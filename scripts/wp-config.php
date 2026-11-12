@@ -28,5 +28,7 @@ if (!file_exists($salt_file)) {
 require $salt_file;
 
 $table_prefix = 'wp_';
-define('ABSPATH', __DIR__ . '/');
+if (!defined('ABSPATH')) {
+    define('ABSPATH', __DIR__ . '/');
+}
 require_once ABSPATH . 'wp-settings.php';

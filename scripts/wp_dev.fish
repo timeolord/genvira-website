@@ -17,9 +17,12 @@ switch "$argv[1]"
         end
         wp --path="$site_dir" $argv[2..]
         exit $status
+    case snapshot
+        create_snapshot
+        exit $status
     case up
     case '*'
-        echo 'usage: wp_dev up | wp_dev cli <arguments>' >&2
+        echo 'usage: wp_dev up | wp_dev cli <arguments> | wp_dev snapshot' >&2
         exit 1
 end
 
@@ -57,7 +60,7 @@ for core_file in "$WP_DEV_SOURCE"/*
     end
 end
 ln -sfn "$WP_DEV_ROOT/wp-content" "$site_dir/wp-content"; or exit 1
-cp "$WP_DEV_CONFIG" "$site_dir/wp-config.php"; or exit 1
+cp --remove-destination --no-preserve=mode "$WP_DEV_CONFIG" "$site_dir/wp-config.php"; or exit 1
 for content_dir in themes plugins
     cp -r --update=none --no-preserve=mode "$WP_DEV_SOURCE/wp-content/$content_dir/." "$WP_DEV_ROOT/wp-content/$content_dir/"; or exit 1
 end

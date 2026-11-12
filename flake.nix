@@ -18,6 +18,7 @@
           });
           wp_dev = pkgs.writeScriptBin "wp_dev" ''
             #!${pkgs.fish}/bin/fish
+            ${builtins.readFile ./scripts/snapshot.fish}
             ${builtins.readFile ./scripts/wp_dev.fish}
           '';
         in {
@@ -26,6 +27,7 @@
             WP_DEV_SOURCE = "${wordpress}/share/wordpress";
             WP_DEV_CONFIG = "${./scripts/wp-config.php}";
             WP_DEV_ROUTER = "${./scripts/router.php}";
+            WP_DEV_SANITIZER = "${./scripts/sanitize-snapshot.sql}";
           };
         });
     };
