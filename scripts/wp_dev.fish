@@ -3,6 +3,14 @@ if not test -f flake.nix; or not test -d wp-content
     exit 1
 end
 
+if not set -q WP_DEV_PORT
+    set -gx WP_DEV_PORT 8080
+end
+if not string match -rq '^[0-9]{1,5}$' -- "$WP_DEV_PORT"; or test "$WP_DEV_PORT" -lt 1024; or test "$WP_DEV_PORT" -gt 65535
+    echo 'WP_DEV_PORT must be a port between 1024 and 65535' >&2
+    exit 1
+end
+set -gx WP_DEV_URL "http://localhost:$WP_DEV_PORT"
 set -gx WP_DEV_ROOT (pwd -P)
 set -g state_dir "$WP_DEV_ROOT/.local"
 set -g site_dir "$state_dir/wordpress"
@@ -17,12 +25,18 @@ switch "$argv[1]"
         end
         wp --path="$site_dir" $argv[2..]
         exit $status
+    case prototype
+        wp --path="$site_dir" --skip-plugins --skip-themes eval-file "$WP_DEV_PROTOTYPE"
+        exit $status
+    case export
+        wp --path="$site_dir" --skip-plugins --skip-themes eval-file "$WP_DEV_EXPORT" $argv[2..]
+        exit $status
     case snapshot
         create_snapshot
         exit $status
     case up
     case '*'
-        echo 'usage: wp_dev up | wp_dev cli <arguments> | wp_dev snapshot' >&2
+        echo 'usage: wp_dev up | wp_dev cli <arguments> | wp_dev snapshot | wp_dev prototype | wp_dev export [base_path]' >&2
         exit 1
 end
 
@@ -96,8 +110,8 @@ end
 printf '%s\n' "CREATE DATABASE IF NOT EXISTS wordpress; CREATE USER IF NOT EXISTS 'wordpress'@'localhost' IDENTIFIED BY 'wordpress'; GRANT ALL ON wordpress.* TO 'wordpress'@'localhost';" | mariadb --no-defaults --socket="$WP_DEV_SOCKET" -u root
 or exit 1
 
-echo 'open http://localhost:8080 to use wordpress'
+echo "open $WP_DEV_URL to use wordpress"
 echo 'press ctrl c to stop the site and database'
-php -d upload_max_filesize=64M -d post_max_size=64M -S localhost:8080 -t "$site_dir" "$WP_DEV_ROUTER" &
+php -d upload_max_filesize=64M -d post_max_size=64M -S "localhost:$WP_DEV_PORT" -t "$site_dir" "$WP_DEV_ROUTER" &
 set -g php_pid $last_pid
 wait $php_pid

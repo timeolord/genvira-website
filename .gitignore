@@ -19,3 +19,6 @@
 # local backups
 /wordpress.sql
 /uploads-backup/
+
+# generated static export
+/dist/

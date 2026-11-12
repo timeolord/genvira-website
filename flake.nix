@@ -10,6 +10,8 @@
     in {
       devShells = for_each_system (pkgs:
         let
+          php = pkgs.php84;
+          wp_cli = pkgs.wp-cli.override { inherit php; };
           wordpress = pkgs.wordpress.overrideAttrs (_: {
             installPhase = ''
               mkdir -p $out/share/wordpress
@@ -23,11 +25,16 @@
           '';
         in {
           default = pkgs.mkShell {
-            packages = [ pkgs.php pkgs.mariadb pkgs.wp-cli pkgs.coreutils wp_dev ];
+            packages = [ php pkgs.mariadb wp_cli pkgs.coreutils wp_dev ];
             WP_DEV_SOURCE = "${wordpress}/share/wordpress";
             WP_DEV_CONFIG = "${./scripts/wp-config.php}";
             WP_DEV_ROUTER = "${./scripts/router.php}";
             WP_DEV_SANITIZER = "${./scripts/sanitize-snapshot.sql}";
+            WP_DEV_PROTOTYPE = "${./scripts/setup-prototype.php}";
+            WP_DEV_EXPORT = "${./scripts/export-static.php}";
+          };
+          qa = pkgs.mkShell {
+            packages = [ pkgs.nodejs pkgs.chromium pkgs.actionlint ];
           };
         });
     };

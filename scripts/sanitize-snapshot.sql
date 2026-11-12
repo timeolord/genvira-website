@@ -14,7 +14,7 @@ UPDATE wp_posts SET post_author = 1, post_password = '', post_content_filtered =
 
 DELETE FROM wp_postmeta
 WHERE post_id NOT IN (SELECT ID FROM wp_posts)
-   OR meta_key NOT IN ('_wp_page_template', '_thumbnail_id', '_wp_attached_file', '_wp_attachment_metadata', '_wp_attachment_image_alt');
+   OR meta_key NOT IN ('_wp_page_template', '_thumbnail_id', '_wp_attached_file', '_wp_attachment_metadata', '_wp_attachment_image_alt', '_genvira_prototype', '_genvira_eyebrow', '_genvira_summary', '_genvira_date_label');
 
 DELETE FROM wp_term_relationships WHERE object_id NOT IN (SELECT ID FROM wp_posts);
 

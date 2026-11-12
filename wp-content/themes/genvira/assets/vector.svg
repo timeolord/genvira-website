@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 540" fill="none">
+  <defs>
+    <linearGradient id="shell" x1="165" y1="120" x2="425" y2="380" gradientUnits="userSpaceOnUse"><stop stop-color="#00afef" stop-opacity=".32"/><stop offset="1" stop-color="#00a859" stop-opacity=".12"/></linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#80bdd2" opacity=".22"/></pattern>
+  </defs>
+  <path fill="url(#grid)" d="M0 0h640v540H0z"/>
+  <circle cx="318" cy="262" r="208" stroke="#39788d" stroke-dasharray="3 9"/>
+  <circle cx="318" cy="262" r="166" stroke="#39788d" opacity=".45"/>
+  <path d="M34 262h572M318 24v476" stroke="#39788d" opacity=".25"/>
+  <g transform="rotate(-31 318 262)">
+    <rect x="146" y="157" width="344" height="210" rx="105" fill="url(#shell)" stroke="#00afef" stroke-width="2"/>
+    <rect x="163" y="174" width="310" height="176" rx="88" stroke="#71d5ed" stroke-width="1.5"/>
+    <rect x="183" y="194" width="270" height="136" rx="68" stroke="#6dcfdc" stroke-dasharray="2 6"/>
+    <path d="M213 262c18-62 35 62 53 0s35 62 53 0 35 62 53 0 35 62 53 0" stroke="#00afef" stroke-width="5" stroke-linecap="round"/>
+    <path d="M213 262c18 62 35-62 53 0s35-62 53 0 35-62 53 0 35-62 53 0" stroke="#00a859" stroke-width="5" stroke-linecap="round"/>
+    <path d="M232 246v32m35-32v32m35-32v32m35-32v32m35-32v32m35-32v32" stroke="#b1ede6" stroke-width="2" opacity=".7"/>
+    <g stroke="#00afef" stroke-width="3" stroke-linecap="round"><path d="M220 161v-20m48 17v-25m50 25v-25m50 25v-25m48 29v-20M220 362v20m48-16v25m50-25v25m50-25v25m48-30v20M151 227l-21-9m16 46h-24m31 37-22 10m353-83 21-10m-16 46h24m-31 37 22 10"/></g>
+    <g fill="#00afef"><circle cx="220" cy="138" r="5"/><circle cx="268" cy="130" r="5"/><circle cx="318" cy="130" r="5"/><circle cx="368" cy="130" r="5"/><circle cx="416" cy="139" r="5"/><circle cx="220" cy="385" r="5"/><circle cx="268" cy="394" r="5"/><circle cx="318" cy="394" r="5"/><circle cx="368" cy="394" r="5"/><circle cx="416" cy="384" r="5"/></g>
+  </g>
+  <path d="M197 147h-70l-26-36H42M423 322h70l37 43h67M286 291l-71 111H70" stroke="#91c6d6" stroke-width="1.5"/>
+  <circle cx="197" cy="147" r="4" fill="#00afef"/><circle cx="423" cy="322" r="4" fill="#00a859"/><circle cx="286" cy="291" r="4" fill="#f69734"/>
+  <g font-family="sans-serif" font-size="12" letter-spacing="1.4" fill="#c7e5ed"><text x="42" y="96">ENGINEERED VECTOR</text><text x="445" y="389">VECTOR DESIGN</text><text x="70" y="426">THERAPEUTIC PAYLOAD</text></g>
+  <g fill="#eb288f"><circle cx="501" cy="111" r="6"/><circle cx="514" cy="125" r="3"/><circle cx="529" cy="113" r="3"/></g>
+  <g stroke="#f69734" stroke-width="2"><path d="M106 343v16m-8-8h16M526 257v16m-8-8h16"/></g>
+  <circle cx="318" cy="54" r="4" fill="#00a859"/><circle cx="110" cy="262" r="4" fill="#00afef"/>
+</svg>
