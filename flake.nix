@@ -25,7 +25,7 @@
           '';
         in {
           default = pkgs.mkShell {
-            packages = [ php pkgs.mariadb wp_cli pkgs.coreutils wp_dev ];
+            packages = [ php pkgs.mariadb wp_cli pkgs.coreutils pkgs.fish wp_dev ];
             WP_DEV_SOURCE = "${wordpress}/share/wordpress";
             WP_DEV_CONFIG = "${./scripts/wp-config.php}";
             WP_DEV_ROUTER = "${./scripts/router.php}";
@@ -34,7 +34,7 @@
             WP_DEV_EXPORT = "${./scripts/export-static.php}";
           };
           qa = pkgs.mkShell {
-            packages = [ pkgs.nodejs pkgs.chromium pkgs.actionlint ];
+            packages = [ pkgs.nodejs pkgs.chromium pkgs.actionlint pkgs.fish ];
           };
         });
     };
