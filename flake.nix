@@ -24,8 +24,8 @@
           default = pkgs.mkShell {
             packages = [ pkgs.php pkgs.mariadb pkgs.wp-cli pkgs.coreutils wp_dev ];
             WP_DEV_SOURCE = "${wordpress}/share/wordpress";
-            WP_DEV_CONFIG = toString ./scripts/wp-config.php;
-            WP_DEV_ROUTER = toString ./scripts/router.php;
+            WP_DEV_CONFIG = "${./scripts/wp-config.php}";
+            WP_DEV_ROUTER = "${./scripts/router.php}";
           };
         });
     };
