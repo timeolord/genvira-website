@@ -74,7 +74,7 @@ The `genvira` theme implements the proposed website. With `wp_dev up` running, r
 wp_dev prototype
 ```
 
-This activates the theme, creates eleven pages and four source-linked research updates, selects the homepage, and configures readable URLs. Re-running it refreshes only content marked as belonging to this prototype; back up editorial changes before doing so. Unrelated pages and posts are preserved. It refuses to replace an existing, unmarked page or post with the same slug.
+This activates the theme, creates twelve pages and four source-linked research updates, selects the homepage, and configures readable URLs. Re-running it refreshes only content marked as belonging to this prototype; back up editorial changes before doing so. Unrelated pages and posts are preserved. It refuses to replace an existing, unmarked page or post with the same slug.
 
 Open <http://localhost:8080>. Edit the seeded pages and research posts in WordPress, or change the initial content in `wp-content/themes/genvira/content` and run the setup again. Design styles and behavior live in the theme's `style.css` and `assets/site.js`. To add a research update in WordPress, create a post and assign the Publication or Company news category; those categories populate the research archive and homepage.
 
@@ -260,7 +260,7 @@ Keep Chromium running. In another terminal with the same QA environment, run:
 node scripts/check-prototype.mjs
 ```
 
-The checks cover all eleven prototype pages at desktop and mobile widths, the four research articles, menu controls, platform steps, research filtering and search, contact links, the no-JavaScript fallback, and the missing-page response. Screenshots are saved to `/tmp/genvira-prototype-qa`. Stop Chromium when finished.
+The checks cover all twelve prototype pages at desktop and mobile widths, the four research articles, menu controls, platform steps, research filtering and search, contact links, the no-JavaScript fallback, and the missing-page response. Screenshots are saved to `/tmp/genvira-prototype-qa`. Stop Chromium when finished.
 
 ## Troubleshooting
 

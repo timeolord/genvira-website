@@ -57,7 +57,7 @@ The local privacy page describes only the prototype. Final public privacy and me
 
 ## Verification
 
-The browser checks cover eleven pages at 1440 px desktop and 390 px mobile widths, four research detail pages, responsive overflow, image loading, heading structure, menu open and Escape behavior, platform steps, research type filters, search with no results, contact topic links, a JavaScript-disabled fallback, and a real 404 response. The script and its Nix QA environment are documented in the root README.
+The browser checks cover twelve pages at 1440 px desktop and 390 px mobile widths, four research detail pages, responsive overflow, image loading, heading structure, menu open and Escape behavior, platform steps, research type filters, search with no results, contact topic links, a JavaScript-disabled fallback, and a real 404 response. The script and its Nix QA environment are documented in the root README.
 
 The sanitized SQL was imported into a temporary database. Checks confirmed all eleven page summaries, fifteen prototype content markers, the selected theme, four queryable research posts, and creation of a fresh administrator with ID 1. Checksums confirmed that the restore test did not change the working database.
 
@@ -74,3 +74,5 @@ TLS are presented as organized immune-cell groups that can occur in tumor-associ
 The updated [program-page preview](tumor-context-desktop.png) shows the staging explanation and diagram together. Desktop and mobile browser checks and the static-export link checks passed for this update.
 
 The follow-up TLS reference informed the revised cell arrangement: a central green B-cell follicle with a surrounding cyan T-cell region. The SVG description and legend use those same labels. This remains a simplified two-zone schematic rather than a complete inventory of the cell types in a mature TLS.
+
+The dedicated Team page restores the full biographies and portraits from Genvira’s existing team page, grouped into leadership, directors, and advisors. Team is a primary navigation item, with an introduction from About and a footer link. All biographies remain visible without JavaScript.

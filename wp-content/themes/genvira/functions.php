@@ -20,7 +20,7 @@ function genvira_url($slug = '') {
 }
 
 function genvira_navigation() {
-    $links = ['gvb-2030' => 'GVB-2030', 'pipeline' => 'Pipeline', 'platform' => 'Platform', 'research' => 'Research & updates', 'about' => 'About'];
+    $links = ['gvb-2030' => 'GVB-2030', 'pipeline' => 'Pipeline', 'platform' => 'Platform', 'research' => 'Research & updates', 'about' => 'About', 'team' => 'Team'];
     echo '<ul class="nav-links">';
     foreach ($links as $slug => $label) {
         $current = is_page($slug) ? ' aria-current="page"' : '';

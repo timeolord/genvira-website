@@ -33,6 +33,7 @@ $pages = [
     'platform' => ['Our platform', 'THE ENGINEERING BEHIND OUR PROGRAMS', 'Viral-vector design, characterization, and development capabilities that support our therapeutic pipeline.'],
     'research' => ['Research & updates', 'PUBLICATIONS & COMPANY NEWS', 'Explore the publications behind our work and the collaborations moving it forward.'],
     'about' => ['About Genvira', 'RESEARCH ROOTS. THERAPEUTIC PURPOSE.', 'An Ottawa-based team advancing viral-vector engineering for therapeutic development.'],
+    'team' => ['Our team', 'THE PEOPLE BEHIND GENVIRA', 'Meet our leadership, board of directors, and scientific and strategic advisors.'],
     'partnering' => ['Partnering', 'ADVANCING THROUGH COLLABORATION', 'Connect with Genvira about therapeutic programs, scientific collaboration, and strategic opportunities.'],
     'contact' => ['Contact us', 'LET’S TALK', 'Reach the Genvira team in Ottawa, Canada.'],
     'research-tools' => ['Research tools', 'TOOLS FOR RESEARCH', 'A separate research offering built on our viral-vector expertise.'],

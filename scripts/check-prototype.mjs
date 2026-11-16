@@ -43,7 +43,18 @@ async function navigate(path) {
     }
     await evaluate('document.fonts.ready.then(() => true)');
     await new Promise(resolve => setTimeout(resolve, 100));
-    await evaluate('scrollTo(0, 0)');
+    await evaluate(`(async () => {
+        for (const image of document.images) {
+            if (image.complete) continue;
+            image.scrollIntoView();
+            await new Promise(resolve => {
+                image.addEventListener('load', resolve, {once: true});
+                image.addEventListener('error', resolve, {once: true});
+                setTimeout(resolve, 3000);
+            });
+        }
+        scrollTo(0, 0);
+    })()`);
     assert(await evaluate("document.querySelectorAll('h1').length === 1"), `expected one h1 at ${path}`);
     assert(!await evaluate("/Warning:|Fatal error:/.test(document.body.innerText)"), `php warning at ${path}`);
     assert(await evaluate("[...document.images].every(image => image.complete && image.naturalWidth > 0)"), `missing image at ${path}`);
@@ -62,7 +73,7 @@ try {
     await command('Emulation.setScriptExecutionDisabled', { value: false });
     await command('Runtime.enable');
     await viewport(1440, 1100);
-    const paths = ['/', '/gvb-2030/', '/pipeline/', '/platform/', '/research/', '/about/', '/partnering/', '/contact/', '/research-tools/', '/careers/', '/privacy/'];
+    const paths = ['/', '/gvb-2030/', '/pipeline/', '/platform/', '/research/', '/about/', '/team/', '/partnering/', '/contact/', '/research-tools/', '/careers/', '/privacy/'];
     for (const path of paths) {
         const response = await fetch(`${origin}${path}`);
         assert(response.status === 200, `${path} returned ${response.status}`);
@@ -70,6 +81,16 @@ try {
         assert(await evaluate('document.documentElement.scrollWidth <= innerWidth'), `desktop overflow at ${path}`);
         if (path === '/') await screenshot('home-desktop');
     }
+    await navigate('/team/');
+    assert(await evaluate("document.querySelectorAll('.team-profile').length === 9"), 'team roster incomplete');
+    assert(await evaluate("document.querySelector('.site-nav a[aria-current=page]').textContent === 'Team'"), 'team navigation missing');
+    await screenshot('team-desktop');
+    for (const width of [901, 1024, 1150, 1280]) {
+        await viewport(width, 1000);
+        assert(await evaluate('document.documentElement.scrollWidth <= innerWidth'), `header overflow at ${width}`);
+        assert(await evaluate("document.querySelector('.site-nav').getBoundingClientRect().right <= innerWidth"), `navigation clipped at ${width}`);
+    }
+    await viewport(1440, 1100);
     await navigate('/platform/');
     await evaluate("document.querySelector('[data-step=translate]').click()");
     assert(await evaluate("!document.querySelector('[data-panel=translate]').hidden && document.querySelector('[data-panel=design]').hidden"), 'platform controls failed');
@@ -100,6 +121,7 @@ try {
             await evaluate("document.dispatchEvent(new KeyboardEvent('keydown', {key:'Escape',bubbles:true}))");
             assert(await evaluate("document.querySelector('.menu-toggle').getAttribute('aria-expanded') === 'false'"), 'mobile menu failed to close');
         }
+        if (path === '/team/') await screenshot('team-mobile');
         if (path === '/pipeline/') {
             await evaluate("document.querySelector('.pipeline-table').scrollIntoView()");
             await screenshot('pipeline-mobile');
@@ -108,6 +130,8 @@ try {
     await command('Emulation.setScriptExecutionDisabled', { value: true });
     await navigate('/platform/');
     assert(await evaluate("[...document.querySelectorAll('[data-panel]')].every(panel => !panel.hidden)"), 'platform content requires javascript');
+    await navigate('/team/');
+    assert(await evaluate("[...document.querySelectorAll('.team-profile-bio')].every(bio => bio.getBoundingClientRect().height > 0)"), 'team bios require javascript');
     await navigate('/research/');
     assert(await evaluate("document.querySelectorAll('.research-entry:not([hidden])').length === 4"), 'research content requires javascript');
     await command('Emulation.setScriptExecutionDisabled', { value: false });
