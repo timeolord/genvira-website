@@ -72,3 +72,5 @@ The GVB-2030 page repeats the schematic and explains its disease context in read
 TLS are presented as organized immune-cell groups that can occur in tumor-associated tissue, with [primary bladder cancer research](https://doi.org/10.1038/s41416-024-02598-7) linked for background. Their presence in the schematic does not assert that GVB-2030 induces TLS or has shown a TLS-related clinical outcome. The illustration is original SVG artwork, not a reproduction of the supplied screenshot, a histology image, or experimental data.
 
 The updated [program-page preview](tumor-context-desktop.png) shows the staging explanation and diagram together. Desktop and mobile browser checks and the static-export link checks passed for this update.
+
+The follow-up TLS reference informed the revised cell arrangement: a central green B-cell follicle with a surrounding cyan T-cell region. The SVG description and legend use those same labels. This remains a simplified two-zone schematic rather than a complete inventory of the cell types in a mature TLS.
