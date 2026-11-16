@@ -57,7 +57,7 @@
       <circle cx="489" cy="316" r="6.3"/><circle cx="489" cy="316" r="2.4" fill="#12865d" stroke="none"/>
     </g>
   </g>
-  <g stroke="#c1dfeb" stroke-width="1.2"><path d="M282 119V91h102"/><path d="m474 264 32-54h96"/><path d="M113 158V91H44"/><path d="M312 377h58l24 21h91"/></g>
+  <g stroke="#c1dfeb" stroke-width="1.2"><path d="M282 119V84h102"/><path d="m474 264 32-62h96"/><path d="M113 158V84H44"/><path d="M312 377h58l24 15h91"/></g>
   <g fill="#d7eaf1" font-family="sans-serif" font-size="14"><text x="310" y="78">BLADDER TUMOR</text><text x="43" y="78">VIRAL VECTORS</text><text x="518" y="196">TLS</text><text x="404" y="386">MUSCLE INVASION</text></g>
   <g fill="#c9dce6" font-family="sans-serif" font-size="12"><text x="51" y="242">LINING</text><text x="51" y="306">CONNECTIVE</text><text x="51" y="322">TISSUE</text><text x="51" y="397">MUSCLE</text></g>
   <g font-family="sans-serif" font-size="12"><circle cx="398" cy="477" r="4" fill="#50d5a0"/><text x="411" y="481" fill="#c9dce6">B-cell follicle</text><circle cx="520" cy="477" r="4" fill="#00afef"/><text x="533" y="481" fill="#c9dce6">T-cell region</text></g>
