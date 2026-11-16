@@ -62,3 +62,13 @@ The browser checks cover eleven pages at 1440 px desktop and 390 px mobile width
 The sanitized SQL was imported into a temporary database. Checks confirmed all eleven page summaries, fifteen prototype content markers, the selected theme, four queryable research posts, and creation of a fresh administrator with ID 1. Checksums confirmed that the restore test did not change the working database.
 
 Browser captures of the actual WordPress theme: [desktop homepage](../wp-content/themes/genvira/screenshot.png), [mobile homepage](prototype-mobile.png), and [mobile pipeline](pipeline-mobile.png).
+
+## CEO illustration update, 16 November 2026
+
+The homepage now shows a bladder-wall section with a tumor extending through the lining and connective tissue into muscle, rather than only an isolated viral vector. The illustration includes an anatomical bladder inset, cyan viral-vector symbols, and a tertiary lymphoid structure (TLS) with B-cell and T-cell groups. TLS was interpreted as tertiary lymphoid structures in this oncology context.
+
+The GVB-2030 page repeats the schematic and explains its disease context in readable text. Stage II is used as the concrete example of muscle invasion beyond stages 0 and I, following the [National Cancer Institute staging description](https://www.cancer.gov/types/bladder/stages). This does not relabel every stage beyond I as metastatic or establish a clinical eligibility criterion for GVB-2030. The program's public indication and IND-enabling development status remain as previously sourced.
+
+TLS are presented as organized immune-cell groups that can occur in tumor-associated tissue, with [primary bladder cancer research](https://doi.org/10.1038/s41416-024-02598-7) linked for background. Their presence in the schematic does not assert that GVB-2030 induces TLS or has shown a TLS-related clinical outcome. The illustration is original SVG artwork, not a reproduction of the supplied screenshot, a histology image, or experimental data.
+
+The updated [program-page preview](tumor-context-desktop.png) shows the staging explanation and diagram together. Desktop and mobile browser checks and the static-export link checks passed for this update.
