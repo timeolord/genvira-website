@@ -94,9 +94,9 @@ Research notes and content sources are recorded in `docs`. The logo is copied fr
 
 ## Automatic GitHub Pages deployment
 
-The deployment target is <https://www.melkyway.ca/genvira-website/>. The `deploy prototype` workflow builds and publishes the static site whenever `main` is pushed. Pull requests run the build without publishing. It can also be started manually from the Actions tab.
+The temporary prototype address is <https://www.melkyway.ca/genvira-website/>. This repository deploys independently through GitHub Pages; the domain is being used while prototyping. The `deploy prototype` workflow builds and publishes the static site whenever `main` is pushed. Pull requests run the build without publishing. It can also be started manually from the Actions tab.
 
-One-time repository setup: open Settings → Pages and select GitHub Actions as the build source. This project inherits the domain configured on `timeolord.github.io`; do not set `www.melkyway.ca` as this repository's own custom domain. The workflow reads GitHub Pages metadata to choose the correct URL prefix. No extra DNS record or Hakyll copy rule is needed for this deployment.
+One-time repository setup: open Settings → Pages and select GitHub Actions as the build source. This project inherits the domain configured on `timeolord.github.io`; do not set `www.melkyway.ca` as this repository's own custom domain. The workflow reads GitHub Pages metadata to choose the correct URL prefix. Deployment is managed entirely in this repository and requires no changes to the personal website.
 
 Each build uses `flake.lock`, PHP 8.4, MariaDB, the checked-in theme and plugins, and `database/initial.sql`. It starts a temporary local WordPress instance, imports the snapshot, normalizes the local source URL, exports the site, validates links and assets, and uploads only `dist/genvira` to Pages. The temporary server is stopped after the build. No WordPress server or database is hosted publicly.
 
@@ -129,7 +129,7 @@ Export a copy that can be hosted on a normal static website. Keep WordPress runn
 wp_dev export
 ```
 
-The command writes `dist/genvira/` and `dist/genvira-static.zip`. The ZIP contains a `genvira` directory ready to place under your website's public root. At `www.melkyway.ca`, that would make the demo available at `https://www.melkyway.ca/genvira/` after you upload and publish it.
+The command writes `dist/genvira/` and `dist/genvira-static.zip` for local previews or an alternative static host. The ZIP contains a `genvira` directory. GitHub Pages deployment uses the separate automated workflow above.
 
 The default destination path is `/genvira/`. To use a different location, export again with its leading and trailing slashes:
 
@@ -166,20 +166,6 @@ With a browser running as described in Browser checks, validate the default expo
 ```fish
 env GENVIRA_QA_URL=http://127.0.0.1:8090/genvira node scripts/check-prototype.mjs
 ```
-
-### Include it in the personal Hakyll site
-
-Copy the exported `genvira` directory into the personal website's source root, alongside `site.hs`. Add this rule inside `hakyllWith config $ do`:
-
-```haskell
-match "genvira/**" $ do
-    route idRoute
-    compile copyFileCompiler
-```
-
-Build and publish the personal website as usual. Hakyll will copy the demo to `docs/genvira` without applying the blog templates. Replace the source `genvira` folder when updating the export. Copying only into the generated `docs` folder is temporary because a clean rebuild can remove it.
-
-The export command prepares local files; publishing those files to the personal website is a separate step.
 
 ## Working together
 

@@ -14,3 +14,4 @@ earlier prototype entries are reconstructed from git commit timestamps in utc
 2026-11-16T15:51:16Z | replace tiled muscle texture with continuous curved fibres (0bdeebe)
 2026-11-16T15:56:15Z | spell out tertiary lymphoid structure in the diagram (007010f)
 2026-11-16T16:08:03Z | update the readme for the team page and current illustration; add repository instructions requiring timestamped changelog entries and backfill recent changes from git
+2026-11-16T16:15:10Z | remove personal website integration instructions; clarify independent github pages deployment and temporary domain use in the readme and agent instructions; documentation links checked

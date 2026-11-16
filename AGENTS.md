@@ -22,6 +22,6 @@ WordPress content and settings live in the database. Refresh and review the sani
 
 Run checks appropriate to the change. Use desktop and mobile previews for visual changes and static-export validation when export behavior changes. Documentation-only changes need link and diff checks, without rebuilding the website.
 
-Pushing `main` automatically deploys the static prototype through GitHub Actions. Preserve the `/genvira-website/` deployment path and inherited domain configuration. Do not stop an existing local development server unless you started it or the user asks you to.
+Pushing `main` automatically deploys the static prototype through GitHub Actions. Preserve the `/genvira-website/` deployment path and inherited domain configuration. The personal domain is temporary during prototyping; deployment belongs entirely to this repository. Do not modify the personal website or add integration steps for it. Do not stop an existing local development server unless you started it or the user asks you to.
 
 Preserve unrelated user files. The untracked `old-website/` directory is reference material; do not stage it wholesale.
