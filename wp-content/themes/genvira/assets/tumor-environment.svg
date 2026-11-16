@@ -4,7 +4,7 @@
   <defs>
     <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#80bdd2" opacity=".18"/></pattern>
     <pattern id="muscle" width="28" height="22" patternUnits="userSpaceOnUse"><path d="M-7 20 14 0M7 22 28 2M21 24 42 4" stroke="#a9a5e4" stroke-width="1.2" opacity=".3"/></pattern>
-    <g id="virus"><rect x="-16" y="-10" width="32" height="20" rx="8" fill="#00afef" fill-opacity=".13" stroke="#65d7ff" stroke-width="1.7"/><rect x="-10" y="-5" width="20" height="10" rx="4" stroke="#65d7ff" stroke-width="1"/><path d="M-9-11v-5M0-11v-5M9-11v-5M-9 11v5M0 11v5M9 11v5M-17-4h-5M-17 4h-5M17-4h5M17 4h5" stroke="#65d7ff" stroke-width="1.7" stroke-linecap="round"/></g>
+    <g id="virus"><circle r="14" fill="#00afef" fill-opacity=".13" stroke="#65d7ff" stroke-width="1.7"/><circle r="7" stroke="#65d7ff" stroke-width="1"/><path d="M0-15v-5M0 15v5M-15 0h-5M15 0h5M-11-11l-4-4M11-11l4-4M-11 11l-4 4M11 11l4 4" stroke="#65d7ff" stroke-width="1.7" stroke-linecap="round"/></g>
   </defs>
   <path fill="url(#grid)" d="M0 0h680v560H0z"/>
   <g transform="translate(565 109) scale(.65)">
@@ -24,8 +24,8 @@
   <g fill="#8e315f" fill-opacity=".8"><ellipse cx="237" cy="175" rx="9" ry="7"/><ellipse cx="271" cy="149" rx="8" ry="10"/><ellipse cx="308" cy="166" rx="10" ry="7"/><ellipse cx="333" cy="194" rx="8" ry="9"/><ellipse cx="267" cy="200" rx="11" ry="8"/><ellipse cx="238" cy="223" rx="8" ry="6"/><ellipse cx="301" cy="233" rx="9" ry="10"/><ellipse cx="284" cy="275" rx="8" ry="10"/><ellipse cx="297" cy="314" rx="8" ry="6"/><ellipse cx="276" cy="350" rx="7" ry="9"/><ellipse cx="300" cy="379" rx="7" ry="8"/></g>
   <g transform="translate(114 176) rotate(-24)"><use href="#virus"/></g><g transform="translate(158 115) rotate(24) scale(.8)"><use href="#virus"/></g><g transform="translate(153 223) rotate(-8) scale(.75)"><use href="#virus"/></g>
   <g id="tls-organized">
-    <ellipse cx="475" cy="302" rx="72" ry="40" stroke="#72d7ac" stroke-width="1.5" stroke-dasharray="3 4" fill="#00a859" fill-opacity=".06"/>
-    <ellipse cx="475" cy="302" rx="32" ry="24" fill="#00a859" fill-opacity=".16" stroke="#72d7ac" stroke-opacity=".65" stroke-dasharray="2 3"/>
+    <ellipse cx="475" cy="302" rx="72" ry="40" fill="#00a859" fill-opacity=".06"/>
+    <ellipse cx="475" cy="302" rx="32" ry="24" fill="#00a859" fill-opacity=".16"/>
     <g id="tls-t-cell-region" fill="#00afef" stroke="#b0e9fa" stroke-width=".8">
       <circle cx="531.0" cy="302.0" r="5.2"/><circle cx="531.0" cy="302.0" r="1.9" fill="#006f98" stroke="none"/>
       <circle cx="527.6" cy="311.9" r="5.2"/><circle cx="527.6" cy="311.9" r="1.9" fill="#006f98" stroke="none"/>
