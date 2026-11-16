@@ -65,7 +65,7 @@ Browser captures of the actual WordPress theme: [desktop homepage](../wp-content
 
 ## CEO illustration update, 16 November 2026
 
-The homepage now shows a bladder-wall section with a tumor extending through the lining and connective tissue into muscle, rather than only an isolated viral vector. The illustration includes an anatomical bladder inset, cyan viral-vector symbols, and a tertiary lymphoid structure (TLS) with B-cell and T-cell groups. TLS was interpreted as tertiary lymphoid structures in this oncology context.
+The homepage now shows a bladder-wall section with a tumor extending through the lining and connective tissue into muscle, rather than only an isolated viral vector. The illustration includes a separate whole-bladder overview, cyan viral-vector symbols, and a tertiary lymphoid structure (TLS) with B-cell and T-cell groups. An outline frames the enlarged wall section, with the overview outside the frame and no dotted connector. TLS was interpreted as tertiary lymphoid structures in this oncology context.
 
 The GVB-2030 page repeats the schematic and explains its disease context in readable text. Stage II is used as the concrete example of muscle invasion beyond stages 0 and I, following the [National Cancer Institute staging description](https://www.cancer.gov/types/bladder/stages). This does not relabel every stage beyond I as metastatic or establish a clinical eligibility criterion for GVB-2030. The program's public indication and IND-enabling development status remain as previously sourced.
 

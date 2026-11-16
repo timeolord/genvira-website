@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 560" fill="none" role="img" aria-labelledby="title description">
   <title id="title">Muscle-invasive bladder tumor, tertiary lymphoid structure, and viral vectors</title>
-  <desc id="description">A conceptual bladder-wall section shows a pink tumor extending from the lining through connective tissue into the purple muscle layer. A nearby tertiary lymphoid structure has a central B-cell follicle surrounded by a T-cell region. Cyan viral-vector symbols are shown nearby. This is a schematic, not a treatment result or an anatomical scale drawing.</desc>
+  <desc id="description">An outlined, enlarged bladder-wall section is shown separately from a small whole-bladder overview. The section shows a pink tumor extending from the lining through connective tissue into the purple muscle layer. A nearby tertiary lymphoid structure has a central B-cell follicle surrounded by a T-cell region. Cyan viral-vector symbols are shown nearby. This is a schematic, not a treatment result or an anatomical scale drawing.</desc>
   <defs>
     <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#80bdd2" opacity=".18"/></pattern>
     <pattern id="muscle" width="28" height="22" patternUnits="userSpaceOnUse"><path d="M-7 20 14 0M7 22 28 2M21 24 42 4" stroke="#a9a5e4" stroke-width="1.2" opacity=".3"/></pattern>
     <g id="virus"><circle r="14" fill="#00afef" fill-opacity=".13" stroke="#65d7ff" stroke-width="1.7"/><circle r="7" stroke="#65d7ff" stroke-width="1"/><path d="M0-15v-5M0 15v5M-15 0h-5M15 0h5M-11-11l-4-4M11-11l4-4M-11 11l-4 4M11 11l4 4" stroke="#65d7ff" stroke-width="1.7" stroke-linecap="round"/></g>
   </defs>
   <path fill="url(#grid)" d="M0 0h680v560H0z"/>
-  <g transform="translate(565 109) scale(.65)">
+  <path id="enlarged-section-outline" d="M40 56h408q16 0 16 16v88q0 16 16 16h160q16 0 16 16v296q0 16-16 16H40q-16 0-16-16V72q0-16 16-16z" stroke="#81cde2" stroke-width="1.5"/>
+  <g transform="translate(565 99) scale(.65)">
     <path d="M-42-45c-38-27-62 37-29 75 15 25 47 31 55 44l4 24h24l4-24c8-13 40-19 55-44 33-38 9-102-29-75-27 15-57 15-84 0z" fill="#174c60" stroke="#81cde2" stroke-width="2"/>
     <path d="M-41-28c-24-20-40 28-18 48 18 21 42 23 59 42 17-19 41-21 59-42 22-20 6-68-18-48-26 12-56 12-82 0z" stroke="#9698e0" stroke-width="7"/>
     <path d="M-53-15c14-13 27 2 20 13 11 9 5 25-7 28-14-3-24-24-13-41z" fill="#d76099"/>
   </g>
-  <path d="m530 105-161 28" stroke="#7aaebe" stroke-dasharray="3 5"/>
-  <g font-family="sans-serif" font-size="14" fill="#c9e5ef" letter-spacing="1.2"><text x="43" y="44">BLADDER WALL / CONCEPTUAL SECTION</text><text x="43" y="528" font-size="11" letter-spacing="1">SIMPLIFIED ANATOMY · NOT TO SCALE</text></g>
+  <g font-family="sans-serif" font-size="14" fill="#c9e5ef" letter-spacing="1.2"><text x="43" y="44">ENLARGED BLADDER WALL SECTION</text><text x="565" y="44" text-anchor="middle" font-size="11" letter-spacing=".8">BLADDER OVERVIEW</text><text x="43" y="528" font-size="11" letter-spacing="1">SIMPLIFIED ANATOMY · NOT TO SCALE</text></g>
   <path d="M43 251c134-16 261 18 392 0 77-10 144-9 202-3v24c-60-6-128-7-202 3-131 18-258-16-392 0z" fill="#00afef" fill-opacity=".3"/>
   <path d="M43 275c134-16 261 18 392 0 77-10 144-9 202-3v70c-60-6-128-7-202 3-131 18-258-16-392 0z" fill="#27748a" fill-opacity=".38"/>
   <path d="M43 345c134-16 261 18 392 0 77-10 144-9 202-3v105c-60-6-128-7-202 3-131 18-258-16-392 0z" fill="#3e4095" fill-opacity=".8"/>
