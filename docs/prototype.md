@@ -73,6 +73,6 @@ TLS are presented as organized immune-cell groups that can occur in tumor-associ
 
 The updated [program-page preview](tumor-context-desktop.png) shows the staging explanation and diagram together. Desktop and mobile browser checks and the static-export link checks passed for this update.
 
-The follow-up TLS reference informed the revised cell arrangement: a central green B-cell follicle with a surrounding cyan T-cell region. The SVG description and legend use those same labels. The TLS uses subtle filled regions without dotted boundaries, and viral-vector symbols are circular. This remains a simplified two-zone schematic rather than a complete inventory of the cell types in a mature TLS.
+The follow-up TLS reference informed the revised cell arrangement: a central green B-cell follicle with a surrounding cyan T-cell region. The SVG description and legend use those same labels. The TLS shows the cells without shaded backgrounds or dotted boundaries, and viral-vector symbols are circular. This remains a simplified two-zone schematic rather than a complete inventory of the cell types in a mature TLS.
 
 The dedicated Team page restores the full biographies and portraits from Genvira’s existing team page, grouped into leadership, directors, and advisors. Team is a primary navigation item, with an introduction from About and a footer link. All biographies remain visible without JavaScript.
