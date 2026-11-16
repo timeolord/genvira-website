@@ -78,7 +78,9 @@ This activates the theme, creates twelve pages and four source-linked research u
 
 Open <http://localhost:8080>. Edit the seeded pages and research posts in WordPress, or change the initial content in `wp-content/themes/genvira/content` and run the setup again. Design styles and behavior live in the theme's `style.css` and `assets/site.js`. To add a research update in WordPress, create a post and assign the Publication or Company news category; those categories populate the research archive and homepage.
 
-The site includes a dedicated GVB-2030 page, an HTML pipeline, a separate engineering platform, Research & Updates, About, Partnering, Contact, Careers, and a separate pseudovirus research-tools page. Research filters and platform step controls enhance server-rendered content. Contact links open the visitor's email application; no message is submitted by the site.
+The site includes a dedicated GVB-2030 page, an HTML pipeline, a separate engineering platform, Research & Updates, About, Team, Partnering, Contact, Careers, and a separate pseudovirus research-tools page. Team has its own main navigation tab, with the full biographies and portraits from the previous website grouped into leadership, directors, and advisors. Research filters and platform step controls enhance server-rendered content. Contact links open the visitor's email application; no message is submitted by the site.
+
+The homepage and GVB-2030 page share a conceptual illustration of muscle-invasive bladder cancer. An outlined enlarged wall section sits beside a whole-bladder overview, with circular viral vectors and a labelled Tertiary Lymphoid Structure (TLS). The TLS has a central B-cell follicle surrounded by T-cells spaced evenly along the ellipse, without shaded backgrounds or dotted boundaries. The muscle layer uses continuous curved fibres rather than a tiled texture, and all four guide labels use consistent spacing. Edit the shared SVG in [tumor-environment.svg](wp-content/themes/genvira/assets/tumor-environment.svg); both pages use the same asset.
 
 With Local, start the site and run this in its site shell, using the actual path to the repository:
 
@@ -102,7 +104,7 @@ For theme code, CSS, or JavaScript changes, commit and push the changes. For pag
 
 ```fish
 wp_dev snapshot
-git add database/initial.sql wp-content/themes wp-content/plugins
+git add database/initial.sql wp-content/themes wp-content/plugins changelog.txt
 git commit -m "update the website prototype"
 git push
 ```
@@ -180,6 +182,8 @@ Build and publish the personal website as usual. Hakyll will copy the demo to `d
 The export command prepares local files; publishing those files to the personal website is a separate step.
 
 ## Working together
+
+Record every repository change in [changelog.txt](changelog.txt) in the same commit. Append a concise entry using the actual UTC timestamp in `YYYY-MM-DDTHH:MM:SSZ | description` format, with relevant verification when applicable. Earlier prototype entries were reconstructed from Git commit timestamps. Repository instructions for coding agents are in [AGENTS.md](AGENTS.md).
 
 Commit theme and plugin files under `wp-content/themes` and `wp-content/plugins`, including third party code used by the site. This gives collaborators the same versions and records changes made through the dashboard. Review `git status` after installing or updating either. WordPress core remains managed by each development environment.
 

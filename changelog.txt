@@ -1,0 +1,16 @@
+changelog
+
+earlier prototype entries are reconstructed from git commit timestamps in utc
+
+2026-11-16T14:56:21Z | show muscle invasive bladder tumor with tls and viral vectors (f50d82c)
+2026-11-16T15:18:03Z | show organized b cell follicle and surrounding t cell region (35df23c)
+2026-11-16T15:26:04Z | give the team a dedicated page with original bios and portraits (5ff3a45)
+2026-11-16T15:30:50Z | simplify tls boundaries and make viral particles circular (b5f26fd)
+2026-11-16T15:34:28Z | remove green shading behind the tls cells (0ac7c89)
+2026-11-16T15:35:29Z | space tls t cells evenly along the ellipse perimeter (5b62c35)
+2026-11-16T15:40:19Z | frame the enlarged bladder section and separate the overview (03d4382)
+2026-11-16T15:44:15Z | align tumor and viral vector labels within the enlarged section (7f24045)
+2026-11-16T15:47:41Z | tighten the spacing between diagram labels and guides (ed04bfb)
+2026-11-16T15:51:16Z | replace tiled muscle texture with continuous curved fibres (0bdeebe)
+2026-11-16T15:56:15Z | spell out tertiary lymphoid structure in the diagram (007010f)
+2026-11-16T16:08:03Z | update the readme for the team page and current illustration; add repository instructions requiring timestamped changelog entries and backfill recent changes from git
