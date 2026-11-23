@@ -1,0 +1,65 @@
+baseURL = "https://genvira.com/"
+languageCode = "en-us"
+title = "Genvira"
+theme="hugo-universal-theme"
+font_size = "20px"
+relativeURLs = true
+
+[menu]
+
+[[menu.main]]
+    identifier="home"
+    name = "Home"
+    url  = "/"
+    weight = 1
+
+[[menu.main]]
+    identifier="about-us"
+    name = "About Us"
+    url  = "/about-us"
+    weight = 2
+
+[[menu.main]]
+    identifier="services"
+    name = "Services"
+    url  = "/services"
+    weight = 3
+
+[[menu.main]]
+    identifier="research"
+    name = "Research"
+    url  = "/research"
+    weight = 4
+
+[[menu.main]]
+    identifier="career"
+    name = "Career"
+    url  = "/career"
+    weight = 5
+
+[Params]
+    
+    style = "blue"
+
+    logo = "img/logo/genvira_logo_true_transparent.png"
+    logo_small = "img/logo/genvira_logo_true_transparent.png"
+    
+    date_format = "Jan 2, 2006"
+    
+    # Footer information
+    
+    address = """310 Hunt Club Rd, Suite 304
+        <br> Ottawa, Ontario K1V&nbsp;1C1, Canada
+        <br> Tel: +1 (613) 695-4718
+        <br>
+        """
+    
+    copyright = "© 2020 Genvira Biosciences Inc. All Rights Reserved"
+    
+    about_us = "Specialists in viral vector engineering for cancer immunotherapy, gene therapy, and vaccines."
+    
+[Params.carousel]
+    enable = false
+    
+[Params.features]
+    enable = false

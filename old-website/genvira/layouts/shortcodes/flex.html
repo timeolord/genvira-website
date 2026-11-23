@@ -1,0 +1,3 @@
+<div class="flex-container {{ .Get "class" }}" {{ with .Get "id" }} id="{{.}}"{{ end }} >
+  {{ printf "%s" .Inner | safeHTML }}
+</div>

@@ -1,0 +1,3 @@
+[submodule "legacy-hugo-theme"]
+	path = old-website/genvira/themes/hugo-universal-theme
+	url = https://github.com/devcows/hugo-universal-theme.git
