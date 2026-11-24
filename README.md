@@ -237,6 +237,12 @@ To move between local environments or to another host, restore the database and 
 
 ## Browser checks
 
+The theme bundles Manrope for text and Genvira Symbols for the five decorative glyphs outside Manrope's character set. Rebuild the symbol font from its source with:
+
+```fish
+nix develop .#fonts --command python3 scripts/build-symbol-font.py
+```
+
 Start the WordPress site, then enter the browser tools environment in another terminal:
 
 ```fish

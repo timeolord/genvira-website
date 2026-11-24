@@ -36,6 +36,9 @@
           qa = pkgs.mkShell {
             packages = [ pkgs.nodejs pkgs.chromium pkgs.actionlint pkgs.fish ];
           };
+          fonts = pkgs.mkShell {
+            packages = [ (pkgs.python3.withPackages (ps: [ ps.fonttools ])) ];
+          };
         });
     };
 }
