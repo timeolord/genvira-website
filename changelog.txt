@@ -18,3 +18,39 @@ earlier prototype entries are reconstructed from git commit timestamps in utc
 2026-11-23T14:39:29Z | import the legacy hugo site as a subtree with its commit history and register its pinned theme submodule
 2026-11-23T21:37:05Z | Embed Manrope in the bladder tumor SVG and refresh desktop and mobile previews after Chromium verification.
 2026-11-23T21:56:54Z | Bundle the five site symbols and embed Manrope in the vector diagram, with font coverage checked across 16 pages and the static export verified.
+2026-11-24T16:00:21Z | Align the homepage capability icons in a shared column before the text and verify desktop and mobile previews.
+2026-11-24T16:02:40Z | Remove the homepage capability icons from the layout and verify the WordPress formatted rows at desktop and mobile widths.
+2026-11-24T16:05:33Z | Remove public prototype labels from the header and Privacy page, update the sanitized snapshot, and verify the rendered site.
+2026-11-24T16:05:33Z | Increase site typography by 12.5 percent and verify desktop and mobile layouts in Chromium.
+2026-11-24T16:08:05Z | Increase shared tumor illustration label sizes by 12.5 percent, verify label spacing in Chromium, and refresh saved previews.
+2026-11-24T16:10:23Z | Restore the Team portrait and biography columns by hiding empty WordPress paragraphs, and verify all nine profiles at desktop and mobile widths.
+2026-11-24T16:13:37Z | Remove references to the previous website from Team and About, refresh the affected snapshot content, and verify the rendered pages.
+2026-11-24T16:15:43Z | Enlarge Team section links, reduce the gap above Leadership, and verify desktop and mobile layouts.
+2026-11-24T16:17:12Z | Restore underlined Team section links while keeping larger text and tighter spacing, verified on desktop and mobile.
+2026-11-24T16:19:31Z | Remove staging and pipeline source notes from GVB-2030, retain background citations in project notes, and verify the rendered page.
+2026-11-24T16:21:04Z | Remove the requested program description note from GVB-2030, update the sanitized snapshot, and verify the rendered page.
+2026-11-24T16:24:02Z | Expand the native melanoma news post, route research and partnering readers to local articles, and verify the sanitized snapshot, browser checks, and static export.
+2026-11-24T16:28:34Z | Publish the supplied melanoma announcement verbatim in the native news post, update the snapshot, and verify the rendered text and layouts.
+2026-11-24T16:29:54Z | Restore the Genvira homepage link in the melanoma announcement and verify it in WordPress.
+2026-11-24T16:35:12Z | Add Genvira’s founding story, attributed partnered study update, and GMP manufacturing goal to About and Platform, replace legacy links, and verify the rendered site and export.
+2026-11-24T16:38:07Z | Identify GVB-2040 as a personalized cancer vaccine in the pipeline, update the snapshot, and verify desktop and mobile layouts.
+2026-11-24T16:41:02Z | Move clinical development progress from About to below the Pipeline table, update the snapshot, and verify desktop and mobile layouts.
+2026-11-24T16:43:37Z | Use first person for the partnered study update on Pipeline and verify the rendered copy.
+2026-11-24T16:48:13Z | Move the supporter section to the homepage, use the five original logos, and verify desktop and mobile layouts and static assets.
+2026-11-24T16:51:39Z | Simplify the Platform diagram to show a viral vector carrying its payload, update the snapshot, and verify desktop and mobile layouts.
+2026-11-24T16:54:51Z | Enlarge the Platform translation graphic, illustrate the three stages, and verify desktop and mobile layouts.
+2026-11-24T16:57:08Z | Replace the Platform assay circles with labeled category bars, update the snapshot, and verify desktop and mobile layouts.
+2026-11-24T16:58:42Z | Vary the illustrative assay bar lengths and remove the caption and assay results sentence, verified on desktop and mobile.
+2026-11-24T17:00:08Z | Remove the requested Pipeline source note and site footer sentence, then verify the rendered pages.
+2026-11-24T17:03:41Z | Retire Research Tools, remove its footer and Contact references, and verify the retired route and static export.
+2026-11-24T17:03:41Z | Move cover letter and résumé instructions into the Careers copy, remove the legacy link, and verify the rendered site.
+2026-11-24T17:09:42Z | Route the Partnering contact button to the Contact page and verify the local destination.
+2026-11-24T17:17:40Z | Replace the Contact inquiry picker with an Ottawa Google Maps embed, stack email and phone links, and verify desktop, mobile, and static export.
+2026-11-24T17:21:53Z | Keep the displayed email address underlined as plain text on Contact, Privacy, and the footer, and verify the layout.
+2026-11-24T17:23:17Z | Pin the Contact map and Google Maps link to Genvira’s Suite 304 office listing and verify the embed configuration.
+2026-11-24T17:31:13Z | Switch Contact to Leaflet with OpenStreetMap tiles and one office marker, then verify live tiles, panning, zooming, and static export.
+2026-11-24T17:53:17Z | Show the office address inside the map and add a button that restores the original center and zoom, verified on desktop and mobile.
+2026-11-24T17:53:17Z | Remove the duplicate tumor illustration caption, update the deployment snapshot, and refresh the saved preview.
+2026-11-24T18:00:34Z | Restore the external Google Maps office link while keeping the OpenStreetMap embed, verified with and without JavaScript.
+2026-11-24T18:00:34Z | Remove the requested schematic paragraph from GVB-2030, verify the rendered page, and refresh the saved preview.
+2026-11-24T18:46:33Z | Remove the Pipeline table caption, update the sanitized snapshot, and verify desktop and mobile layouts.

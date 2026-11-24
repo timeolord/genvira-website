@@ -14,7 +14,7 @@
     <path d="M-41-28c-24-20-40 28-18 48 18 21 42 23 59 42 17-19 41-21 59-42 22-20 6-68-18-48-26 12-56 12-82 0z" stroke="#9698e0" stroke-width="7"/>
     <path d="M-53-15c14-13 27 2 20 13 11 9 5 25-7 28-14-3-24-24-13-41z" fill="#d76099"/>
   </g>
-  <g font-family="Manrope" font-size="14" fill="#c9e5ef" letter-spacing="1.2"><text x="43" y="44">ENLARGED BLADDER WALL SECTION</text><text x="565" y="44" text-anchor="middle" font-size="11" letter-spacing=".8">BLADDER OVERVIEW</text><text x="43" y="528" font-size="11" letter-spacing="1">SIMPLIFIED ANATOMY · NOT TO SCALE</text></g>
+  <g font-family="Manrope" font-size="15.75" fill="#c9e5ef" letter-spacing="1.2"><text x="43" y="44">ENLARGED BLADDER WALL SECTION</text><text x="565" y="44" text-anchor="middle" font-size="12.375" letter-spacing=".8">BLADDER OVERVIEW</text><text x="43" y="528" font-size="12.375" letter-spacing="1">SIMPLIFIED ANATOMY · NOT TO SCALE</text></g>
   <path d="M43 251c134-16 261 18 392 0 77-10 144-9 202-3v24c-60-6-128-7-202 3-131 18-258-16-392 0z" fill="#00afef" fill-opacity=".3"/>
   <path d="M43 275c134-16 261 18 392 0 77-10 144-9 202-3v70c-60-6-128-7-202 3-131 18-258-16-392 0z" fill="#27748a" fill-opacity=".38"/>
   <path d="M43 345c134-16 261 18 392 0 77-10 144-9 202-3v105c-60-6-128-7-202 3-131 18-258-16-392 0z" fill="#3e4095" fill-opacity=".8"/>
@@ -59,7 +59,7 @@
     </g>
   </g>
   <g stroke="#c1dfeb" stroke-width="1.2"><path d="M282 119V84h102"/><path d="m474 264 32-62h96"/><path d="M113 158V84H44"/><path d="M312 377h58l24 15h91"/></g>
-  <g fill="#d7eaf1" font-family="Manrope" font-size="14"><text x="310" y="78">BLADDER TUMOR</text><text x="43" y="78">VIRAL VECTORS</text><text x="400" y="196">Tertiary Lymphoid Structure (TLS)</text><text x="404" y="386">MUSCLE INVASION</text></g>
-  <g fill="#c9dce6" font-family="Manrope" font-size="12"><text x="51" y="242">LINING</text><text x="51" y="306">CONNECTIVE</text><text x="51" y="322">TISSUE</text><text x="51" y="397">MUSCLE</text></g>
-  <g font-family="Manrope" font-size="12"><circle cx="398" cy="477" r="4" fill="#50d5a0"/><text x="411" y="481" fill="#c9dce6">B-cell follicle</text><circle cx="520" cy="477" r="4" fill="#00afef"/><text x="533" y="481" fill="#c9dce6">T-cell region</text></g>
+  <g fill="#d7eaf1" font-family="Manrope" font-size="15.75"><text x="310" y="78">BLADDER TUMOR</text><text x="43" y="78">VIRAL VECTORS</text><text x="400" y="196">Tertiary Lymphoid Structure (TLS)</text><text x="404" y="386">MUSCLE INVASION</text></g>
+  <g fill="#c9dce6" font-family="Manrope" font-size="13.5"><text x="51" y="242">LINING</text><text x="51" y="304">CONNECTIVE</text><text x="51" y="325">TISSUE</text><text x="51" y="397">MUSCLE</text></g>
+  <g font-family="Manrope" font-size="13.5"><circle cx="398" cy="477" r="4" fill="#50d5a0"/><text x="411" y="481" fill="#c9dce6">B-cell follicle</text><circle cx="520" cy="477" r="4" fill="#00afef"/><text x="533" y="481" fill="#c9dce6">T-cell region</text></g>
 </svg>

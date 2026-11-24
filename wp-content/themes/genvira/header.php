@@ -8,7 +8,6 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="prototype-strip">Website prototype <span aria-hidden="true">/</span> Public research and company information <a href="<?php echo esc_url(genvira_url('research')); ?>">Explore the research <span aria-hidden="true">↗</span></a></div>
 <header class="site-header">
     <div class="shell header-inner">
         <a class="brand" href="<?php echo esc_url(genvira_url()); ?>" aria-label="Genvira Biosciences home"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/logo.svg'); ?>" width="216" height="60" alt="Genvira Biosciences"></a>

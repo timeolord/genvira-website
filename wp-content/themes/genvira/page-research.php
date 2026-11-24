@@ -5,6 +5,5 @@
     <p class="filter-status small" aria-live="polite" data-filter-status></p>
     <div class="research-grid research-archive"><?php genvira_latest_research(30); ?></div>
     <p class="empty-results" hidden>No matching updates. Try another search or choose All updates.</p>
-    <p class="source-note">These publications are listed in Genvira’s public research archive. They are not clinical results for GVB-2030. <a href="https://genvira.com/pages/key-publications">View the original bibliography</a>.</p>
 </section>
 <?php get_footer(); ?>

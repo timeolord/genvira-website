@@ -2,7 +2,7 @@
 
 ## Direction
 
-The prototype follows the supplied email: GVB-2030 first, distinct program and platform pages, a readable pipeline, source-linked publications and news, and a secondary research-tools page. Competitor page inventories and retrieval limits are in the two reference review documents beside this file.
+The prototype follows the supplied email: GVB-2030 first, distinct program and platform pages, a readable pipeline, and source-linked publications and news. Competitor page inventories and retrieval limits are in the two reference review documents beside this file.
 
 CG Oncology informed the direct disease and lead-program hierarchy, restrained navigation, separated scientific illustrations, and dated research. Transgene informed the product-first ordering. Nouscom informed the distinction between technology and candidates. Arrakis's toolkit distinction was useful; its brand narrative and animated transitions were not carried over. No competitor imagery, layouts, or copy were copied.
 
@@ -26,11 +26,11 @@ Dark ink and pale backgrounds are supporting colours, not extracted logo colours
 
 ## Content sources
 
-Reviewed 12 November 2026. Facts are paraphrased, and source links are present alongside the relevant website sections.
+Reviewed 12 November 2026. The table records sources for the website copy.
 
 | Content | Primary source |
 | --- | --- |
-| GVB-2030 focus and next development goal | https://genvira.com/pages/about |
+| GVB-2030 focus, next development goal, partnered Phase 1 study, and manufacturing goals | https://genvira.com/pages/about |
 | Program names, modalities, published stages | https://genvira.com/pages/pipeline and its linked pipeline graphic |
 | Vector engineering and assays | https://genvira.com/ |
 | Company origin | https://genvira.com/pages/company-history-1 |
@@ -40,10 +40,9 @@ Reviewed 12 November 2026. Facts are paraphrased, and source links are present a
 | NET-1 and UNC-5B publication | https://doi.org/10.1007/s00249-023-01644-1 |
 | Viral distribution review | https://doi.org/10.2147/OV.S137159 |
 | Melanoma collaboration | https://genvira.com/blogs/news/genvira-and-labskin-receive-1-2-million-2-0-million-uk-canada-collaboration-award-to-advance-immunotherapies-for-malignant-melanoma |
-| Research-tools offering | https://genvira.com/pages/sars-cov-2-spike-vsv-based-pseudovirus |
 | Contact and careers | https://genvira.com/pages/contact and https://genvira.com/pages/careers |
 
-GVB-2030 remains labelled IND-enabling, as in the public pipeline. First-in-human development is described as a goal, with no trial-enrollment claim. The partnered Phase 1 statement on the current company page is not presented as GVB-2030 clinical evidence. No unpublished results, efficacy statistics, clinical milestones, or new intellectual-property details were invented.
+GVB-2030 remains labelled IND-enabling, as in the public pipeline. First-in-human development is described as a goal, with no trial-enrollment claim. The Pipeline page attributes preliminary safety and efficacy signals to Genvira’s account of a partnered Phase 1 study in a separate program. The company overview does not identify the partner, trial registration, or study readout. Platform frames GMP manufacturing as a development goal. No unpublished results, efficacy statistics, clinical milestones, or new intellectual-property details were invented.
 
 Publication cards show only the verified year when an exact publication day was not established. Internal WordPress ordering dates are not presented as exact bibliographic dates. Company news uses the actual announcement date. Publications are not described as clinical results for GVB-2030.
 
@@ -57,7 +56,7 @@ The local privacy page describes only the prototype. Final public privacy and me
 
 ## Verification
 
-The browser checks cover twelve pages at 1440 px desktop and 390 px mobile widths, four research detail pages, responsive overflow, image loading, heading structure, menu open and Escape behavior, platform steps, research type filters, search with no results, contact topic links, a JavaScript-disabled fallback, and a real 404 response. The script and its Nix QA environment are documented in the root README.
+The browser checks cover eleven pages at 1440 px desktop and 390 px mobile widths, four research detail pages, responsive overflow, image loading, heading structure, menu open and Escape behavior, platform steps, research type filters, search with no results, contact details and map layout, a JavaScript-disabled fallback, and a real 404 response. The script and its Nix QA environment are documented in the root README.
 
 The sanitized SQL was imported into a temporary database. Checks confirmed all eleven page summaries, fifteen prototype content markers, the selected theme, four queryable research posts, and creation of a fresh administrator with ID 1. Checksums confirmed that the restore test did not change the working database.
 

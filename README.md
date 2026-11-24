@@ -74,11 +74,11 @@ The `genvira` theme implements the proposed website. With `wp_dev up` running, r
 wp_dev prototype
 ```
 
-This activates the theme, creates twelve pages and four source-linked research updates, selects the homepage, and configures readable URLs. Re-running it refreshes only content marked as belonging to this prototype; back up editorial changes before doing so. Unrelated pages and posts are preserved. It refuses to replace an existing, unmarked page or post with the same slug.
+This activates the theme, creates eleven pages and four source-linked research updates, selects the homepage, and configures readable URLs. Re-running it refreshes only content marked as belonging to this prototype; back up editorial changes before doing so. Unrelated pages and posts are preserved. It refuses to replace an existing, unmarked page or post with the same slug.
 
 Open <http://localhost:8080>. Edit the seeded pages and research posts in WordPress, or change the initial content in `wp-content/themes/genvira/content` and run the setup again. Design styles and behavior live in the theme's `style.css` and `assets/site.js`. To add a research update in WordPress, create a post and assign the Publication or Company news category; those categories populate the research archive and homepage.
 
-The site includes a dedicated GVB-2030 page, an HTML pipeline, a separate engineering platform, Research & Updates, About, Team, Partnering, Contact, Careers, and a separate pseudovirus research-tools page. Team has its own main navigation tab, with the full biographies and portraits from the previous website grouped into leadership, directors, and advisors. Research filters and platform step controls enhance server-rendered content. Contact links open the visitor's email application; no message is submitted by the site.
+The site includes a dedicated GVB-2030 page, an HTML pipeline, a separate engineering platform, Research & Updates, About, Team, Partnering, Contact, and Careers. Team has its own main navigation tab, with the full biographies and portraits from the previous website grouped into leadership, directors, and advisors. Research filters and platform step controls enhance server-rendered content. Contact shows the office address, phone and email on separate lines, and an interactive Leaflet map with OpenStreetMap tiles and a link to the office in Google Maps.
 
 The homepage and GVB-2030 page share a conceptual illustration of muscle-invasive bladder cancer. An outlined enlarged wall section sits beside a whole-bladder overview, with circular viral vectors and a labelled Tertiary Lymphoid Structure (TLS). The TLS has a central B-cell follicle surrounded by T-cells spaced evenly along the ellipse, without shaded backgrounds or dotted boundaries. The muscle layer uses continuous curved fibres rather than a tiled texture, and all four guide labels use consistent spacing. Edit the shared SVG in [tumor-environment.svg](wp-content/themes/genvira/assets/tumor-environment.svg); both pages use the same asset.
 
@@ -139,7 +139,7 @@ wp_dev export /projects/genvira/
 
 For a standalone domain, use `wp_dev export /` and upload the contents of `dist/genvira` at that domain's root. The output directory is always named `genvira`; its placement on the host must match the path chosen for the export. Nested pages use directory indexes such as `pipeline/index.html`.
 
-The export includes the public prototype pages, research and news posts in the Publication or Company news categories, their assets, a missing-page document, and font licenses. The menu, platform controls, research filters, and email links work in the browser. WordPress administration, the database, login, API discovery links, feeds, and private or password protected content are excluded. The demo includes a `noindex` directive.
+The export includes the public prototype pages, research and news posts in the Publication or Company news categories, their assets, a missing-page document, and third-party licenses. The menu, platform controls, research filters, and email links work in the browser. WordPress administration, the database, login, API discovery links, feeds, and private or password protected content are excluded. The demo includes a `noindex` directive.
 
 Edit the site in WordPress and export again when you want to refresh the demonstration. Generated files are ignored by Git. The exporter replaces its own previous `dist/genvira` output, so keep manual changes in the WordPress theme or content instead. A link to a local page outside the exported prototype causes a build error rather than silently producing a broken link.
 
@@ -256,7 +256,7 @@ Keep Chromium running. In another terminal with the same QA environment, run:
 node scripts/check-prototype.mjs
 ```
 
-The checks cover all twelve prototype pages at desktop and mobile widths, the four research articles, menu controls, platform steps, research filtering and search, contact links, the no-JavaScript fallback, and the missing-page response. Screenshots are saved to `/tmp/genvira-prototype-qa`. Stop Chromium when finished.
+The checks cover all eleven prototype pages at desktop and mobile widths, the four research articles, menu controls, platform steps, research filtering and search, contact details and map layout, the no-JavaScript fallback, and the missing-page response. Screenshots are saved to `/tmp/genvira-prototype-qa`. Stop Chromium when finished.
 
 ## Troubleshooting
 

@@ -70,11 +70,3 @@ if (research_controls) {
     search.addEventListener('input', filter_research);
     filter_research();
 }
-
-const contact_topic = document.querySelector('[data-contact-topic]');
-const email_link = document.querySelector('[data-email-link]');
-if (contact_topic && email_link) {
-    contact_topic.addEventListener('change', () => {
-        email_link.href = `mailto:info@genvira.com?subject=${encodeURIComponent(contact_topic.value)}`;
-    });
-}

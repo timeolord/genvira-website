@@ -197,6 +197,7 @@ try {
     foreach (['OFL.txt', 'FONT-LICENSE.md'] as $license) {
         genvira_export_write($work . '/licenses/' . $license, file_get_contents(get_theme_root() . '/genvira/assets/' . $license));
     }
+    genvira_export_write($work . '/licenses/LEAFLET.txt', file_get_contents(get_theme_root() . '/genvira/assets/leaflet/LICENSE'));
     $manifest = ['format' => 'genvira-static-v1', 'base_path' => $base, 'pages' => array_keys($state['pages']), 'assets' => array_keys($state['assets'])];
     genvira_export_write($work . '/export-manifest.json', wp_json_encode($manifest, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . "\n");
     $zip = new ZipArchive();

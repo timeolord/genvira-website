@@ -58,7 +58,7 @@ foreach ($manifest['assets'] as $asset) {
         throw new RuntimeException('An exported asset is missing.');
     }
 }
-if (!is_file($root . '/licenses/OFL.txt') || !is_file($root . '/404.html') || !is_file($root . '/index.html')) {
+if (!is_file($root . '/licenses/OFL.txt') || !is_file($root . '/licenses/LEAFLET.txt') || !is_file($root . '/404.html') || !is_file($root . '/index.html')) {
     throw new RuntimeException('The export is missing required files.');
 }
 echo 'Verified ' . $count . ' HTML documents, all local links, assets, and deployment path ' . $base . PHP_EOL;

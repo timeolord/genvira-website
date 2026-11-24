@@ -44,7 +44,7 @@ async function navigate(path) {
     await evaluate('document.fonts.ready.then(() => true)');
     await new Promise(resolve => setTimeout(resolve, 100));
     await evaluate(`(async () => {
-        for (const image of document.images) {
+        for (const image of document.querySelectorAll('img:not(.leaflet-tile)')) {
             if (image.complete) continue;
             image.scrollIntoView();
             await new Promise(resolve => {
@@ -57,7 +57,35 @@ async function navigate(path) {
     })()`);
     assert(await evaluate("document.querySelectorAll('h1').length === 1"), `expected one h1 at ${path}`);
     assert(!await evaluate("/Warning:|Fatal error:/.test(document.body.innerText)"), `php warning at ${path}`);
-    assert(await evaluate("[...document.images].every(image => image.complete && image.naturalWidth > 0)"), `missing image at ${path}`);
+    assert(await evaluate("[...document.querySelectorAll('img:not(.leaflet-tile)')].every(image => image.complete && image.naturalWidth > 0)"), `missing image at ${path}`);
+}
+async function check_contact_layout(mobile) {
+    assert(await evaluate(`(() => {
+        const email = document.querySelector('.contact-details span.email-address');
+        const email_box = email.getBoundingClientRect();
+        const phone = document.querySelector('.contact-details a[href^="tel:"]').getBoundingClientRect();
+        const map = document.querySelector('.contact-map');
+        const contact = document.querySelector('.contact-layout > div').getBoundingClientRect();
+        const frame = map.getBoundingClientRect();
+        return email.textContent === 'info@genvira.com' && getComputedStyle(email).textDecorationLine === 'underline' &&
+            email_box.left === phone.left && email_box.bottom < phone.top &&
+            map.dataset.latitude === '45.337208' && map.dataset.longitude === '-75.685013' &&
+            map.querySelectorAll('.leaflet-marker-icon').length === 1 &&
+            !!map.querySelector('.leaflet-control-attribution a[href="https://www.openstreetmap.org/copyright"]') &&
+            frame.width > 0 && frame.height >= 320 && frame.right <= innerWidth &&
+            (${mobile} ? frame.top > contact.bottom : frame.left > contact.right);
+    })()`), 'contact details and map layout are incorrect');
+    await evaluate("document.querySelector('.office-pin').click()");
+    assert(await evaluate("document.querySelector('.leaflet-popup-content').textContent.includes('Suite 304')"), 'office pin did not open the address');
+    assert(await evaluate(`(() => {
+        const panel_address = document.querySelector('.office-map-card address');
+        const contact_address = document.querySelector('.contact-details address');
+        if (!panel_address || panel_address.textContent !== contact_address.textContent) return false;
+
+        map.setView([45.34, -75.68], 17, { animate: false });
+        document.querySelector('.office-map-reset').click();
+        return map.getCenter().equals([45.337208, -75.685013]) && map.getZoom() === 16;
+    })()`), 'map address or back-to-office control did not work');
 }
 async function screenshot(name) {
     const result = await command('Page.captureScreenshot', { format: 'png' });
@@ -73,7 +101,7 @@ try {
     await command('Emulation.setScriptExecutionDisabled', { value: false });
     await command('Runtime.enable');
     await viewport(1440, 1100);
-    const paths = ['/', '/gvb-2030/', '/pipeline/', '/platform/', '/research/', '/about/', '/team/', '/partnering/', '/contact/', '/research-tools/', '/careers/', '/privacy/'];
+    const paths = ['/', '/gvb-2030/', '/pipeline/', '/platform/', '/research/', '/about/', '/team/', '/partnering/', '/contact/', '/careers/', '/privacy/'];
     for (const path of paths) {
         const response = await fetch(`${origin}${path}`);
         assert(response.status === 200, `${path} returned ${response.status}`);
@@ -108,8 +136,7 @@ try {
     const detail_links = (await evaluate("[...document.querySelectorAll('.research-archive h3 a')].map(link => new URL(link.href).pathname)")).map(path => path.slice(path_prefix.length));
     for (const path of detail_links) await navigate(path);
     await navigate('/contact/');
-    await evaluate("document.querySelector('[data-contact-topic]').value='Investor inquiry'; document.querySelector('[data-contact-topic]').dispatchEvent(new Event('change'))");
-    assert(await evaluate("document.querySelector('[data-email-link]').href.includes('Investor%20inquiry')"), 'contact topic link failed');
+    await check_contact_layout(false);
     await viewport(390, 844);
     for (const path of paths) {
         await navigate(path);
@@ -121,6 +148,7 @@ try {
             await evaluate("document.dispatchEvent(new KeyboardEvent('keydown', {key:'Escape',bubbles:true}))");
             assert(await evaluate("document.querySelector('.menu-toggle').getAttribute('aria-expanded') === 'false'"), 'mobile menu failed to close');
         }
+        if (path === '/contact/') await check_contact_layout(true);
         if (path === '/team/') await screenshot('team-mobile');
         if (path === '/pipeline/') {
             await evaluate("document.querySelector('.pipeline-table').scrollIntoView()");
@@ -128,6 +156,8 @@ try {
         }
     }
     await command('Emulation.setScriptExecutionDisabled', { value: true });
+    await navigate('/contact/');
+    assert(await evaluate("document.querySelector('.contact-map').hidden && !!document.querySelector('.contact-details a[href^=\"https://www.google.com/maps/search/\"]')"), 'Contact must retain an external map link without JavaScript');
     await navigate('/platform/');
     assert(await evaluate("[...document.querySelectorAll('[data-panel]')].every(panel => !panel.hidden)"), 'platform content requires javascript');
     await navigate('/team/');
@@ -136,8 +166,9 @@ try {
     assert(await evaluate("document.querySelectorAll('.research-entry:not([hidden])').length === 4"), 'research content requires javascript');
     await command('Emulation.setScriptExecutionDisabled', { value: false });
     assert((await fetch(`${origin}/missing-prototype-page/`)).status === 404, 'missing page did not return 404');
+    assert((await fetch(`${origin}/research-tools/`)).status === 404, 'retired research tools page should return 404');
     assert(exceptions.length === 0, `browser exceptions: ${exceptions.join(', ')}`);
-    console.log(`passed: ${paths.length} pages at desktop and mobile widths, ${detail_links.length} article pages, platform controls, research filters/search, contact links, mobile menu, no javascript fallback, and 404`);
+    console.log(`passed: ${paths.length} pages at desktop and mobile widths, ${detail_links.length} article pages, platform controls, research filters/search, contact details and map layout, mobile menu, no javascript fallback, and 404`);
     console.log(`screenshots: ${output_dir}`);
 } finally {
     await command('Emulation.setScriptExecutionDisabled', { value: false });

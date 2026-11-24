@@ -36,9 +36,8 @@ $pages = [
     'team' => ['Our team', 'THE PEOPLE BEHIND GENVIRA', 'Meet our leadership, board of directors, and scientific and strategic advisors.'],
     'partnering' => ['Partnering', 'ADVANCING THROUGH COLLABORATION', 'Connect with Genvira about therapeutic programs, scientific collaboration, and strategic opportunities.'],
     'contact' => ['Contact us', 'LET’S TALK', 'Reach the Genvira team in Ottawa, Canada.'],
-    'research-tools' => ['Research tools', 'TOOLS FOR RESEARCH', 'A separate research offering built on our viral-vector expertise.'],
     'careers' => ['Careers', 'BUILD WITH US', 'Help bring viral engineering and therapeutic research together.'],
-    'privacy' => ['Prototype privacy information', 'LOCAL WEBSITE PROTOTYPE', 'How this prototype handles contact links and local WordPress access.'],
+    'privacy' => ['Privacy', 'WEBSITE PRIVACY', 'Information about email contact and links to external websites.'],
 ];
 
 $administrators = get_users(['role' => 'administrator', 'number' => 1, 'fields' => 'ID']);
@@ -60,15 +59,31 @@ foreach ($pages as $slug => [$title, $eyebrow, $summary]) {
 $articles = [
     [
         'slug' => 'melanoma-research-collaboration', 'category' => 'news', 'label' => 'Company news',
-        'title' => 'A UK–Canada collaboration to advance melanoma research', 'date' => '2025-08-01 12:00:00', 'date_label' => '1 Aug 2025',
+        'title' => 'Genvira and Labskin Receive £1.2 Million ($2.0 Million) UK–Canada Collaboration Award to Advance Immunotherapies for Malignant Melanoma', 'date' => '2025-08-01 12:00:00', 'date_label' => 'August 1, 2025',
         'excerpt' => 'Genvira, Labskin, and NRC announce a collaboration supported by up to £1.2 million ($2.0 million) in funding.',
-        'content' => '<p>Genvira, Labskin Limited, and the National Research Council of Canada announced a collaborative project to develop immunotherapy approaches for malignant melanoma.</p><p>The project is supported by advisory services and up to £1.2 million ($2.0 million) through the Canada–UK Biomanufacturing of Biologics and Advanced Therapies program.</p><p>Support is provided through Innovate UK in the United Kingdom and NRC programs in Canada. The announcement describes a research collaboration, not clinical efficacy results.</p><p><a class="button" href="https://genvira.com/blogs/news/genvira-and-labskin-receive-1-2-million-2-0-million-uk-canada-collaboration-award-to-advance-immunotherapies-for-malignant-melanoma">Read the original announcement ↗</a></p>',
+        'content' => <<<'ANNOUNCEMENT'
+<p>Genvira Biosciences Inc. (“Genvira”), a Canadian innovator in next-generation viral vectors, Labskin Limited (“Labskin”), a leader in 3D in vitro human skin models, and the National Research Council of Canada (NRC) are pleased to announce the launch of a collaborative project to develop novel immunotherapies for malignant melanoma. The collaboration is receiving advisory services and up to £1.2 million ($2.0 million) in funding through the Canada–UK Biomanufacturing of Biologics and Advanced Therapies program. UK participants are supported by Innovate UK, part of UK Research and Innovation (UKRI), while in Canada, support for the project is offered through the NRC Industrial Research Assistance Program (NRC IRAP) and the NRC Collaborative Science and Technology Innovation Program (NRC CSTIP).</p>
+<p>Malignant melanoma continues to be a serious global health concern, with an estimated 330,000 new cases and 60,000 deaths each year. This international partnership aims to address the unmet need by developing cutting-edge cancer vaccines and optimizing targeted antigen delivery systems.</p>
+<p>As part of the collaboration, Labskin will utilize its expertise in advanced disease modeling to develop a novel 3D human skin model of melanoma, enabling in vitro testing of vaccine candidates. Genvira will contribute its proprietary viral vector and gene delivery platforms, while the NRC will support the integration of mRNA technologies to engineer innovative, targeted immunotherapies tailored to melanoma.</p>
+<p>Dr. Nicola Kingswell, Scientific Director at Labskin Limited, stated:</p>
+<blockquote><p>“We’re extremely grateful to Innovate UK for supporting this exciting project. It represents a step-change in the treatment of malignant melanoma, which will benefit many patients worldwide. This partnership will not only produce and validate new immunotherapies, but also establish a framework for developing future cancer therapeutics.”</p></blockquote>
+<p>Dr. Jiahu Wang, President of Genvira Biosciences, added:</p>
+<blockquote><p>“We’d like to thank NRC IRAP for their support, and the NRC for their collaborative role. This partnership enables us to rapidly translate our viral vector technologies into clinical applications for melanoma and lays the groundwork for broader advances in cancer immunotherapy.”</p></blockquote>
+<p>The project brings together unique and complementary strengths in 3D tissue engineering, gene and viral therapy, mRNA technology, and advanced biomanufacturing. In addition to therapeutic development, the consortium will focus on scalable production processes, quality control assays, and robust technologies to enable rapid response to future healthcare challenges.</p>
+<p>This initiative highlights the importance of international collaboration in driving innovation and accelerating the development of advanced biologics and therapies.</p>
+<h2>About Labskin Limited</h2>
+<p>Labskin Limited is a UK-based biotechnology company specializing in full-thickness human skin models for pharmaceutical, cosmetic, and clinical research. Its advanced 3D platforms offer realistic testing environments for evaluating treatments in vitro.</p>
+<p>To learn more: <a href="https://www.labskin.co.uk">www.labskin.co.uk</a></p>
+<h2>About Genvira Biosciences Inc.</h2>
+<p>Genvira Bioscience is a Canadian biotechnology company focused on designing and developing viral vector platforms for use in gene therapies, cancer vaccines, and regenerative medicine.</p>
+<p>To learn more: <a href="https://www.genvira.com">www.genvira.com</a></p>
+ANNOUNCEMENT,
     ],
     [
         'slug' => 'ox40l-vaccinia-antitumor-immunity', 'category' => 'publication', 'label' => 'Publication',
         'title' => 'OX40L-expressing recombinant modified vaccinia virus Ankara induces potent antitumor immunity via reprogramming Tregs', 'date' => '2023-08-01 12:00:00', 'date_label' => '2023',
         'excerpt' => 'Journal of Experimental Medicine · Research on an engineered vaccinia virus and antitumor immunity.',
-        'content' => '<p class="publication-meta">Yang N, Wang Y, Liu S, et al.<br>Journal of Experimental Medicine. 2023;220(8):e20221166.<br>DOI: 10.1084/jem.20221166</p><p>This paper is listed in Genvira’s public bibliography. It examines an OX40L-expressing modified vaccinia virus Ankara and antitumor immune responses.</p><p>This publication is not a clinical report on GVB-2030. Consult the original paper for its experimental methods, findings, and limitations.</p><p><a class="button" href="https://doi.org/10.1084/jem.20221166">Read the paper ↗</a></p><p><a href="https://pubmed.ncbi.nlm.nih.gov/37145142/">View on PubMed</a> · <a href="https://genvira.com/pages/key-publications">Genvira bibliography</a></p>',
+        'content' => '<p class="publication-meta">Yang N, Wang Y, Liu S, et al.<br>Journal of Experimental Medicine. 2023;220(8):e20221166.<br>DOI: 10.1084/jem.20221166</p><p>It examines an OX40L-expressing modified vaccinia virus Ankara and antitumor immune responses.</p><p>This publication is not a clinical report on GVB-2030. Consult the original paper for its experimental methods, findings, and limitations.</p><p><a class="button" href="https://doi.org/10.1084/jem.20221166">Read the paper ↗</a></p><p><a href="https://pubmed.ncbi.nlm.nih.gov/37145142/">View on PubMed</a></p>',
     ],
     [
         'slug' => 'net1-unc5b-characterization', 'category' => 'publication', 'label' => 'Publication',

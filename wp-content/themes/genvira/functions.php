@@ -12,6 +12,13 @@ add_action('after_setup_theme', 'genvira_setup');
 function genvira_assets() {
     wp_enqueue_style('genvira', get_stylesheet_uri(), [], filemtime(get_template_directory() . '/style.css'));
     wp_enqueue_script('genvira', get_template_directory_uri() . '/assets/site.js', [], filemtime(get_template_directory() . '/assets/site.js'), ['in_footer' => true, 'strategy' => 'defer']);
+    if (is_page('contact')) {
+        $assets_url = get_template_directory_uri() . '/assets/';
+        $script_options = ['in_footer' => true, 'strategy' => 'defer'];
+        wp_enqueue_style('genvira-leaflet', $assets_url . 'leaflet/leaflet.css', [], '1.9.4');
+        wp_enqueue_script('genvira-leaflet', $assets_url . 'leaflet/leaflet.js', [], '1.9.4', $script_options);
+        wp_enqueue_script('genvira-contact-map', $assets_url . 'contact-map.js', ['genvira-leaflet'], filemtime(get_template_directory() . '/assets/contact-map.js'), $script_options);
+    }
 }
 add_action('wp_enqueue_scripts', 'genvira_assets');
 

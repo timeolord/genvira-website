@@ -41,7 +41,7 @@ Representative [program data news](https://arrakistx.com/press-release/arrakis-t
 
 ## Decisions for the prototype
 
-Lead with GVB-2030 and use separate pages for program details, pipeline, and platform. Provide a smaller publication and news section with dates and sources. Keep the SARS-CoV-2 pseudovirus offering on a secondary research tools page. Use the supplied Genvira branding rather than either competitor's assets or palette.
+Lead with GVB-2030 and use separate pages for program details, pipeline, and platform. Provide a smaller publication and news section with dates and sources. Use the supplied Genvira branding rather than either competitor's assets or palette.
 
 Follow the email's preference for immediate, selectable text and useful scientific diagrams. Essential content should be visible without waiting for animations and available without video or audio. Treat clinical stage, trial status, and performance claims as company content requiring verification, never as decorative placeholders.
 
