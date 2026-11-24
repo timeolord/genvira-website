@@ -37,7 +37,7 @@ $pages = [
     'partnering' => ['Partnering', 'ADVANCING THROUGH COLLABORATION', 'Connect with Genvira about therapeutic programs, scientific collaboration, and strategic opportunities.'],
     'contact' => ['Contact us', 'LET’S TALK', 'Reach the Genvira team in Ottawa, Canada.'],
     'careers' => ['Careers', 'BUILD WITH US', 'Help bring viral engineering and therapeutic research together.'],
-    'privacy' => ['Privacy', 'WEBSITE PRIVACY', 'Information about email contact and links to external websites.'],
+    'privacy' => ['Privacy', 'GENVIRA BIOSCIENCES', 'How we handle information when you visit our website or contact us.'],
 ];
 
 $administrators = get_users(['role' => 'administrator', 'number' => 1, 'fields' => 'ID']);
