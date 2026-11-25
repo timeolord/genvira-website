@@ -57,3 +57,5 @@ earlier prototype entries are reconstructed from git commit timestamps in utc
 2026-11-24T18:54:43Z | Preserve word spacing around manual heading and text breaks, verify the mobile homepage wording, and refresh the mobile preview.
 2026-11-24T18:56:31Z | Remove the homepage illustration caption, update the sanitized snapshot, and refresh desktop and mobile previews.
 2026-11-24T19:00:59Z | Rewrite the website privacy notice around hosting, maps, direct inquiries, and privacy requests, then verify the rendered page.
+2026-11-25T15:03:22Z | Move seeded research updates into standalone HTML files and a metadata index, document WordPress publishing, and verify repeat imports and static export with additional posts.
+2026-11-25T15:07:44Z | Use the supplied abstracts verbatim in the three publication posts and verify the text and citations in WordPress and the static export.

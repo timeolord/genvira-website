@@ -125,10 +125,14 @@ try {
     await evaluate("document.querySelector('[data-platform]').scrollIntoView()");
     await screenshot('platform-desktop');
     await navigate('/research/');
-    await evaluate("document.querySelector('[data-filter=news]').click()");
-    assert(await evaluate("document.querySelectorAll('.research-archive .research-entry:not([hidden])').length === 1"), 'news filter failed');
-    await evaluate("document.querySelector('[data-filter=publication]').click()");
-    assert(await evaluate("document.querySelectorAll('.research-archive .research-entry:not([hidden])').length === 3"), 'publication filter failed');
+    for (const category of ['news', 'publication']) {
+        await evaluate(`document.querySelector('[data-filter=${category}]').click()`);
+        assert(await evaluate(`(() => {
+            const entries = [...document.querySelectorAll('.research-archive .research-entry')];
+            return entries.some(entry => entry.dataset.kind === '${category}') &&
+                entries.every(entry => entry.hidden === (entry.dataset.kind !== '${category}'));
+        })()`), `${category} filter failed`);
+    }
     await evaluate("document.querySelector('#research-search').value='no matching publication'; document.querySelector('#research-search').dispatchEvent(new Event('input'))");
     assert(await evaluate("!document.querySelector('.empty-results').hidden"), 'empty research search failed');
     await evaluate("document.querySelector('#research-search').value=''; document.querySelector('[data-filter=all]').click()");
@@ -163,7 +167,7 @@ try {
     await navigate('/team/');
     assert(await evaluate("[...document.querySelectorAll('.team-profile-bio')].every(bio => bio.getBoundingClientRect().height > 0)"), 'team bios require javascript');
     await navigate('/research/');
-    assert(await evaluate("document.querySelectorAll('.research-entry:not([hidden])').length === 4"), 'research content requires javascript');
+    assert(await evaluate("document.querySelectorAll('.research-entry:not([hidden])').length") === detail_links.length, 'research content requires javascript');
     await command('Emulation.setScriptExecutionDisabled', { value: false });
     assert((await fetch(`${origin}/missing-prototype-page/`)).status === 404, 'missing page did not return 404');
     assert((await fetch(`${origin}/research-tools/`)).status === 404, 'retired research tools page should return 404');

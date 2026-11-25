@@ -21,10 +21,58 @@ function genvira_seed_record($record) {
     return $id;
 }
 
+function genvira_seed_links($content) {
+    $content = preg_replace_callback('/\{\{url:([a-z0-9-]*)\}\}/', fn($match) => esc_url(home_url('/' . ($match[1] ? $match[1] . '/' : ''))), $content);
+    return preg_replace_callback('/\{\{asset:([a-z0-9.-]+)\}\}/', fn($match) => esc_url(content_url('/themes/genvira/assets/' . $match[1])), $content);
+}
+
+function genvira_seed_articles($directory, $categories) {
+    $index = $directory . '/index.json';
+    $json = is_readable($index) ? file_get_contents($index) : false;
+    if ($json === false) {
+        WP_CLI::error('Could not read the research updates index.');
+    }
+    try {
+        $articles = json_decode($json, true, 512, JSON_THROW_ON_ERROR);
+    } catch (JsonException $error) {
+        WP_CLI::error('Invalid research updates index: ' . $error->getMessage());
+    }
+    if (!is_array($articles)) {
+        WP_CLI::error('The research updates index must be keyed by post slug.');
+    }
+    foreach ($articles as $slug => $article) {
+        if (!is_string($slug) || !preg_match('/^[a-z0-9]+(?:-[a-z0-9]+)*$/D', $slug) || !is_array($article)) {
+            WP_CLI::error('Invalid research update slug or metadata: ' . $slug);
+        }
+        foreach (['title', 'category', 'date', 'excerpt'] as $field) {
+            if (!is_string($article[$field] ?? null) || trim($article[$field]) === '') {
+                WP_CLI::error('Missing or invalid ' . $field . ' for research update ' . $slug);
+            }
+        }
+        if (!isset($categories[$article['category']])) {
+            WP_CLI::error('Invalid category for research update ' . $slug);
+        }
+        $date = DateTimeImmutable::createFromFormat('Y-m-d H:i:s', $article['date']);
+        if (!$date || $date->format('Y-m-d H:i:s') !== $article['date'] || !is_string($article['date_label'] ?? '')) {
+            WP_CLI::error('Invalid date or date label for research update ' . $slug);
+        }
+        $file = $directory . '/' . $slug . '.html';
+        $content = is_readable($file) ? file_get_contents($file) : false;
+        if ($content === false || trim($content) === '') {
+            WP_CLI::error('Missing or empty article body: ' . $file);
+        }
+        $articles[$slug]['content'] = genvira_seed_links(trim($content));
+    }
+    return $articles;
+}
+
 $theme_dir = get_theme_root() . '/genvira';
 if (!is_file($theme_dir . '/style.css')) {
     WP_CLI::error('The genvira theme is missing from wp-content/themes.');
 }
+
+$categories = ['news' => 'Company news', 'publication' => 'Publication'];
+$articles = genvira_seed_articles($theme_dir . '/content/updates', $categories);
 
 $pages = [
     'home' => ['Home', 'OUR LEAD PROGRAM', 'Genvira is advancing GVB-2030, an investigational viral-vector therapeutic program for bladder cancer.'],
@@ -47,8 +95,7 @@ kses_remove_filters();
 foreach ($pages as $slug => [$title, $eyebrow, $summary]) {
     $content_file = $theme_dir . '/content/' . $slug . '.html';
     $content = is_file($content_file) ? file_get_contents($content_file) : '';
-    $content = preg_replace_callback('/\{\{url:([a-z0-9-]*)\}\}/', fn($match) => esc_url(home_url('/' . ($match[1] ? $match[1] . '/' : ''))), $content);
-    $content = preg_replace_callback('/\{\{asset:([a-z0-9.-]+)\}\}/', fn($match) => esc_url(content_url('/themes/genvira/assets/' . $match[1])), $content);
+    $content = genvira_seed_links($content);
     $page_ids[$slug] = genvira_seed_record([
         'post_type' => 'page', 'post_name' => $slug, 'post_title' => $title,
         'post_content' => $content, 'post_author' => $author,
@@ -56,63 +103,20 @@ foreach ($pages as $slug => [$title, $eyebrow, $summary]) {
     ]);
 }
 
-$articles = [
-    [
-        'slug' => 'melanoma-research-collaboration', 'category' => 'news', 'label' => 'Company news',
-        'title' => 'Genvira and Labskin Receive £1.2 Million ($2.0 Million) UK–Canada Collaboration Award to Advance Immunotherapies for Malignant Melanoma', 'date' => '2025-08-01 12:00:00', 'date_label' => 'August 1, 2025',
-        'excerpt' => 'Genvira, Labskin, and NRC announce a collaboration supported by up to £1.2 million ($2.0 million) in funding.',
-        'content' => <<<'ANNOUNCEMENT'
-<p>Genvira Biosciences Inc. (“Genvira”), a Canadian innovator in next-generation viral vectors, Labskin Limited (“Labskin”), a leader in 3D in vitro human skin models, and the National Research Council of Canada (NRC) are pleased to announce the launch of a collaborative project to develop novel immunotherapies for malignant melanoma. The collaboration is receiving advisory services and up to £1.2 million ($2.0 million) in funding through the Canada–UK Biomanufacturing of Biologics and Advanced Therapies program. UK participants are supported by Innovate UK, part of UK Research and Innovation (UKRI), while in Canada, support for the project is offered through the NRC Industrial Research Assistance Program (NRC IRAP) and the NRC Collaborative Science and Technology Innovation Program (NRC CSTIP).</p>
-<p>Malignant melanoma continues to be a serious global health concern, with an estimated 330,000 new cases and 60,000 deaths each year. This international partnership aims to address the unmet need by developing cutting-edge cancer vaccines and optimizing targeted antigen delivery systems.</p>
-<p>As part of the collaboration, Labskin will utilize its expertise in advanced disease modeling to develop a novel 3D human skin model of melanoma, enabling in vitro testing of vaccine candidates. Genvira will contribute its proprietary viral vector and gene delivery platforms, while the NRC will support the integration of mRNA technologies to engineer innovative, targeted immunotherapies tailored to melanoma.</p>
-<p>Dr. Nicola Kingswell, Scientific Director at Labskin Limited, stated:</p>
-<blockquote><p>“We’re extremely grateful to Innovate UK for supporting this exciting project. It represents a step-change in the treatment of malignant melanoma, which will benefit many patients worldwide. This partnership will not only produce and validate new immunotherapies, but also establish a framework for developing future cancer therapeutics.”</p></blockquote>
-<p>Dr. Jiahu Wang, President of Genvira Biosciences, added:</p>
-<blockquote><p>“We’d like to thank NRC IRAP for their support, and the NRC for their collaborative role. This partnership enables us to rapidly translate our viral vector technologies into clinical applications for melanoma and lays the groundwork for broader advances in cancer immunotherapy.”</p></blockquote>
-<p>The project brings together unique and complementary strengths in 3D tissue engineering, gene and viral therapy, mRNA technology, and advanced biomanufacturing. In addition to therapeutic development, the consortium will focus on scalable production processes, quality control assays, and robust technologies to enable rapid response to future healthcare challenges.</p>
-<p>This initiative highlights the importance of international collaboration in driving innovation and accelerating the development of advanced biologics and therapies.</p>
-<h2>About Labskin Limited</h2>
-<p>Labskin Limited is a UK-based biotechnology company specializing in full-thickness human skin models for pharmaceutical, cosmetic, and clinical research. Its advanced 3D platforms offer realistic testing environments for evaluating treatments in vitro.</p>
-<p>To learn more: <a href="https://www.labskin.co.uk">www.labskin.co.uk</a></p>
-<h2>About Genvira Biosciences Inc.</h2>
-<p>Genvira Bioscience is a Canadian biotechnology company focused on designing and developing viral vector platforms for use in gene therapies, cancer vaccines, and regenerative medicine.</p>
-<p>To learn more: <a href="https://www.genvira.com">www.genvira.com</a></p>
-ANNOUNCEMENT,
-    ],
-    [
-        'slug' => 'ox40l-vaccinia-antitumor-immunity', 'category' => 'publication', 'label' => 'Publication',
-        'title' => 'OX40L-expressing recombinant modified vaccinia virus Ankara induces potent antitumor immunity via reprogramming Tregs', 'date' => '2023-08-01 12:00:00', 'date_label' => '2023',
-        'excerpt' => 'Journal of Experimental Medicine · Research on an engineered vaccinia virus and antitumor immunity.',
-        'content' => '<p class="publication-meta">Yang N, Wang Y, Liu S, et al.<br>Journal of Experimental Medicine. 2023;220(8):e20221166.<br>DOI: 10.1084/jem.20221166</p><p>It examines an OX40L-expressing modified vaccinia virus Ankara and antitumor immune responses.</p><p>This publication is not a clinical report on GVB-2030. Consult the original paper for its experimental methods, findings, and limitations.</p><p><a class="button" href="https://doi.org/10.1084/jem.20221166">Read the paper ↗</a></p><p><a href="https://pubmed.ncbi.nlm.nih.gov/37145142/">View on PubMed</a></p>',
-    ],
-    [
-        'slug' => 'net1-unc5b-characterization', 'category' => 'publication', 'label' => 'Publication',
-        'title' => 'Investigation of dynamic solution interactions between NET-1 and UNC-5B by multi-wavelength analytical ultracentrifugation', 'date' => '2023-07-01 12:00:00', 'date_label' => '2023',
-        'excerpt' => 'European Biophysics Journal · Biophysical characterization of protein interactions.',
-        'content' => '<p class="publication-meta">Gabir H, Gupta M, Meier M, et al.<br>European Biophysics Journal. 2023;52:473–481.<br>DOI: 10.1007/s00249-023-01644-1</p><p>This study examines the solution behavior and interactions of NET-1 and its receptor UNC-5B using analytical ultracentrifugation. Genvira appears among the author affiliations.</p><p>It is included as research from Genvira’s public bibliography, not evidence of clinical benefit for a therapeutic candidate.</p><p><a class="button" href="https://doi.org/10.1007/s00249-023-01644-1">Read the paper ↗</a></p><p><a href="https://pubmed.ncbi.nlm.nih.gov/36939874/">View on PubMed</a></p>',
-    ],
-    [
-        'slug' => 'imaging-oncolytic-virus-distribution', 'category' => 'publication', 'label' => 'Publication',
-        'title' => 'The importance of imaging strategies for pre-clinical and clinical in vivo distribution of oncolytic viruses', 'date' => '2018-01-01 12:00:00', 'date_label' => '2018',
-        'excerpt' => 'Oncolytic Virotherapy · A review of imaging approaches for studying viral distribution.',
-        'content' => '<p class="publication-meta">Pelin A, Wang J, Bell J, Le Boeuf F.<br>Oncolytic Virotherapy. 2018;7:25–35.<br>DOI: 10.2147/OV.S137159</p><p>This review discusses imaging strategies for understanding how oncolytic viruses distribute in preclinical and clinical settings.</p><p>The paper is included in Genvira’s public bibliography. It is a scientific review, not a clinical update for GVB-2030.</p><p><a class="button" href="https://doi.org/10.2147/OV.S137159">Read the paper ↗</a></p><p><a href="https://pubmed.ncbi.nlm.nih.gov/29637059/">View on PubMed</a></p>',
-    ],
-];
-
-foreach ($articles as $article) {
+foreach ($articles as $slug => $article) {
     $category = term_exists($article['category'], 'category');
     if (!$category) {
-        $category = wp_insert_term($article['label'], 'category', ['slug' => $article['category']]);
+        $category = wp_insert_term($categories[$article['category']], 'category', ['slug' => $article['category']]);
     }
     if (is_wp_error($category)) {
         WP_CLI::error($category->get_error_message());
     }
     genvira_seed_record([
-        'post_type' => 'post', 'post_name' => $article['slug'], 'post_title' => $article['title'],
+        'post_type' => 'post', 'post_name' => $slug, 'post_title' => $article['title'],
         'post_content' => $article['content'], 'post_excerpt' => $article['excerpt'],
         'post_author' => $author, 'post_date' => $article['date'],
         'post_category' => [(int) $category['term_id']],
-        'meta_input' => ['_genvira_date_label' => $article['date_label']],
+        'meta_input' => ['_genvira_date_label' => $article['date_label'] ?? ''],
     ]);
 }
 kses_init_filters();

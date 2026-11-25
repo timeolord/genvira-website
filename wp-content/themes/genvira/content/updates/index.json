@@ -1,0 +1,30 @@
+{
+  "melanoma-research-collaboration": {
+    "title": "Genvira and Labskin Receive £1.2 Million ($2.0 Million) UK–Canada Collaboration Award to Advance Immunotherapies for Malignant Melanoma",
+    "category": "news",
+    "date": "2025-08-01 12:00:00",
+    "date_label": "August 1, 2025",
+    "excerpt": "Genvira, Labskin, and NRC announce a collaboration supported by up to £1.2 million ($2.0 million) in funding."
+  },
+  "ox40l-vaccinia-antitumor-immunity": {
+    "title": "OX40L-expressing recombinant modified vaccinia virus Ankara induces potent antitumor immunity via reprogramming Tregs",
+    "category": "publication",
+    "date": "2023-08-01 12:00:00",
+    "date_label": "2023",
+    "excerpt": "Journal of Experimental Medicine · Research on an engineered vaccinia virus and antitumor immunity."
+  },
+  "net1-unc5b-characterization": {
+    "title": "Investigation of dynamic solution interactions between NET-1 and UNC-5B by multi-wavelength analytical ultracentrifugation",
+    "category": "publication",
+    "date": "2023-07-01 12:00:00",
+    "date_label": "2023",
+    "excerpt": "European Biophysics Journal · Biophysical characterization of protein interactions."
+  },
+  "imaging-oncolytic-virus-distribution": {
+    "title": "The importance of imaging strategies for pre-clinical and clinical in vivo distribution of oncolytic viruses",
+    "category": "publication",
+    "date": "2018-01-01 12:00:00",
+    "date_label": "2018",
+    "excerpt": "Oncolytic Virotherapy · A review of imaging approaches for studying viral distribution."
+  }
+}

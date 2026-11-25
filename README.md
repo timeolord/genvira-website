@@ -76,7 +76,19 @@ wp_dev prototype
 
 This activates the theme, creates eleven pages and four source-linked research updates, selects the homepage, and configures readable URLs. Re-running it refreshes only content marked as belonging to this prototype; back up editorial changes before doing so. Unrelated pages and posts are preserved. It refuses to replace an existing, unmarked page or post with the same slug.
 
-Open <http://localhost:8080>. Edit the seeded pages and research posts in WordPress, or change the initial content in `wp-content/themes/genvira/content` and run the setup again. Design styles and behavior live in the theme's `style.css` and `assets/site.js`. To add a research update in WordPress, create a post and assign the Publication or Company news category; those categories populate the research archive and homepage.
+Open <http://localhost:8080>. Edit pages and posts in WordPress. Initial page content lives in `wp-content/themes/genvira/content`. Design styles and behavior live in the theme's `style.css` and `assets/site.js`.
+
+### Publish a research update
+
+In the WordPress dashboard, open **Posts → Add New Post**. Write the update in the block editor, set its excerpt, and assign either **Publication** or **Company news**. Published posts appear in Research & Updates. The homepage shows the latest three. Run `wp_dev snapshot` to capture the post for the next static deployment.
+
+### Edit the seeded updates
+
+The posts installed by `wp_dev prototype` are in [content/updates](wp-content/themes/genvira/content/updates). Each post has a standalone HTML body named after its slug. The matching entry in [index.json](wp-content/themes/genvira/content/updates/index.json) defines its title, category (`news` or `publication`), WordPress date (`YYYY-MM-DD HH:MM:SS`), excerpt, and optional display date. To add an update to the starter content, add the metadata entry and its matching HTML file.
+
+Run `wp_dev prototype` to apply seed changes, then `wp_dev snapshot` to capture them for deployment. The setup refreshes seeded posts from these files, so save any dashboard edits to those posts before running it.
+
+### Pages and features
 
 The site includes a dedicated GVB-2030 page, an HTML pipeline, a separate engineering platform, Research & Updates, About, Team, Partnering, Contact, and Careers. Team has its own main navigation tab, with the full biographies and portraits from the previous website grouped into leadership, directors, and advisors. Research filters and platform step controls enhance server-rendered content. Contact shows the office address, phone and email on separate lines, and an interactive Leaflet map with OpenStreetMap tiles and a link to the office in Google Maps.
 
@@ -256,7 +268,7 @@ Keep Chromium running. In another terminal with the same QA environment, run:
 node scripts/check-prototype.mjs
 ```
 
-The checks cover all eleven prototype pages at desktop and mobile widths, the four research articles, menu controls, platform steps, research filtering and search, contact details and map layout, the no-JavaScript fallback, and the missing-page response. Screenshots are saved to `/tmp/genvira-prototype-qa`. Stop Chromium when finished.
+The checks cover all eleven prototype pages at desktop and mobile widths, the research articles listed in the archive, menu controls, platform steps, research filtering and search, contact details and map layout, the no-JavaScript fallback, and the missing-page response. Screenshots are saved to `/tmp/genvira-prototype-qa`. Stop Chromium when finished.
 
 ## Troubleshooting
 
