@@ -78,3 +78,4 @@ earlier prototype entries are reconstructed from git commit timestamps in utc
 2026-11-26T17:00:10Z | Expand the platform science overview with the GVB-2030 immune rationale and GVB-2040 HLA focus; verify static, desktop, and mobile checks.
 2026-11-26T17:01:21Z | Apply shared text transitions to headings across the site and verify desktop, mobile, and reduced motion behavior.
 2026-11-26T17:02:12Z | Lay out platform science topics in three desktop columns and stack them on mobile; verify layout, inline links, and static build.
+2026-11-26T17:03:17Z | Add the platform TLS footnote and share citation styles across pages; verify static, desktop, and mobile checks.

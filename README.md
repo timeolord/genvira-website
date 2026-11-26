@@ -105,6 +105,8 @@ Content files start with TOML metadata between `+++` lines. All page and article
 
 The homepage and other designed pages use `---` on its own line to separate layout blocks. Keep those separators in order when editing; their templates arrange the blocks into the existing columns, cards, diagrams, and controls. Section labels and other small layout details live under `[extra]` in the same file. Team biographies use `### Name`, an image, a role in bold, and ordinary paragraphs. The pipeline uses a Markdown table. The privacy page and research articles use the shared prose layout and do not need layout separators.
 
+Use Markdown footnotes for citations, with `[^source]` in the text and `[^source]: [Study title](https://example.org/)` below it. The platform and pipeline pages keep footnote definitions under a final References block.
+
 Layout markup lives in `templates/layouts/`, with shared text and button formatting in `templates/partials/`. Research articles share `templates/article.html` and the prose styles in `static/markdown.css`, including headings, citations, quotations, and source links. In templates, use `get_url` for links and assets that need the deployment prefix.
 
 ### Publish a program

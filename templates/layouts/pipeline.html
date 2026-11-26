@@ -22,4 +22,4 @@
 <div class="prose article-width">{{ blocks[2] | safe }}</div>
 </section>
 <section class="tinted-section"><div class="shell section">{% set copy = blocks[3] %}{% set label = page.extra.labels[1] %}{% set lead = false %}{% set link_class = "button button-outline" %}{% include "partials/split.html" %}</div></section>
-<section class="shell pipeline-references" aria-labelledby="references"><div class="article-width">{{ blocks[4] | safe }}</div></section>
+{% set references = blocks[4] %}{% include "partials/references.html" %}

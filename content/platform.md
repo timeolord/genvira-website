@@ -14,7 +14,7 @@ How can we help the immune system recognize a tumor and mount a response against
 
 ### Engaging the tumor immune environment
 
-[GVB-2030](@/programs/gvb-2030.md) is an investigational vaccinia-based immunotherapy for bladder cancer. It is designed to stimulate an antitumor immune response. One focus of our research is tertiary lymphoid structures (TLS), clusters of immune cells that can form in tumors. Published bladder cancer research has linked higher densities of mature TLS with better tumor response and longer event-free survival in patients who received checkpoint immunotherapy before surgery. [Study of mature TLS in bladder cancer](https://pubmed.ncbi.nlm.nih.gov/42358824/)
+[GVB-2030](@/programs/gvb-2030.md) is an investigational vaccinia-based immunotherapy for bladder cancer. It is designed to stimulate an antitumor immune response. One focus of our research is tertiary lymphoid structures (TLS), clusters of immune cells that can form in tumors. Published bladder cancer research has linked higher densities of mature TLS with better tumor response and longer event-free survival in patients who received checkpoint immunotherapy before surgery.[^platform-tls]
 
 ### Personalizing how the immune system sees the tumor
 
@@ -64,3 +64,9 @@ GVB-2030 is in IND-enabling studies for bladder cancer. GVB-2040 is our next dev
 [View our pipeline ↗](@/pipeline.md)
 
 [Explore partnering →](@/partnering.md)
+
+---
+
+## References
+
+[^platform-tls]: [Germinal Center-Like Tertiary Lymphoid Structures Mark Immune Responsiveness and Enable Checkpoint Immunotherapy in Bladder Cancer](https://pubmed.ncbi.nlm.nih.gov/42358824/)
