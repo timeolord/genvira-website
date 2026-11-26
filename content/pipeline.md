@@ -29,13 +29,13 @@ GVB-2030 is designed to activate an antitumor immune response in bladder cancer.
 
 ### Mature TLS and treatment response
 
-Tertiary lymphoid structures (TLS) are clusters of immune cells that can form in tumors. In muscle-invasive bladder cancer, higher mature TLS density was linked to better tumor response and longer event-free survival after checkpoint immunotherapy given before surgery. [Study of mature TLS in bladder cancer](https://pubmed.ncbi.nlm.nih.gov/42358824/)
+Tertiary lymphoid structures (TLS) are clusters of immune cells that can form in tumors. In muscle-invasive bladder cancer, higher mature TLS density was linked to better tumor response and longer event-free survival after checkpoint immunotherapy given before surgery.[^pipeline-1]
 
-In a separate Phase 1b study, TLS density increased in patients who responded to investigational oncolytic immunotherapy combined with nivolumab. These findings support Genvira’s focus on local immune activity in bladder tumors. [Phase 1b study in Nature Medicine](https://pmc.ncbi.nlm.nih.gov/articles/PMC12302721/)
+In a separate Phase 1b study, TLS density increased in patients who responded to investigational oncolytic immunotherapy combined with nivolumab. These findings support Genvira’s focus on local immune activity in bladder tumors.[^pipeline-2]
 
 ### Clinical precedent for immunotherapy
 
-In the Phase 3 KEYNOTE-045 trial, patients with advanced urothelial cancer that progressed during or after platinum chemotherapy had a median overall survival of 10.3 months with pembrolizumab versus 7.4 months with chemotherapy. [KEYNOTE-045 trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC5635424/)
+In the Phase 3 KEYNOTE-045 trial, patients with advanced urothelial cancer that progressed during or after platinum chemotherapy had a median overall survival of 10.3 months with pembrolizumab versus 7.4 months with chemotherapy.[^pipeline-3]
 
 [Explore GVB-2030](@/gvb-2030.md)
 
@@ -52,3 +52,11 @@ Future clinical studies will evaluate GVB-2030’s safety and potential benefit 
 Our platform brings vector design, performance testing, and manufacturing planning together early in development.
 
 [Explore the engineering platform ↗](@/platform.md)
+
+---
+
+## References
+
+[^pipeline-1]: [Germinal Center-Like Tertiary Lymphoid Structures Mark Immune Responsiveness and Enable Checkpoint Immunotherapy in Bladder Cancer](https://pubmed.ncbi.nlm.nih.gov/42358824/)
+[^pipeline-2]: [Oncolytic Immunotherapy With Nivolumab in Muscle-Invasive Bladder Cancer. Nature Medicine.](https://pmc.ncbi.nlm.nih.gov/articles/PMC12302721/)
+[^pipeline-3]: [Bellmunt et al. Pembrolizumab as Second-Line Therapy for Advanced Urothelial Carcinoma. New England Journal of Medicine.](https://pmc.ncbi.nlm.nih.gov/articles/PMC5635424/)

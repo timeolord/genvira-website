@@ -69,3 +69,4 @@ earlier prototype entries are reconstructed from git commit timestamps in utc
 2026-11-26T16:43:44Z | Add cited clinical and tumor immunology research to the GVB-2030 pipeline rationale and verify static, desktop, and mobile builds.
 2026-11-26T16:45:06Z | Update the pipeline rationale with clinical studies linking mature tertiary lymphoid structures to favorable bladder cancer outcomes.
 2026-11-26T16:46:34Z | Simplify pipeline program descriptions and explain the TLS evidence in more direct language; verify the static build.
+2026-11-26T16:48:40Z | Format pipeline citations as linked superscripts with smaller references below the page copy; verify static, desktop, and mobile checks.
