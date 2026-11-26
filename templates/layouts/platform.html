@@ -1,4 +1,12 @@
-<section class="section shell">{% set copy = blocks[0] %}{% set label = page.extra.labels[0] %}{% set lead = true %}{% set link_class = "text-link" %}{% include "partials/split.html" %}</section>
+<section class="section shell">
+{% set science = blocks[0] | split(pat="<h3") %}
+{% set copy = science[0] %}{% set label = page.extra.labels[0] %}{% set lead = true %}{% set link_class = "text-link" %}{% include "partials/split.html" %}
+<div class="three-columns">
+{% for topic in science[1:] %}
+<div>{{ ("<h3" ~ topic) | safe }}</div>
+{% endfor %}
+</div>
+</section>
 <section class="tinted-section"><div class="section shell" data-platform><div class="section-heading"><div><p class="eyebrow">{{ page.extra.labels[1] }}</p>{{ blocks[1] | regex_replace(pattern="(?s)^\\s*(<h2[^>]*>.*?</h2>).*", rep="$1") | safe }}</div>{{ blocks[1] | regex_replace(pattern="(?s)^\\s*<h2[^>]*>.*?</h2>", rep="") | safe }}</div>
 <div class="platform-tabs" role="group" aria-label="Platform steps"><button type="button" data-step="design" aria-pressed="true">01 <span>Design & engineer</span></button><button type="button" data-step="measure" aria-pressed="false">02 <span>Measure & characterize</span></button><button type="button" data-step="translate" aria-pressed="false">03 <span>Develop for translation</span></button></div>
 <div class="platform-panel" data-panel="design"><figure class="payload-diagram" role="img" aria-label="A viral vector carrying a therapeutic payload"><div class="payload-vector"><div class="payload-vector-label">Viral vector</div><div class="payload-core">Therapeutic<br>payload</div></div></figure><div><p class="eyebrow">01 / DESIGN & ENGINEER</p>{{ blocks[2] | safe }}</div></div>
