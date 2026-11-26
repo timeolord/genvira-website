@@ -1,0 +1,10 @@
+<nav class="team-jump shell" aria-label="Team sections">{{ blocks[0] | regex_replace(pattern='<p>(.*?)</p>', rep='$1') | safe }}</nav>
+{% set group_ids = ["leadership", "board", "advisors"] %}
+{% for block in blocks[1:4] %}
+<section id="{{ group_ids[loop.index0] }}" class="team-section"><div class="shell section"><p class="eyebrow">{{ page.extra.labels[loop.index0] }}</p>
+{% set profiles = block | split(pat="<h3") %}{{ profiles[0] | regex_replace(pattern=' id="[^"]+"', rep='') | safe }}
+<div class="team-profiles">{% for profile in profiles[1:] %}
+{{ ("<h3" ~ profile) | regex_replace(pattern='(?s)^(<h3[^>]*>.*?</h3>)\\s*<p>(<img[^>]+>)</p>\\s*<p><strong>(.*?)</strong></p>(.*)$', rep='<article class="team-profile">$2<div>$1<p class="team-profile-role">$3</p><div class="team-profile-bio">$4</div></div></article>') | safe }}
+{% endfor %}</div></div></section>
+{% endfor %}
+<div class="shell team-source">{% set copy = blocks[4] %}{% set link_class = "text-link" %}{% include "partials/copy.html" %}</div>

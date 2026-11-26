@@ -4,8 +4,45 @@ description = "Connect with Genvira about therapeutic programs, scientific colla
 template = "page.html"
 [extra]
 eyebrow = "ADVANCING THROUGH COLLABORATION"
+layout = "partnering"
+labels = ["WORK WITH GENVIRA", "AREAS FOR DISCUSSION", "RECENT COLLABORATION"]
+column_labels = ["01 / THERAPEUTIC PROGRAMS", "02 / SCIENTIFIC COLLABORATION", "03 / STRATEGIC CONVERSATIONS"]
 +++
 
-<section class="section shell split-section"><div><p class="eyebrow">WORK WITH GENVIRA</p><h2>A focused conversation.<br> A shared scientific goal.</h2></div><div><p class="large-copy">We welcome conversations with biotechnology companies, research groups, and potential investment partners.</p><p>Start with the program or capability that interests you. Our team can discuss the public development overview and explore whether there is a basis for further collaboration.</p><a class="button" href="{{ get_url(path="contact/", trailing_slash=true) }}">Contact our team <span aria-hidden="true">↗</span></a></div></section>
-<section class="tinted-section"><div class="section shell"><p class="eyebrow">AREAS FOR DISCUSSION</p><div class="three-columns"><div><span class="number-label">01 / THERAPEUTIC PROGRAMS</span><h3>GVB-2030 & the pipeline</h3><p>Discuss the lead bladder cancer program and Genvira’s broader research direction.</p><a class="text-link" href="{{ get_url(path="gvb-2030/", trailing_slash=true) }}">Explore GVB-2030 <span aria-hidden="true">↗</span></a></div><div><span class="number-label">02 / SCIENTIFIC COLLABORATION</span><h3>Viral-vector engineering</h3><p>Explore potential collaboration in vector design, characterization, and translational development.</p><a class="text-link" href="{{ get_url(path="platform/", trailing_slash=true) }}">Explore the platform <span aria-hidden="true">↗</span></a></div><div><span class="number-label">03 / STRATEGIC CONVERSATIONS</span><h3>Partners & investors</h3><p>Connect with the team about Genvira’s therapeutic focus and development priorities.</p><a class="text-link" href="mailto:info@genvira.com?subject=Strategic%20inquiry">Start a conversation <span aria-hidden="true">↗</span></a></div></div></div></section>
-<section class="section shell"><p class="eyebrow">RECENT COLLABORATION</p><h2>Working together on melanoma research.</h2><p class="large-copy narrow">Genvira, Labskin, and the National Research Council of Canada announced a UK–Canada collaboration supported by up to £1.2 million ($2.0 million) in funding in August 2025.</p><a class="text-link" href="{{ get_url(path="research/", trailing_slash=true) }}">Read the company update <span aria-hidden="true">↗</span></a><p class="source-note"><a href="{{ get_url(path="melanoma-research-collaboration/", trailing_slash=true) }}">Read the collaboration announcement</a></p></section>
+## A focused conversation. A shared scientific goal.
+
+We welcome conversations with biotechnology companies, research groups, and potential investment partners.
+
+Start with the program or capability that interests you. Our team can discuss the public development overview and explore whether there is a basis for further collaboration.
+
+[Contact our team ↗](@/contact.md)
+
+---
+
+### GVB-2030 & the pipeline
+
+Discuss the lead bladder cancer program and Genvira’s broader research direction.
+
+[Explore GVB-2030 ↗](@/gvb-2030.md)
+
+### Viral-vector engineering
+
+Explore potential collaboration in vector design, characterization, and translational development.
+
+[Explore the platform ↗](@/platform.md)
+
+### Partners & investors
+
+Connect with the team about Genvira’s therapeutic focus and development priorities.
+
+[Start a conversation ↗](mailto:info@genvira.com?subject=Strategic%20inquiry)
+
+---
+
+## Working together on melanoma research.
+
+Genvira, Labskin, and the National Research Council of Canada announced a UK–Canada collaboration supported by up to £1.2 million ($2.0 million) in funding in August 2025.
+
+[Read the company update ↗](@/research/_index.md)
+
+[Read the collaboration announcement](@/research/melanoma-research-collaboration.md)

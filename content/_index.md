@@ -4,10 +4,69 @@ description = "Genvira is advancing GVB-2030, an investigational viral-vector th
 template = "index.html"
 [extra]
 eyebrow = "OUR LEAD PROGRAM"
+layout = "home"
+labels = ["OUR LEAD PROGRAM · GVB-2030", "THERAPEUTICS FIRST", "OUR ENGINEERING PLATFORM", "BUILT IN OTTAWA. WORKING THROUGH COLLABORATION."]
+facts = [{"label" = "LEAD CANDIDATE", "value" = "GVB-2030"}, {"label" = "THERAPEUTIC FOCUS", "value" = "Bladder cancer"}, {"label" = "DEVELOPMENT STAGE", "value" = "IND-enabling studies"}]
 +++
 
-<section class="home-hero"><div class="shell hero-grid"><div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span> OUR LEAD PROGRAM · GVB-2030</p><h1>Engineering a new approach to <span>bladder cancer.</span></h1><p>We’re advancing viral-vector therapeutics with a clear purpose: to bring new approaches to cancer treatment.</p><div class="button-row"><a class="button button-cyan" href="{{ get_url(path="gvb-2030/", trailing_slash=true) }}">Explore GVB-2030 <span aria-hidden="true">↗</span></a><a class="hero-text-link" href="{{ get_url(path="pipeline/", trailing_slash=true) }}">View our pipeline <span aria-hidden="true">→</span></a></div></div><figure class="hero-visual"><div class="visual-topline"><span>BLADDER CANCER / IMMUNE ENVIRONMENT</span><span>01</span></div><img src="{{ get_url(path="assets/tumor-environment.svg") }}" alt="Conceptual bladder-wall section showing a tumor invading the muscle layer, nearby tertiary lymphoid structures (TLS), and viral vectors" width="680" height="560"></figure></div><div class="shell hero-facts"><div><span>LEAD CANDIDATE</span><strong>GVB-2030</strong></div><div><span>THERAPEUTIC FOCUS</span><strong>Bladder cancer</strong></div><div><span>DEVELOPMENT STAGE</span><strong>IND-enabling studies</strong></div><a href="{{ get_url(path="gvb-2030/", trailing_slash=true) }}#development">Program overview <span aria-hidden="true">↗</span></a></div></section>
-<section class="section shell introduction"><div><p class="eyebrow">THERAPEUTICS FIRST</p><h2>One lead program.<br> A platform built<br> to go further.</h2></div><div><p class="large-copy">GVB-2030 brings our viral engineering expertise into focus.</p><p>Our lead program is an engineered vaccinia virus being developed for bladder cancer. It is designed to deliver an immune-activating payload to the tumor environment.</p><p>Behind it is a broader development platform that brings vector design, characterization, and manufacturing considerations together.</p><a class="text-link" href="{{ get_url(path="gvb-2030/", trailing_slash=true) }}">Meet our lead program <span aria-hidden="true">↗</span></a></div></section>
-<section class="platform-feature"><div class="shell feature-grid"><div class="feature-heading"><p class="eyebrow">OUR ENGINEERING PLATFORM</p><h2>From vector design<br> to therapeutic potential.</h2><p>We engineer the vector and evaluate how it performs, with translation in mind from the start.</p><a class="button button-outline" href="{{ get_url(path="platform/", trailing_slash=true) }}">Explore our platform <span aria-hidden="true">↗</span></a></div><div class="capability-list"><div><span class="step-number">01</span><div><h3>Design & engineer</h3><p>Vector architecture, genetic stability, and payload design.</p></div><span class="capability-symbol cyan" aria-hidden="true">◎</span></div><div><span class="step-number">02</span><div><h3>Measure & characterize</h3><p>Potency, durability, and immune activity assays.</p></div><span class="capability-symbol green" aria-hidden="true">⌁</span></div><div><span class="step-number">03</span><div><h3>Develop for translation</h3><p>Process development and scalable manufacturing considerations.</p></div><span class="capability-symbol violet" aria-hidden="true">⤴</span></div></div></div></section>
-<section class="section shell company-note"><p class="eyebrow">BUILT IN OTTAWA. WORKING THROUGH COLLABORATION.</p><div><h2>Research roots.<br> A therapeutic focus.</h2><p>Genvira grew out of the Ottawa Hospital Research Institute. Today, our team brings viral engineering and translational research together to advance our own programs and work with partners.</p><a class="text-link" href="{{ get_url(path="about/", trailing_slash=true) }}">Get to know Genvira <span aria-hidden="true">↗</span></a></div></section>
-<section aria-label="Supported by"><ul class="shell supporter-list" role="list"><li><img src="{{ get_url(path="assets/supporter-feddev.png") }}" alt="FedDev Ontario"></li><li><img src="{{ get_url(path="assets/supporter-ontario.svg") }}" alt="Government of Ontario"></li><li><img src="{{ get_url(path="assets/supporter-mitacs.svg") }}" alt="Mitacs"></li><li><img src="{{ get_url(path="assets/supporter-invest-ottawa.svg") }}" alt="Invest Ottawa"></li><li><img src="{{ get_url(path="assets/supporter-obio.svg") }}" alt="OBIO"></li></ul></section>
+# Engineering a new approach to **bladder cancer.**
+
+We’re advancing viral-vector therapeutics with a clear purpose: to bring new approaches to cancer treatment.
+
+[Explore GVB-2030 ↗](@/gvb-2030.md)
+
+[View our pipeline →](@/pipeline.md)
+
+---
+
+![Conceptual bladder-wall section showing an enlarged tumor invading the muscle layer, a tertiary lymphoid structure (TLS) inside the tumor, and viral vectors outside it](/assets/tumor-environment.svg)
+
+---
+
+## One lead program. A platform built to go further.
+
+GVB-2030 brings our viral engineering expertise into focus.
+
+Our lead program is an engineered vaccinia virus being developed for bladder cancer. It is designed to deliver an immune-activating payload to the tumor environment.
+
+Behind it is a broader development platform that brings vector design, characterization, and manufacturing considerations together.
+
+[Meet our lead program ↗](@/gvb-2030.md)
+
+---
+
+## From vector design to therapeutic potential.
+
+We engineer the vector and evaluate how it performs, with translation in mind from the start.
+
+[Explore our platform ↗](@/platform.md)
+
+---
+
+### Design & engineer
+
+Vector architecture, genetic stability, and payload design.
+
+### Measure & characterize
+
+Potency, durability, and immune activity assays.
+
+### Develop for translation
+
+Process development and scalable manufacturing considerations.
+
+---
+
+## Research roots. A therapeutic focus.
+
+Genvira grew out of the Ottawa Hospital Research Institute. Today, our team brings viral engineering and translational research together to advance our own programs and work with partners.
+
+[Get to know Genvira ↗](@/about.md)
+
+---
+
+- ![FedDev Ontario](/assets/supporter-feddev.png)
+- ![Government of Ontario](/assets/supporter-ontario.svg)
+- ![Mitacs](/assets/supporter-mitacs.svg)
+- ![Invest Ottawa](/assets/supporter-invest-ottawa.svg)
+- ![OBIO](/assets/supporter-obio.svg)

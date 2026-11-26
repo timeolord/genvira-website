@@ -62,3 +62,6 @@ earlier prototype entries are reconstructed from git commit timestamps in utc
 2026-11-26T15:40:02Z | Migrate the prototype to Zola with source content, preserved URLs and artwork, Nix and Pages builds, updated documentation and previews; verify desktop and mobile behavior, publishing, drafts, links, and deployment paths.
 2026-11-26T15:49:02Z | Normalize migrated metadata and copied license whitespace; verify the complete commit diff.
 2026-11-26T15:51:31Z | Document Windows PowerShell installation, editing, builds, static previews, and changelog entries, with setup guidance for other systems without Nix; verify official download links and documentation diff.
+2026-11-26T16:13:23Z | Convert all page and article bodies to Markdown with shared layouts and prose styles; preserve ordered text, links, images, and alt text, and verify desktop, mobile, publishing, drafts, and deployment paths.
+2026-11-26T16:21:42Z | Enlarge the shared tumor illustration to enclose the entire TLS, update descriptions and previews, and verify cell containment, desktop and mobile rendering, and static links.
+2026-11-26T16:26:05Z | Add a separate Blender Nix shell and launch instructions; verify Blender 5.2.3 LTS background startup, ARM shell evaluation, and documentation links.

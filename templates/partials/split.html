@@ -1,0 +1,4 @@
+<div class="split-section markdown-split">
+    <div><p class="eyebrow">{{ label }}</p>{{ copy | regex_replace(pattern="(?s)^\\s*(<h2[^>]*>.*?</h2>).*", rep="$1") | safe }}</div>
+    <div class="markdown-copy{% if lead %} markdown-lead{% endif %}">{% set copy = copy | regex_replace(pattern="(?s)^\\s*<h2[^>]*>.*?</h2>\\s*", rep="") %}{% include "partials/copy.html" %}</div>
+</div>

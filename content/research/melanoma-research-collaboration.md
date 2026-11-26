@@ -8,18 +8,32 @@ kind = "news"
 date_label = "August 1, 2025"
 +++
 
-<p>Genvira Biosciences Inc. (“Genvira”), a Canadian innovator in next-generation viral vectors, Labskin Limited (“Labskin”), a leader in 3D in vitro human skin models, and the National Research Council of Canada (NRC) are pleased to announce the launch of a collaborative project to develop novel immunotherapies for malignant melanoma. The collaboration is receiving advisory services and up to £1.2 million ($2.0 million) in funding through the Canada–UK Biomanufacturing of Biologics and Advanced Therapies program. UK participants are supported by Innovate UK, part of UK Research and Innovation (UKRI), while in Canada, support for the project is offered through the NRC Industrial Research Assistance Program (NRC IRAP) and the NRC Collaborative Science and Technology Innovation Program (NRC CSTIP).</p>
-<p>Malignant melanoma continues to be a serious global health concern, with an estimated 330,000 new cases and 60,000 deaths each year. This international partnership aims to address the unmet need by developing cutting-edge cancer vaccines and optimizing targeted antigen delivery systems.</p>
-<p>As part of the collaboration, Labskin will utilize its expertise in advanced disease modeling to develop a novel 3D human skin model of melanoma, enabling in vitro testing of vaccine candidates. Genvira will contribute its proprietary viral vector and gene delivery platforms, while the NRC will support the integration of mRNA technologies to engineer innovative, targeted immunotherapies tailored to melanoma.</p>
-<p>Dr. Nicola Kingswell, Scientific Director at Labskin Limited, stated:</p>
-<blockquote><p>“We’re extremely grateful to Innovate UK for supporting this exciting project. It represents a step-change in the treatment of malignant melanoma, which will benefit many patients worldwide. This partnership will not only produce and validate new immunotherapies, but also establish a framework for developing future cancer therapeutics.”</p></blockquote>
-<p>Dr. Jiahu Wang, President of Genvira Biosciences, added:</p>
-<blockquote><p>“We’d like to thank NRC IRAP for their support, and the NRC for their collaborative role. This partnership enables us to rapidly translate our viral vector technologies into clinical applications for melanoma and lays the groundwork for broader advances in cancer immunotherapy.”</p></blockquote>
-<p>The project brings together unique and complementary strengths in 3D tissue engineering, gene and viral therapy, mRNA technology, and advanced biomanufacturing. In addition to therapeutic development, the consortium will focus on scalable production processes, quality control assays, and robust technologies to enable rapid response to future healthcare challenges.</p>
-<p>This initiative highlights the importance of international collaboration in driving innovation and accelerating the development of advanced biologics and therapies.</p>
-<h2>About Labskin Limited</h2>
-<p>Labskin Limited is a UK-based biotechnology company specializing in full-thickness human skin models for pharmaceutical, cosmetic, and clinical research. Its advanced 3D platforms offer realistic testing environments for evaluating treatments in vitro.</p>
-<p>To learn more: <a href="https://www.labskin.co.uk">www.labskin.co.uk</a></p>
-<h2>About Genvira Biosciences Inc.</h2>
-<p>Genvira Bioscience is a Canadian biotechnology company focused on designing and developing viral vector platforms for use in gene therapies, cancer vaccines, and regenerative medicine.</p>
-<p>To learn more: <a href="https://www.genvira.com">www.genvira.com</a></p>
+Genvira Biosciences Inc. (“Genvira”), a Canadian innovator in next-generation viral vectors, Labskin Limited (“Labskin”), a leader in 3D in vitro human skin models, and the National Research Council of Canada (NRC) are pleased to announce the launch of a collaborative project to develop novel immunotherapies for malignant melanoma. The collaboration is receiving advisory services and up to £1.2 million ($2.0 million) in funding through the Canada–UK Biomanufacturing of Biologics and Advanced Therapies program. UK participants are supported by Innovate UK, part of UK Research and Innovation (UKRI), while in Canada, support for the project is offered through the NRC Industrial Research Assistance Program (NRC IRAP) and the NRC Collaborative Science and Technology Innovation Program (NRC CSTIP).
+
+Malignant melanoma continues to be a serious global health concern, with an estimated 330,000 new cases and 60,000 deaths each year. This international partnership aims to address the unmet need by developing cutting-edge cancer vaccines and optimizing targeted antigen delivery systems.
+
+As part of the collaboration, Labskin will utilize its expertise in advanced disease modeling to develop a novel 3D human skin model of melanoma, enabling in vitro testing of vaccine candidates. Genvira will contribute its proprietary viral vector and gene delivery platforms, while the NRC will support the integration of mRNA technologies to engineer innovative, targeted immunotherapies tailored to melanoma.
+
+Dr. Nicola Kingswell, Scientific Director at Labskin Limited, stated:
+
+> “We’re extremely grateful to Innovate UK for supporting this exciting project. It represents a step-change in the treatment of malignant melanoma, which will benefit many patients worldwide. This partnership will not only produce and validate new immunotherapies, but also establish a framework for developing future cancer therapeutics.”
+
+Dr. Jiahu Wang, President of Genvira Biosciences, added:
+
+> “We’d like to thank NRC IRAP for their support, and the NRC for their collaborative role. This partnership enables us to rapidly translate our viral vector technologies into clinical applications for melanoma and lays the groundwork for broader advances in cancer immunotherapy.”
+
+The project brings together unique and complementary strengths in 3D tissue engineering, gene and viral therapy, mRNA technology, and advanced biomanufacturing. In addition to therapeutic development, the consortium will focus on scalable production processes, quality control assays, and robust technologies to enable rapid response to future healthcare challenges.
+
+This initiative highlights the importance of international collaboration in driving innovation and accelerating the development of advanced biologics and therapies.
+
+## About Labskin Limited
+
+Labskin Limited is a UK-based biotechnology company specializing in full-thickness human skin models for pharmaceutical, cosmetic, and clinical research. Its advanced 3D platforms offer realistic testing environments for evaluating treatments in vitro.
+
+To learn more: [www.labskin.co.uk](https://www.labskin.co.uk)
+
+## About Genvira Biosciences Inc.
+
+Genvira Bioscience is a Canadian biotechnology company focused on designing and developing viral vector platforms for use in gene therapies, cancer vaccines, and regenerative medicine.
+
+To learn more: [www.genvira.com](https://www.genvira.com)

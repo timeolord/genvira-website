@@ -1,0 +1,5 @@
+<section class="section shell">{% set copy = blocks[0] %}{% set label = page.extra.labels[0] %}{% set lead = true %}{% set link_class = "button" %}{% include "partials/split.html" %}</section>
+<section class="tinted-section"><div class="section shell"><p class="eyebrow">{{ page.extra.labels[1] }}</p><div class="three-columns">
+{% set columns = blocks[1] | trim | split(pat="<h3") %}{% for column in columns[1:] %}<div><span class="number-label">{{ page.extra.column_labels[loop.index0] }}</span>{% set copy = "<h3" ~ column %}{% set link_class = "text-link" %}{% include "partials/copy.html" %}</div>{% endfor %}
+</div></div></section>
+<section class="section shell markdown-copy markdown-lead-after-heading"><p class="eyebrow">{{ page.extra.labels[2] }}</p>{% set copy = blocks[2] %}{% set link_class = "text-link" %}{% include "partials/copy.html" %}</section>

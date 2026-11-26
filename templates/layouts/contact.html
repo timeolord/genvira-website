@@ -1,0 +1,5 @@
+<section class="section shell contact-layout"><div><p class="eyebrow">{{ page.extra.labels[0] }}</p>{{ blocks[0] | safe }}
+<div class="contact-details"><p class="eyebrow">{{ page.extra.labels[1] }}</p>
+{% set copy = blocks[1] | regex_replace(pattern='(?s)(</h3>\\s*)<p>(.*?)</p>', rep='$1<address>$2</address>') | regex_replace(pattern='<p>([^<\\s]+@[^<\\s]+)</p>', rep='<span class="email-address">$1</span>') | regex_replace(pattern='<p>(<a href="tel:[^"]+">.*?</a>)</p>', rep='$1') %}
+{% set link_class = "text-link" %}{% include "partials/copy.html" %}
+</div></div><div class="contact-map" data-latitude="45.337208" data-longitude="-75.685013" role="region" aria-label="Map of Genvira’s Ottawa office" hidden></div></section>

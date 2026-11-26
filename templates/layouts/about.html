@@ -1,0 +1,5 @@
+{% for block in blocks %}
+{% if loop.index0 == 1 %}<section class="tinted-section"><div class="shell section">{% else %}<section class="section shell">{% endif %}
+{% set copy = block %}{% set label = page.extra.labels[loop.index0] %}{% set lead = true %}{% set link_class = "button" %}{% include "partials/split.html" %}
+{% if loop.index0 == 1 %}</div>{% endif %}</section>
+{% endfor %}

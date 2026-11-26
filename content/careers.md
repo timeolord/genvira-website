@@ -4,6 +4,14 @@ description = "Help bring viral engineering and therapeutic research together."
 template = "page.html"
 [extra]
 eyebrow = "BUILD WITH US"
+layout = "careers"
+labels = ["WORK AT GENVIRA"]
 +++
 
-<section class="section shell split-section"><div><p class="eyebrow">WORK AT GENVIRA</p><h2>Bring your expertise<br> to viral engineering.</h2></div><div><p class="large-copy">We welcome interest from people working in bioengineering, cancer biology, immunology, molecular biology, and quality.</p><p>We invite inquiries from research scientists, laboratory technicians, and co-op students. Please include your cover letter and résumé with your inquiry.</p><a class="button" href="mailto:info@genvira.com?subject=Career%20inquiry">Send a career inquiry <span aria-hidden="true">↗</span></a></div></section>
+## Bring your expertise to viral engineering.
+
+We welcome interest from people working in bioengineering, cancer biology, immunology, molecular biology, and quality.
+
+We invite inquiries from research scientists, laboratory technicians, and co-op students. Please include your cover letter and résumé with your inquiry.
+
+[Send a career inquiry ↗](mailto:info@genvira.com?subject=Career%20inquiry)

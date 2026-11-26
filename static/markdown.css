@@ -1,0 +1,12 @@
+.markdown-lead>p:first-child,.markdown-lead-after-heading>h2+p{font-size:1.4375rem;line-height:1.55;letter-spacing:-.025em;color:var(--ink)}
+.markdown-copy>.button,.markdown-copy>.text-link{margin-right:22px;margin-bottom:8px}.markdown-copy>h2+p{max-width:780px}
+.markdown-introduction>.markdown-split{gap:120px}.markdown-introduction .markdown-split>div:first-child h2{max-width:500px}.markdown-introduction .markdown-lead>p:first-child{max-width:450px}.markdown-introduction .markdown-copy>p:not(:first-child){max-width:530px}
+.markdown-facts ul{list-style:none;padding:0;margin:0}.markdown-facts li{display:grid;grid-template-columns:1fr 1.4fr;gap:18px;border-bottom:1px solid var(--line);padding:18px 0;font-size:0.8125rem;font-weight:700}.markdown-facts li:last-child{border:0}.markdown-facts li>strong{color:var(--muted);font-weight:400}
+.markdown-definitions>h3:not(:first-child){font-size:1rem;font-weight:750;letter-spacing:0;line-height:1.7;padding-top:19px;border-top:1px solid #bbced7;margin:28px 0 8px}.markdown-definitions>h3:not(:first-child)+p{font-size:0.875rem}
+.pipeline-table td em{display:block;font-size:0.8125rem;line-height:1.65;color:var(--muted);font-style:normal}
+.pipeline-table .lead-row .stage-label{background:var(--cyan-dark);color:white;border-color:var(--cyan-dark)}
+.prose blockquote{margin:0 0 28px;border-left:3px solid var(--cyan);padding-left:20px;font-size:0.875rem;color:var(--muted)}.prose blockquote p{font-size:inherit}.prose blockquote p:last-child{margin-bottom:0}.prose h3{font-size:1.4375rem;margin-top:32px}.prose ul,.prose ol{margin-bottom:28px}.article-body>.button,.article-body>.text-link{margin-right:24px;margin-bottom:25px}.article-body>.text-link{display:flex;width:fit-content}.prose a:not(.button):not(.text-link){text-decoration-thickness:1px}.prose hr{border:0;border-top:1px solid var(--line);margin-block:36px}
+@media(max-width:1150px) and (min-width:641px){.markdown-facts li{grid-template-columns:1fr;gap:5px}}
+@media(max-width:1150px){.markdown-introduction>.markdown-split{gap:60px}}
+@media(max-width:900px){.markdown-lead>p:first-child,.markdown-lead-after-heading>h2+p{font-size:1.25rem}.markdown-introduction>.markdown-split{gap:40px}}
+@media(max-width:640px){.markdown-introduction>.markdown-split{gap:28px}.markdown-introduction .markdown-split>div:first-child h2{max-width:360px}.markdown-facts li{gap:15px}.pipeline-table td:nth-child(2)::before{content:"Approach"}.pipeline-table td:nth-child(3)::before{content:"Focus"}.pipeline-table td:nth-child(4)::before{content:"Development status"}}

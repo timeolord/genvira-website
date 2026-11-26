@@ -1,0 +1,2 @@
+{% set secondary_class = "hero-text-link" if link_class == "hero-text-link" else "text-link" %}
+{{ copy | regex_replace(pattern='<p><a ([^>]+)>([^<]*?) →</a></p>', rep='<a class="' ~ secondary_class ~ '" $1>$2 <span aria-hidden="true">→</span></a>') | regex_replace(pattern='<p><a ([^>]+)>(.+?)</a></p>', rep='<a class="' ~ link_class ~ '" $1>$2</a>') | regex_replace(pattern=' ([↗→])</a>', rep=' <span aria-hidden="true">$1</span></a>') | regex_replace(pattern='<a class="text-link" ([^>]*href="https://doi.org/[^"]+"[^>]*)>', rep='<a class="button" $1>') | safe }}

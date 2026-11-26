@@ -1,5 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 <section class="page-hero"><div class="shell"><a class="breadcrumb" href="{{ get_url(path="", trailing_slash=true) }}">Home</a><span class="breadcrumb-separator" aria-hidden="true">/</span><span class="breadcrumb">{{ page.title }}</span><p class="eyebrow">{{ page.extra.eyebrow }}</p><h1>{{ page.title }}</h1><p class="page-intro">{{ page.description }}</p></div></section>
-<div class="page-content">{{ page.content | safe }}</div>
+{% set content_html = page.content | replace(from='src="/assets/', to='src="' ~ get_url(path="assets/", trailing_slash=true)) %}
+{% set blocks = content_html | split(pat="<hr />") %}
+<div class="page-content">
+{% if page.extra.layout == "about" %}{% include "layouts/about.html" %}
+{% elif page.extra.layout == "careers" %}{% include "layouts/careers.html" %}
+{% elif page.extra.layout == "partnering" %}{% include "layouts/partnering.html" %}
+{% elif page.extra.layout == "contact" %}{% include "layouts/contact.html" %}
+{% elif page.extra.layout == "pipeline" %}{% include "layouts/pipeline.html" %}
+{% elif page.extra.layout == "team" %}{% include "layouts/team.html" %}
+{% elif page.extra.layout == "gvb-2030" %}{% include "layouts/gvb-2030.html" %}
+{% elif page.extra.layout == "platform" %}{% include "layouts/platform.html" %}
+{% else %}<section class="section shell article-width prose markdown-copy">{{ content_html | safe }}</section>{% endif %}
+</div>
 {% endblock content %}

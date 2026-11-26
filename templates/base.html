@@ -8,6 +8,7 @@
     <meta name="description" content="{% if page is defined %}{{ page.description | default(value=config.description) }}{% elif section is defined %}{{ section.description | default(value=config.description) }}{% else %}{{ config.description }}{% endif %}">
     <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
+    <link rel="stylesheet" href="{{ get_url(path="markdown.css") }}">
     {% if current_path == "/contact/" %}<link rel="stylesheet" href="{{ get_url(path="assets/leaflet/leaflet.css") }}">{% endif %}
 </head>
 <body class="{% if page is defined and page.extra.kind is defined %}single{% elif current_path == "/" %}home{% else %}page{% endif %}">

@@ -4,7 +4,22 @@ description = "An Ottawa-based team advancing viral-vector engineering for thera
 template = "page.html"
 [extra]
 eyebrow = "RESEARCH ROOTS. THERAPEUTIC PURPOSE."
+layout = "about"
+labels = ["OUR COMPANY", "PEOPLE BEHIND THE WORK"]
 +++
 
-<section class="section shell split-section"><div><p class="eyebrow">OUR COMPANY</p><h2>From research roots<br> to therapeutic development.</h2></div><div><p class="large-copy">Genvira is an Ottawa-based biotechnology company focused on viral-vector engineering.</p><p>Dr. Jiahu Wang founded Genvira in 2019 as a spinout from the Ottawa Hospital Research Institute. The company grew out of research into three practical limits of viral vectors: genetic instability, low production yields, and limited room for therapeutic payloads.</p><p>Today, our <a href="{{ get_url(path="platform/", trailing_slash=true) }}">engineering platform</a> supports work in cancer immunotherapy, genetic medicines, and vaccines.</p></div></section>
-<section class="tinted-section"><div class="shell section split-section"><div><p class="eyebrow">PEOPLE BEHIND THE WORK</p><h2>Meet the team<br> moving our work forward.</h2></div><div><p class="large-copy">Our leadership, board, and advisors bring experience across viral-vector research, therapeutic development, manufacturing, and business strategy.</p><a class="button" href="{{ get_url(path="team/", trailing_slash=true) }}">Meet our team <span aria-hidden="true">↗</span></a></div></div></section>
+## From research roots to therapeutic development.
+
+Genvira is an Ottawa-based biotechnology company focused on viral-vector engineering.
+
+Dr. Jiahu Wang founded Genvira in 2019 as a spinout from the Ottawa Hospital Research Institute. The company grew out of research into three practical limits of viral vectors: genetic instability, low production yields, and limited room for therapeutic payloads.
+
+Today, our [engineering platform](@/platform.md) supports work in cancer immunotherapy, genetic medicines, and vaccines.
+
+---
+
+## Meet the team moving our work forward.
+
+Our leadership, board, and advisors bring experience across viral-vector research, therapeutic development, manufacturing, and business strategy.
+
+[Meet our team ↗](@/team.md)

@@ -4,8 +4,53 @@ description = "Viral-vector design, characterization, and development capabiliti
 template = "page.html"
 [extra]
 eyebrow = "THE ENGINEERING BEHIND OUR PROGRAMS"
+layout = "platform"
+labels = ["VIRAL VECTOR ENGINEERING", "EXPLORE THE WORKFLOW", "PUTTING THE PLATFORM TO WORK"]
 +++
 
-<section class="section shell"><div class="split-section"><div><p class="eyebrow">VIRAL VECTOR ENGINEERING</p><h2>Designed together.<br> Evaluated together.</h2></div><div><p class="large-copy">Vector architecture, payload design, biological performance, and manufacturing all inform therapeutic development.</p><p>Genvira designs, constructs, and characterizes RNA and DNA viral vectors. Our public platform description emphasizes genetic stability, immune activity, payload capacity, and scalable processes.</p></div></div></section>
-<section class="tinted-section"><div class="section shell" data-platform><div class="section-heading"><div><p class="eyebrow">EXPLORE THE WORKFLOW</p><h2>Three connected capabilities.</h2></div><p>Choose a step to explore the work<br> behind our therapeutic programs.</p></div><div class="platform-tabs" role="group" aria-label="Platform steps"><button type="button" data-step="design" aria-pressed="true">01 <span>Design & engineer</span></button><button type="button" data-step="measure" aria-pressed="false">02 <span>Measure & characterize</span></button><button type="button" data-step="translate" aria-pressed="false">03 <span>Develop for translation</span></button></div><div class="platform-panel" data-panel="design"><figure class="payload-diagram" role="img" aria-label="A viral vector carrying a therapeutic payload"><div class="payload-vector"><div class="payload-vector-label">Viral vector</div><div class="payload-core">Therapeutic<br>payload</div></div></figure><div><p class="eyebrow">01 / DESIGN & ENGINEER</p><h3>Begin with the vector.</h3><p>We use vector engineering, in-house libraries, and AI/ML-guided design to explore genetic stability, payload design, and immune activity.</p><p>These choices create candidates that can be evaluated in the laboratory. Proprietary sequences and engineering methods remain outside this public overview.</p></div></div><div class="platform-panel" data-panel="measure"><figure class="assay-graphic" role="img" aria-label="Illustrative bars for potency, durability, and immune activity. Bar lengths do not represent assay values."><div class="assay-row"><div>Potency</div></div><div class="assay-row"><div>Durability</div></div><div class="assay-row"><div>Immune activity</div></div></figure><div><p class="eyebrow">02 / MEASURE & CHARACTERIZE</p><h3>Understand performance.</h3><p>Potency, durability, and immunogenicity assays help compare candidates and guide further development.</p><p>The goal is to connect vector design with measurable biological characteristics.</p></div></div><div class="platform-panel" data-panel="translate"><figure class="translation-graphic" role="img" aria-label="Development progresses from design through process development to scale-up"><div class="translation-stage"><span class="translation-icon translation-design"></span><div>Design</div></div><div class="translation-stage"><span class="translation-icon translation-process"><i></i><i></i><i></i></span><div>Process</div></div><div class="translation-stage"><span class="translation-icon translation-scale"><i></i><i></i><i></i></span><div>Scale</div></div></figure><div><p class="eyebrow">03 / DEVELOP FOR TRANSLATION</p><h3>Consider the path beyond discovery.</h3><p>Process development and manufacturing considerations inform how candidates move toward preclinical and partnered development.</p><p>We consider production yield and scale-up early in vector design, with the goal of developing processes suitable for future manufacturing under Good Manufacturing Practice (GMP).</p></div></div></div></section>
-<section class="section shell split-section"><div><p class="eyebrow">PUTTING THE PLATFORM TO WORK</p><h2>A foundation for<br> our therapeutic pipeline.</h2></div><div><p>GVB-2030 is our lead program, with additional preclinical candidates in development. Our team also collaborates with research and industry partners on viral-vector programs.</p><div class="button-row"><a class="button" href="{{ get_url(path="pipeline/", trailing_slash=true) }}">View our pipeline <span aria-hidden="true">↗</span></a><a class="text-link" href="{{ get_url(path="partnering/", trailing_slash=true) }}">Explore partnering <span aria-hidden="true">→</span></a></div></div></section>
+## Designed together. Evaluated together.
+
+Vector architecture, payload design, biological performance, and manufacturing all inform therapeutic development.
+
+Genvira designs, constructs, and characterizes RNA and DNA viral vectors. Our public platform description emphasizes genetic stability, immune activity, payload capacity, and scalable processes.
+
+---
+
+## Three connected capabilities.
+
+Choose a step to explore the work\
+behind our therapeutic programs.
+
+---
+
+### Begin with the vector.
+
+We use vector engineering, in-house libraries, and AI/ML-guided design to explore genetic stability, payload design, and immune activity.
+
+These choices create candidates that can be evaluated in the laboratory. Proprietary sequences and engineering methods remain outside this public overview.
+
+---
+
+### Understand performance.
+
+Potency, durability, and immunogenicity assays help compare candidates and guide further development.
+
+The goal is to connect vector design with measurable biological characteristics.
+
+---
+
+### Consider the path beyond discovery.
+
+Process development and manufacturing considerations inform how candidates move toward preclinical and partnered development.
+
+We consider production yield and scale-up early in vector design, with the goal of developing processes suitable for future manufacturing under Good Manufacturing Practice (GMP).
+
+---
+
+## A foundation for our therapeutic pipeline.
+
+GVB-2030 is our lead program, with additional preclinical candidates in development. Our team also collaborates with research and industry partners on viral-vector programs.
+
+[View our pipeline ↗](@/pipeline.md)
+
+[Explore partnering →](@/partnering.md)

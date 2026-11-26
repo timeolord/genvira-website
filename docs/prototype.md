@@ -48,7 +48,7 @@ Publication cards show only the verified year when an exact publication day was 
 
 ## Implementation
 
-Zola builds the prototype from content files and Tera templates. All fifteen published prototype records were migrated from the sanitized WordPress snapshot with their titles, summaries, categories, date labels, and article URLs preserved. Each snapshot body matched its authored seed file. Pages retain their HTML layout inside Markdown content files, and research articles can also use ordinary Markdown. There is no database or content seeding step.
+Zola builds the prototype from content files and Tera templates. All fifteen published prototype records were migrated from the sanitized WordPress snapshot with their titles, summaries, categories, date labels, and article URLs preserved. Each snapshot body matched its authored seed file. All page and article bodies now use ordinary Markdown. Layout templates preserve the columns, cards, diagrams, portraits, pipeline table, and controls; shared prose styles give research articles consistent headings, citations, quotes, and source links. There is no database or content seeding step.
 
 The pipeline is a semantic table that becomes a stacked layout on small screens. The platform uses ordinary buttons with keyboard controls. Research filters and search are local and do not require a service. Without JavaScript, navigation, all research entries, and all platform descriptions remain visible. No video, stock photographs, analytics, external font requests, or scroll-triggered content reveals are included.
 
@@ -61,6 +61,8 @@ The browser checks cover eleven pages at 1440 px desktop and 390 px mobile width
 The former WordPress snapshot was previously validated with a temporary database restore. That implementation and snapshot remain available in Git history. The Zola build checks generated links, anchors, CSS assets, sitemap destinations, deployment prefixes, licenses, and the absence of server files or localhost references.
 
 Saved browser captures: [desktop homepage](prototype-desktop.png), [mobile homepage](prototype-mobile.png), and [mobile pipeline](pipeline-mobile.png).
+
+The Markdown conversion preserved every page's ordered words, link destinations, images, and alternative text against a saved build. Desktop and mobile checks passed for all main pages and four article pages, including the source button styles. Shared article typography is shown in the [publication body](publication-desktop.png) and [mobile company announcement](news-mobile.png).
 
 ## CEO illustration update, 16 November 2026
 
@@ -75,3 +77,9 @@ The updated [program-page preview](tumor-context-desktop.png) shows the staging 
 The follow-up TLS reference informed the revised cell arrangement: a central green B-cell follicle with a surrounding cyan T-cell region. The SVG description and legend use those same labels. The TLS shows the cells without shaded backgrounds or dotted boundaries, and viral-vector symbols are circular. T-cells are spaced by equal arc length around the ellipse rather than equal parameter angles. This remains a simplified two-zone schematic rather than a complete inventory of the cell types in a mature TLS.
 
 The dedicated Team page restores the full biographies and portraits from Genvira’s existing team page, grouped into leadership, directors, and advisors. Team is a primary navigation item, with an introduction from About and a footer link. All biographies remain visible without JavaScript.
+
+## TLS placement correction
+
+The shared illustration now expands the pink tumor around the entire TLS, placing its B-cell follicle and surrounding T-cell region inside the tumor. The tumor remains continuous with the component invading the muscle layer. Labels, cell arrangement, viral vectors, and bladder overview retain their existing positions. Image descriptions and the program explanation identify the TLS as being within the tumor.
+
+Browser geometry checks confirmed that every TLS circle, including its outer edge, lies within the tumor boundary. The homepage and GVB-2030 page were reviewed at desktop and mobile widths, and the [desktop](tumor-context-desktop.png) and [mobile](tumor-context-mobile.png) program previews were refreshed.

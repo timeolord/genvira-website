@@ -1,4 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<article><header class="page-hero"><div class="shell article-width"><a class="text-link" href="{{ get_url(path="research/", trailing_slash=true) }}">← Research & updates</a><p class="eyebrow">{% if page.extra.kind == "news" %}Company news{% else %}Publication{% endif %} <span aria-hidden="true">/</span> <time datetime="{{ page.date }}">{{ page.extra.date_label | default(value=page.date | date(format="%-d %B %Y"), boolean=true) }}</time></p><h1>{{ page.title }}</h1></div></header><div class="section shell article-width prose">{{ page.content | safe }}</div></article>
+<article><header class="page-hero"><div class="shell article-width"><a class="text-link" href="{{ get_url(path="research/", trailing_slash=true) }}">← Research & updates</a><p class="eyebrow">{% if page.extra.kind == "news" %}Company news{% else %}Publication{% endif %} <span aria-hidden="true">/</span> <time datetime="{{ page.date }}">{{ page.extra.date_label | default(value=page.date | date(format="%-d %B %Y"), boolean=true) }}</time></p><h1>{{ page.title }}</h1></div></header>
+<div class="section shell article-width prose article-body">
+{% set copy = page.content | replace(from='src="/assets/', to='src="' ~ get_url(path="assets/", trailing_slash=true)) %}{% set link_class = "text-link" %}{% include "partials/copy.html" %}
+</div></article>
 {% endblock content %}

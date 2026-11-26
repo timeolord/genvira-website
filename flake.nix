@@ -19,6 +19,9 @@
           fonts = pkgs.mkShell {
             packages = [ (pkgs.python3.withPackages (ps: [ ps.fonttools ])) ];
           };
+          blender = pkgs.mkShell {
+            packages = [ pkgs.blender pkgs.fish ];
+          };
         });
     };
 }

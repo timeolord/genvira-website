@@ -74,6 +74,22 @@ The output is `dist/genvira/`. These commands perform the same build and validat
 
 Install Git, Zola 0.23.6, and Node.js 24 using their official installers or your package manager. Zola provides prebuilt binaries for these platforms in its [release downloads](https://github.com/getzola/zola/releases/tag/v0.23.6). Check `zola --version` and `node --version`, then run `zola serve` from the repository folder. Build with `zola build --force`, followed by `node scripts/verify-static.mjs` after a successful build. The direct commands in the Windows section also work in other shells; use `cd` instead of `Set-Location`.
 
+### Blender for 3D artwork
+
+Launch Blender from its separate Nix environment:
+
+```fish
+nix develop .#blender --command blender
+```
+
+Or enter an interactive shell with Blender available:
+
+```fish
+nix develop .#blender --command fish
+```
+
+The Blender version comes from the same `flake.lock` as the website tools. Keep `.envrc` set to `use flake` for normal website work. Store editable `.blend` projects outside `static/`, and place exported images or web models under `static/assets/` so only the web assets are published.
+
 ## Editing
 
 - `content/_index.md` contains the homepage.
@@ -81,10 +97,14 @@ Install Git, Zola 0.23.6, and Node.js 24 using their official installers or your
 - `content/research/_index.md` configures the research archive.
 - `content/research/*.md` contains publication and company news articles.
 - `templates/` contains shared layouts, navigation, article cards, and the 404 page.
-- `static/style.css` and `static/assets/` contain styles, JavaScript, fonts, portraits, and artwork.
+- `static/style.css`, `static/markdown.css`, and `static/assets/` contain styles, JavaScript, fonts, portraits, and artwork.
 - `zola.toml` contains site metadata, navigation links, and the deployment URL.
 
-Content files start with TOML metadata between `+++` lines. The existing page bodies retain their HTML to preserve the design. New article bodies can use ordinary Markdown. Within content or templates, use `{{ get_url(path="team/", trailing_slash=true) }}` for page links and `{{ get_url(path="assets/logo.svg") }}` for assets so links work under any deployment prefix. For Markdown links, Zola also supports validated internal links such as `[Our team](@/team.md)`.
+Content files start with TOML metadata between `+++` lines. All page and article bodies use ordinary Markdown. Use `##` for section headings, `###` for subsections, blank lines for paragraphs, `>` for citations or quotes, and Markdown lists and tables. Use validated internal links such as `[Our team](@/team.md)` and images such as `![Description](/assets/tumor-environment.svg)`. The templates resolve image paths under `/assets/` against the deployment prefix. No HTML, CSS classes, or template expressions are needed in the body.
+
+The homepage and other designed pages use `---` on its own line to separate layout blocks. Keep those separators in order when editing; their templates arrange the blocks into the existing columns, cards, diagrams, and controls. Section labels and other small layout details live under `[extra]` in the same file. Team biographies use `### Name`, an image, a role in bold, and ordinary paragraphs. The pipeline uses a Markdown table. The privacy page and research articles use the shared prose layout and do not need layout separators.
+
+Layout markup lives in `templates/layouts/`, with shared text and button formatting in `templates/partials/`. Research articles share `templates/article.html` and the prose styles in `static/markdown.css`, including headings, citations, quotations, and source links. In templates, use `get_url` for links and assets that need the deployment prefix.
 
 ### Publish a research update
 
@@ -104,6 +124,24 @@ date_label = "November 26, 2026"
 Write the update here, with links to its sources.
 ```
 
+For a publication, put the citation in a blockquote followed by an Abstract heading. A backslash at the end of a line keeps a line break without adding HTML:
+
+```markdown
+> Author names.\
+> Journal name and publication details.\
+> DOI: your DOI
+
+## Abstract
+
+The publication abstract, preserving the supplied wording.
+
+[Read the paper ↗](https://doi.org/your-doi)
+
+[View on PubMed](https://pubmed.ncbi.nlm.nih.gov/your-id/)
+```
+
+The shared article template styles DOI links as primary buttons and other standalone source links consistently. Company announcements use the same typography; prefix quoted paragraphs with `>`.
+
 Set `kind` to `news` or `publication`. The `path` keeps articles at `/your-update/`, matching the existing article URL scheme. Dates control archive ordering; `date_label` can show just the verified publication year. Omit `date_label` to display the full date. Set `draft = true` before `[extra]` to keep unfinished work out of production; preview drafts with `zola serve --drafts`.
 
 Published articles appear automatically in Research & Updates, newest first. The homepage shows the latest three. There is no separate index or database snapshot to update. Review the local preview, append a timestamped changelog entry, and commit the source files.
@@ -112,7 +150,7 @@ Published articles appear automatically in Research & Updates, newest first. The
 
 The prototype includes eleven main pages and four initial research updates. Navigation, platform steps, research filtering, and search run in the browser. Contact uses bundled Leaflet with OpenStreetMap tiles and retains a Google Maps link without JavaScript. Navigation, biographies, publications, and platform descriptions remain readable without JavaScript.
 
-The homepage and GVB-2030 page share [tumor-environment.svg](static/assets/tumor-environment.svg), a conceptual illustration rather than study data. The logo, portraits, locally bundled fonts, and scientific source links are preserved from the WordPress prototype. Research and content notes are in [docs/prototype.md](docs/prototype.md). Scientific status, publication links, and privacy copy need the team's review before public launch. The prototype retains `noindex` metadata and a robots exclusion.
+The homepage and GVB-2030 page share [tumor-environment.svg](static/assets/tumor-environment.svg), a conceptual illustration showing a TLS within an enlarged tumor rather than study data. The logo, portraits, locally bundled fonts, and scientific source links are preserved from the WordPress prototype. Research and content notes are in [docs/prototype.md](docs/prototype.md). Scientific status, publication links, and privacy copy need the team's review before public launch. The prototype retains `noindex` metadata and a robots exclusion.
 
 ## Build and deployment
 
