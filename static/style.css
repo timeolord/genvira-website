@@ -24,3 +24,20 @@
 .office-map-card address{margin:0;font-style:normal}
 .office-map-reset{display:block;min-height:44px;width:100%;margin-top:6px;padding:0;border:0;border-top:1px solid var(--line);background:transparent;color:var(--cyan-dark);font:inherit;font-weight:750;text-align:left}
 .office-map-reset:hover{text-decoration:underline}
+
+.home-audiences{border-top:1px solid var(--line)}
+.home-audience-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:36px 44px}
+.home-audience-grid>div{display:flex;flex-direction:column;align-items:start;border-top:1px solid var(--line);padding-top:24px}
+.home-audience-grid p{color:var(--muted)}
+.home-audience-grid .text-link{margin-top:auto}
+
+@media(prefers-reduced-motion:no-preference){
+    .hero-copy>h1,.hero-copy>p:not(.eyebrow),.text-entered h2,.text-entered h3,h2.text-entered{
+        animation:home-text-enter 560ms ease-out both;
+    }
+    .hero-copy>p:not(.eyebrow){animation-delay:110ms}
+}
+@keyframes home-text-enter{
+    from{opacity:.5;transform:translateY(12px)}
+    to{opacity:1;transform:translateY(0)}
+}

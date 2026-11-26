@@ -149,6 +149,7 @@ Published articles appear automatically in Research & Updates, newest first. The
 ### Design and features
 
 The prototype includes eleven main pages and four initial research updates. Navigation, platform steps, research filtering, and search run in the browser. Contact uses bundled Leaflet with OpenStreetMap tiles and retains a Google Maps link without JavaScript. Navigation, biographies, publications, and platform descriptions remain readable without JavaScript.
+The homepage introduces the lead program and gives pharma teams, drug developers, government agencies, investors, and prospective hires links to relevant next steps. Homepage headings animate on entry and respect the browser’s reduced motion preference.
 
 The homepage and GVB-2030 page share [tumor-environment.svg](static/assets/tumor-environment.svg), a conceptual illustration showing a TLS within an enlarged tumor rather than study data. The logo, portraits, locally bundled fonts, and scientific source links are preserved from the WordPress prototype. Research and content notes are in [docs/prototype.md](docs/prototype.md). Scientific status, publication links, and privacy copy need the team's review before public launch. The prototype retains `noindex` metadata and a robots exclusion.
 

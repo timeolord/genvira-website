@@ -70,3 +70,14 @@ if (research_controls) {
     search.addEventListener('input', filter_research);
     filter_research();
 }
+
+if (document.querySelector('[data-home]') && 'IntersectionObserver' in window
+    && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+    const text_observer = new IntersectionObserver(entries => {
+        entries.filter(entry => entry.isIntersecting).forEach(({ target }) => {
+            target.classList.add('text-entered');
+            text_observer.unobserve(target);
+        });
+    }, { rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('[data-text-reveal]').forEach(target => text_observer.observe(target));
+}

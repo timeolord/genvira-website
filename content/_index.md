@@ -11,7 +11,7 @@ facts = [{"label" = "LEAD CANDIDATE", "value" = "GVB-2030"}, {"label" = "THERAPE
 
 # Engineering a new approach to **bladder cancer.**
 
-We’re advancing viral-vector therapeutics with a clear purpose: to bring new approaches to cancer treatment.
+We develop investigational cancer immunotherapies, starting with GVB-2030 for bladder cancer. Our goal is to help the immune system recognize and respond to tumors.
 
 [Explore GVB-2030 ↗](@/gvb-2030.md)
 
@@ -25,7 +25,7 @@ We’re advancing viral-vector therapeutics with a clear purpose: to bring new a
 
 ## One lead program. A platform built to go further.
 
-GVB-2030 brings our viral engineering expertise into focus.
+Bladder cancer is where we’re putting our approach to work.
 
 Our lead program is an engineered vaccinia virus being developed for bladder cancer. It is designed to deliver an immune-activating payload to the tumor environment.
 
@@ -35,9 +35,9 @@ Behind it is a broader development platform that brings vector design, character
 
 ---
 
-## From vector design to therapeutic potential.
+## Built with drug development in mind.
 
-We engineer the vector and evaluate how it performs, with translation in mind from the start.
+Moving a candidate toward the clinic takes careful planning. We consider how to evaluate and manufacture a candidate from the start of development.
 
 [Explore our platform ↗](@/platform.md)
 
@@ -70,3 +70,38 @@ Genvira grew out of the Ottawa Hospital Research Institute. Today, our team brin
 - ![Mitacs](/assets/supporter-mitacs.svg)
 - ![Invest Ottawa](/assets/supporter-invest-ottawa.svg)
 - ![OBIO](/assets/supporter-obio.svg)
+
+
+---
+
+## Work with Genvira
+
+### Pharma and oncology teams
+
+Explore GVB-2030 if you’re evaluating investigational therapies for bladder cancer or looking at new immunotherapy modalities for an oncology portfolio.
+
+[Explore the pipeline](@/pipeline.md)
+
+### Drug developers
+
+Talk to us about research and development collaborations. Tell us which tumor type or therapeutic modality you’re working on and where you see an opportunity to work together.
+
+[Explore partnering](@/partnering.md)
+
+### Government and economic development
+
+Connect with our Ottawa team to discuss growing the local biotech sector and supporting the development of new cancer therapies in Canada.
+
+[Connect with our team](@/contact.md)
+
+### Investors and venture capital
+
+Learn about our lead program, its development stage, and the platform behind it. Get in touch to discuss Genvira’s plans for oncology drug development.
+
+[Start an investor conversation](@/contact.md)
+
+### Scientists and biotech talent
+
+Help move investigational cancer therapies from research toward the clinic. Learn about our team and how to get in touch about working at Genvira.
+
+[Explore careers](@/careers.md)
