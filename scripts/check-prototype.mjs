@@ -108,6 +108,7 @@ try {
         await navigate(path);
         assert(await evaluate('document.documentElement.scrollWidth <= innerWidth'), `desktop overflow at ${path}`);
         if (path === '/') await screenshot('home-desktop');
+        if (path === "/gvb-2040/") await screenshot("gvb-2040-desktop");
     }
     await navigate('/team/');
     assert(await evaluate("document.querySelectorAll('.team-profile').length === 9"), 'team roster incomplete');
@@ -154,6 +155,7 @@ try {
         }
         if (path === '/contact/') await check_contact_layout(true);
         if (path === '/team/') await screenshot('team-mobile');
+        if (path === "/gvb-2040/") await screenshot("gvb-2040-mobile");
         if (path === '/pipeline/') {
             await evaluate("document.querySelector('.pipeline-table').scrollIntoView()");
             await screenshot('pipeline-mobile');
