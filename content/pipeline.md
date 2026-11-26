@@ -29,13 +29,15 @@ Our lead program, GVB-2030, is in IND-enabling studies for bladder cancer. Three
 
 In the randomized Phase 3 KEYNOTE-045 trial, patients with advanced urothelial carcinoma that progressed during or after platinum-based chemotherapy had a median overall survival of 10.3 months with pembrolizumab and 7.4 months with chemotherapy. The trial established a clinical precedent for immune checkpoint inhibition in this setting. [Bellmunt et al., New England Journal of Medicine](https://pmc.ncbi.nlm.nih.gov/articles/PMC5635424/)
 
-### Immune organization in the tumor microenvironment
+### Mature tertiary lymphoid structures and patient outcomes
 
-In a surgical cohort of 580 patients with bladder urothelial carcinoma, tertiary lymphoid structures were detected in 67.8% of muscle-invasive tumors and 48.2% of non-muscle-invasive tumors. Their presence correlated with lymphocyte infiltration. The prognostic value of these structures remained uncertain after multivariable analysis. [Ma et al., The Oncologist](https://pubmed.ncbi.nlm.nih.gov/37874923/)
+In a cohort of patients with muscle-invasive bladder cancer treated with neoadjuvant PD-L1 blockade, higher densities of mature tertiary lymphoid structures (TLS) were associated with major pathological response and longer event-free survival. [Study of mature TLS in bladder cancer](https://pubmed.ncbi.nlm.nih.gov/42358824/)
+
+A separate Phase 1b study in muscle-invasive bladder cancer found that TLS density increased after treatment in patients who responded to an investigational combination of oncolytic immunotherapy and nivolumab. Together, these findings support studying mature TLS as a marker of antitumor immune activity in bladder cancer. [Phase 1b study in Nature Medicine](https://pmc.ncbi.nlm.nih.gov/articles/PMC12302721/)
 
 ### Development hypothesis
 
-GVB-2030 is an investigational immunotherapy designed to engage the bladder tumor microenvironment. The clinical precedent for immunotherapy and evidence of local immune organization provide a rationale for studying that approach. The program is in IND-enabling studies, with first-in-human evaluation as the next development goal.
+GVB-2030 is an investigational immunotherapy designed to engage the bladder tumor microenvironment. The clinical precedent for immunotherapy and the associations between mature TLS and favorable patient outcomes support Genvira’s focus on the local antitumor immune response. The program is in IND-enabling studies, with first-in-human evaluation as the next development goal.
 
 [Explore GVB-2030 and the development plan](@/gvb-2030.md)
 
