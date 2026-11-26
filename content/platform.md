@@ -1,18 +1,28 @@
 +++
 title = "Our platform"
-description = "Viral-vector design, characterization, and development capabilities that support our therapeutic pipeline."
+description = "A cancer immunotherapy platform focused on the tumor immune environment and how each patient’s immune system recognizes cancer."
 template = "page.html"
 [extra]
 eyebrow = "THE ENGINEERING BEHIND OUR PROGRAMS"
 layout = "platform"
-labels = ["VIRAL VECTOR ENGINEERING", "EXPLORE THE WORKFLOW", "PUTTING THE PLATFORM TO WORK"]
+labels = ["OUR SCIENCE", "EXPLORE THE WORKFLOW", "PUTTING THE PLATFORM TO WORK"]
 +++
 
-## Designed together. Evaluated together.
+## Helping the immune system recognize cancer
 
-Vector architecture, payload design, biological performance, and manufacturing all inform therapeutic development.
+How can we help the immune system recognize a tumor and mount a response against it? That question connects Genvira’s therapeutic programs.
 
-Genvira designs, constructs, and characterizes RNA and DNA viral vectors. Our public platform description emphasizes genetic stability, immune activity, payload capacity, and scalable processes.
+### Engaging the tumor immune environment
+
+[GVB-2030](@/programs/gvb-2030.md) is an investigational vaccinia-based immunotherapy for bladder cancer. It is designed to stimulate an antitumor immune response. One focus of our research is tertiary lymphoid structures (TLS), clusters of immune cells that can form in tumors. Published bladder cancer research has linked higher densities of mature TLS with better tumor response and longer event-free survival in patients who received checkpoint immunotherapy before surgery. [Study of mature TLS in bladder cancer](https://pubmed.ncbi.nlm.nih.gov/42358824/)
+
+### Personalizing how the immune system sees the tumor
+
+[GVB-2040](@/programs/gvb-2040.md) brings a patient-specific approach to the same goal. The preclinical cancer vaccine program uses information from a patient sample and tumor biopsy to tailor the vaccine to the patient’s human leukocyte antigen (HLA) profile. HLA helps determine which tumor antigens T cells can recognize.
+
+### Measuring activity before clinical development
+
+We evaluate how candidates perform in the lab and consider manufacturing early in development. The workflow below shows how design, biological characterization, and process development fit together.
 
 ---
 
@@ -49,7 +59,7 @@ We consider production yield and scale-up early in vector design, with the goal 
 
 ## A foundation for our therapeutic pipeline.
 
-GVB-2030 is our lead program, with additional preclinical candidates in development. Our team also collaborates with research and industry partners on viral-vector programs.
+GVB-2030 is in IND-enabling studies for bladder cancer. GVB-2040 is our next development focus and is currently preclinical. We also work with research and industry partners on viral-vector programs.
 
 [View our pipeline ↗](@/pipeline.md)
 
