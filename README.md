@@ -4,6 +4,8 @@ The Genvira prototype is built with [Zola](https://www.getzola.org/). Content, t
 
 ## Development
 
+### With Nix
+
 On NixOS or another Linux system with Nix, load the pinned environment:
 
 ```fish
@@ -24,7 +26,53 @@ zola serve
 
 Open <http://127.0.0.1:1111>. Zola rebuilds and reloads when content, templates, or assets change. Stop the server with Ctrl+C. Use `zola serve --port 1112` if the default port is occupied.
 
-The flake provides Zola, Node.js for validation, and fish. `flake.lock` pins their versions. Keep `.envrc` set to `use flake`. Without Nix, install Zola 0.23.6 and Node.js 24, then use the same commands. The templates use the Tera content templating introduced in Zola 0.23.
+The flake provides Zola, Node.js for validation, and fish. `flake.lock` pins their versions. Keep `.envrc` set to `use flake`. The templates use the Tera content templating introduced in Zola 0.23.
+
+### Windows without Nix
+
+Use PowerShell in Windows Terminal or the normal PowerShell app. Zola does not support PowerShell ISE. You do not need Nix, WSL, fish, WordPress, or a Rust compiler.
+
+Install [Git for Windows](https://git-scm.com/install/windows) and Zola 0.23.6 using WinGet:
+
+```powershell
+winget install --id Git.Git --exact --source winget
+winget install --id getzola.zola --exact --version 0.23.6 --source winget
+```
+
+If WinGet is unavailable or does not offer that Zola version, use the Git installer linked above and download the Windows ZIP from the [Zola 0.23.6 release](https://github.com/getzola/zola/releases/tag/v0.23.6). Extract `zola.exe` into a permanent folder, such as `C:\Tools\Zola`. Search Windows for “Edit environment variables for your account”, edit your user's `Path`, and add that folder. Other installation options are in the [Zola installation guide](https://www.getzola.org/documentation/getting-started/installation/).
+
+Install Node.js 24 using the Windows `.msi` installer from the [Node.js 24 downloads](https://nodejs.org/download/release/latest-v24.x/). Choose `x64.msi` for a typical Intel or AMD computer, or `arm64.msi` for Windows on ARM. Keep the installer's option to add Node.js to `PATH`. Node.js is used for build validation and static previews; Zola alone is enough for editing with `zola serve`.
+
+Close and reopen PowerShell after installation, then check:
+
+```powershell
+git --version
+zola --version
+node --version
+```
+
+Expect Zola `0.23.6` and Node.js `v24.x`. Clone the repository into a folder of your choice, then start the preview:
+
+```powershell
+git clone https://github.com/timeolord/genvira-website.git
+Set-Location genvira-website
+zola serve
+```
+
+If you already have a clone, use `Set-Location` with its path instead. Run all commands below from the repository folder containing `zola.toml`. Open <http://127.0.0.1:1111> and edit the source files in your text editor. Changes reload automatically. Stop the preview with Ctrl+C. If a command is not recognized, reopen PowerShell and check that its installation folder is on `PATH`.
+
+Build and validate from PowerShell by running these commands in order. Continue to validation only if the build succeeds:
+
+```powershell
+zola build --force
+node scripts/verify-static.mjs
+```
+
+The output is `dist/genvira/`. These commands perform the same build and validation as `scripts/build-static.fish`, without requiring fish. No `npm install` is needed. Publishing still happens through GitHub Actions when changes reach `main`.
+
+### macOS or Linux without Nix
+
+Install Git, Zola 0.23.6, and Node.js 24 using their official installers or your package manager. Zola provides prebuilt binaries for these platforms in its [release downloads](https://github.com/getzola/zola/releases/tag/v0.23.6). Check `zola --version` and `node --version`, then run `zola serve` from the repository folder. Build with `zola build --force`, followed by `node scripts/verify-static.mjs` after a successful build. The direct commands in the Windows section also work in other shells; use `cd` instead of `Set-Location`.
 
 ## Editing
 
@@ -86,6 +134,13 @@ To build for another host or path, pass the complete destination URL:
 nix develop --command fish scripts/build-static.fish https://example.org/projects/genvira/
 ```
 
+Without Nix or fish, run these commands in order, continuing only after a successful build:
+
+```powershell
+zola build --force --base-url https://example.org/projects/genvira/
+node scripts/verify-static.mjs https://example.org/projects/genvira/
+```
+
 For a standalone domain, use `https://example.org/`. Upload the contents of `dist/genvira/` at the selected location. Nested pages use directory indexes. See [docs/static-export.md](docs/static-export.md) for static preview details.
 
 ## Checks and previews
@@ -105,7 +160,17 @@ nix develop --command node scripts/serve-static.mjs
 
 Open <http://127.0.0.1:8090/genvira-website/>. This preview reads the deployment path from the generated sitemap and returns the generated 404 page for missing URLs. Rebuild before previewing source changes. Run the production build again before uploading output manually; GitHub Actions always builds its own production output.
 
-Start the QA browser in another terminal:
+On Windows or another system without Nix, run the equivalent commands in order, continuing only if each command succeeds:
+
+```powershell
+zola build --force --base-url http://127.0.0.1:8090/genvira-website/
+node scripts/verify-static.mjs http://127.0.0.1:8090/genvira-website/
+node scripts/serve-static.mjs
+```
+
+Keep that terminal open while previewing, then stop the server with Ctrl+C. Before a manual upload, restore production output with `zola build --force` and `node scripts/verify-static.mjs`.
+
+For automated browser checks using the Linux Nix QA environment, start the QA browser in another terminal:
 
 ```fish
 nix develop .#qa --command chromium --headless --no-sandbox --disable-gpu --remote-debugging-port=9227 --user-data-dir=/tmp/genvira-browser-qa
@@ -128,5 +193,11 @@ nix develop .#fonts --command python3 scripts/build-symbol-font.py
 ## Working together
 
 Record every repository change in [changelog.txt](changelog.txt) in the same commit, using the actual UTC timestamp from `date -u '+%Y-%m-%dT%H:%M:%SZ'`. Keep source changes reviewable in Git and preserve unrelated files. Repository instructions are in [AGENTS.md](AGENTS.md).
+
+On Windows, append the equivalent UTC entry from PowerShell, replacing the example description with your change and verification:
+
+```powershell
+Add-Content -Path changelog.txt -Encoding utf8 -Value (([DateTime]::UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ")) + " | Describe the change and relevant checks.")
+```
 
 The Zola migration preserves the fifteen published prototype records from the sanitized WordPress snapshot, including metadata and article URLs. WordPress starter records were outside the published prototype. The old theme, plugins, database snapshot, and WordPress scripts are available in Git history. Ignored `.local/` data and uploads are preserved for recovery, but are no longer used. The untracked `old-website/` directory remains reference material.

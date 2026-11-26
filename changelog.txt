@@ -61,3 +61,4 @@ earlier prototype entries are reconstructed from git commit timestamps in utc
 2026-11-25T15:07:44Z | Use the supplied abstracts verbatim in the three publication posts and verify the text and citations in WordPress and the static export.
 2026-11-26T15:40:02Z | Migrate the prototype to Zola with source content, preserved URLs and artwork, Nix and Pages builds, updated documentation and previews; verify desktop and mobile behavior, publishing, drafts, links, and deployment paths.
 2026-11-26T15:49:02Z | Normalize migrated metadata and copied license whitespace; verify the complete commit diff.
+2026-11-26T15:51:31Z | Document Windows PowerShell installation, editing, builds, static previews, and changelog entries, with setup guidance for other systems without Nix; verify official download links and documentation diff.
