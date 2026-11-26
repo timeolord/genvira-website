@@ -72,3 +72,4 @@ earlier prototype entries are reconstructed from git commit timestamps in utc
 2026-11-26T16:48:40Z | Format pipeline citations as linked superscripts with smaller references below the page copy; verify static, desktop, and mobile checks.
 2026-11-26T16:50:02Z | Remove underlines from linked superscript citations and verify static, desktop, and mobile checks.
 2026-11-26T16:52:48Z | Add the preclinical GVB-2040 HLA-personalized cancer vaccine page and navigation links; verify static, desktop, and mobile checks.
+2026-11-26T16:53:13Z | Explain how patient and tumor biopsy sequencing inform HLA personalization for GVB-2040; verify the static build.
