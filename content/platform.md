@@ -59,7 +59,9 @@ We consider production yield and scale-up early in vector design, with the goal 
 
 ## A foundation for our therapeutic pipeline.
 
-GVB-2030 is in IND-enabling studies for bladder cancer. GVB-2040 is our next development focus and is currently preclinical. Both programs are part of Genvira’s own therapeutic pipeline.
+GVB-2030 is in IND-enabling studies for bladder cancer. GVB-2040 is our next development focus and is currently preclinical. Both programs are part of Genvira’s own therapeutic pipeline. Our patented vector technology supports the programs we develop in-house.
+
+In our ongoing melanoma collaboration, Labskin develops a lab-grown skin model and Genvira uses it to evaluate our investigational vaccine. [Read about the melanoma collaboration](@/research/melanoma-research-collaboration.md)
 
 [View our pipeline ↗](@/pipeline.md)
 

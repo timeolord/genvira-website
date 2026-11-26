@@ -5,7 +5,7 @@ template = "page.html"
 [extra]
 eyebrow = "CONNECT WITH GENVIRA"
 layout = "partnering"
-labels = ["OUR THERAPEUTIC PROGRAMS", "AREAS FOR DISCUSSION", "RESEARCH & UPDATES"]
+labels = ["OUR THERAPEUTIC PROGRAMS", "AREAS FOR DISCUSSION", "ACTIVE RESEARCH COLLABORATION"]
 column_labels = ["01 / LEAD PROGRAM", "02 / PRECLINICAL PROGRAM", "03 / INVESTMENT INQUIRIES"]
 +++
 
@@ -39,8 +39,10 @@ Connect with the team about Genvira’s therapeutic focus and development priori
 
 ---
 
-## Follow our research
+## Evaluating our melanoma vaccine with Labskin
 
-Explore the published science behind our therapeutic programs and find company updates.
+In this ongoing research collaboration, Labskin develops a lab-grown skin model and Genvira uses it to evaluate our investigational melanoma vaccine. The project also involves the National Research Council of Canada.
 
-[Read research and updates ↗](@/research/_index.md)
+[Read about the melanoma collaboration ↗](@/research/melanoma-research-collaboration.md)
+
+[Explore research and updates →](@/research/_index.md)

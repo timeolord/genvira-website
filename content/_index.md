@@ -59,7 +59,7 @@ Process development and scalable manufacturing considerations.
 
 ## Research roots. A therapeutic focus.
 
-Genvira grew out of the Ottawa Hospital Research Institute. Today, our team brings viral engineering and translational research together to develop our own cancer therapies.
+Genvira grew out of the Ottawa Hospital Research Institute. Today, our team develops its own cancer therapies using Genvira’s patented vector technology.
 
 [Get to know Genvira ↗](@/about.md)
 
@@ -84,7 +84,7 @@ Explore GVB-2030 if you’re evaluating investigational therapies for bladder ca
 
 ### Drug developers
 
-Explore Genvira’s investigational programs, their therapeutic approaches, and their development stages.
+Explore Genvira’s investigational programs and how we work with research collaborators to evaluate our own therapies.
 
 [Discuss our programs](@/partnering.md)
 

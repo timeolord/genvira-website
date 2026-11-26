@@ -80,3 +80,4 @@ earlier prototype entries are reconstructed from git commit timestamps in utc
 2026-11-26T17:02:12Z | Lay out platform science topics in three desktop columns and stack them on mobile; verify layout, inline links, and static build.
 2026-11-26T17:03:17Z | Add the platform TLS footnote and share citation styles across pages; verify static, desktop, and mobile checks.
 2026-11-26T20:23:20Z | Update site copy and program inquiries to reflect development of Genvira’s own products; verify static, desktop, and mobile checks.
+2026-11-26T20:33:09Z | Highlight Genvira’s patented technology and restore promotion of its active melanoma research collaboration; verify the static build.

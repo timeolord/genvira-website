@@ -1,6 +1,6 @@
 +++
 title = "Research & updates"
-description = "Explore scientific publications and company updates from Genvira."
+description = "Explore Genvira’s scientific publications, research collaborations, and company updates."
 template = "research.html"
 page_template = "article.html"
 sort_by = "date"
