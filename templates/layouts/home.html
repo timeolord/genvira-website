@@ -1,21 +1,21 @@
-<section class="home-hero" data-home><div class="shell hero-grid"><div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span> {{ section.extra.labels[0] }}</p>
+<section class="home-hero"><div class="shell hero-grid"><div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span> {{ section.extra.labels[0] }}</p>
 {% set hero_parts = blocks[0] | replace(from="<strong>", to="<span>") | replace(from="</strong>", to="</span>") | split(pat="<p><a") %}{{ hero_parts[0] | safe }}
 <div class="button-row">{% for link in hero_parts[1:] %}{% set copy = "<p><a" ~ link %}{% set link_class = "button button-cyan" if loop.index0 == 0 else "hero-text-link" %}{% include "partials/copy.html" %}{% endfor %}</div>
 </div><figure class="hero-visual"><div class="visual-topline"><span>BLADDER CANCER / IMMUNE ENVIRONMENT</span><span>01</span></div>{{ blocks[1] | regex_replace(pattern='<p>(.*?)</p>', rep='$1') | safe }}</figure></div>
 <div class="shell hero-facts">{% for fact in section.extra.facts %}<div><span>{{ fact.label }}</span><strong>{{ fact.value }}</strong></div>{% endfor %}<a href="{{ get_url(path="@/programs/gvb-2030.md") }}#development">Program overview <span aria-hidden="true">↗</span></a></div></section>
-<section class="section shell markdown-introduction" data-text-reveal>{% set copy = blocks[2] %}{% set label = section.extra.labels[1] %}{% set lead = true %}{% set link_class = "text-link" %}{% include "partials/split.html" %}</section>
-<section class="platform-feature"><div class="shell feature-grid"><div class="feature-heading" data-text-reveal><p class="eyebrow">{{ section.extra.labels[2] }}</p>{% set copy = blocks[3] %}{% set link_class = "button button-outline" %}{% include "partials/copy.html" %}</div><div class="capability-list">
+<section class="section shell markdown-introduction">{% set copy = blocks[2] %}{% set label = section.extra.labels[1] %}{% set lead = true %}{% set link_class = "text-link" %}{% include "partials/split.html" %}</section>
+<section class="platform-feature"><div class="shell feature-grid"><div class="feature-heading"><p class="eyebrow">{{ section.extra.labels[2] }}</p>{% set copy = blocks[3] %}{% set link_class = "button button-outline" %}{% include "partials/copy.html" %}</div><div class="capability-list">
 {% set capabilities = blocks[4] | trim | split(pat="<h3") %}{% set symbols = ["◎", "⌁", "⤴"] %}{% set colors = ["cyan", "green", "violet"] %}
 {% for capability in capabilities[1:] %}<div><span class="step-number">0{{ loop.index }}</span><div>{{ ("<h3" ~ capability) | safe }}</div><span class="capability-symbol {{ colors[loop.index0] }}" aria-hidden="true">{{ symbols[loop.index0] }}</span></div>{% endfor %}
 </div></div></section>
-<section class="section shell company-note" data-text-reveal><p class="eyebrow">{{ section.extra.labels[3] }}</p><div>{% set copy = blocks[5] %}{% set link_class = "text-link" %}{% include "partials/copy.html" %}</div></section>
+<section class="section shell company-note"><p class="eyebrow">{{ section.extra.labels[3] }}</p><div>{% set copy = blocks[5] %}{% set link_class = "text-link" %}{% include "partials/copy.html" %}</div></section>
 <section aria-label="Supported by">{{ blocks[6] | replace(from="<ul>", to='<ul class="shell supporter-list" role="list">') | safe }}</section>
 <section class="section shell home-audiences" aria-labelledby="home-audiences-title">
 {% set audience_parts = blocks[7] | trim | split(pat="<h3") %}
-{{ audience_parts[0] | regex_replace(pattern="<h2[^>]*>", rep='<h2 id="home-audiences-title" data-text-reveal>') | safe }}
+{{ audience_parts[0] | regex_replace(pattern="<h2[^>]*>", rep='<h2 id="home-audiences-title">') | safe }}
 <div class="home-audience-grid">
 {% for audience in audience_parts[1:] %}
-<div data-text-reveal>{% set copy = "<h3" ~ audience %}{% set link_class = "text-link" %}{% include "partials/copy.html" %}</div>
+<div>{% set copy = "<h3" ~ audience %}{% set link_class = "text-link" %}{% include "partials/copy.html" %}</div>
 {% endfor %}
 </div>
 </section>

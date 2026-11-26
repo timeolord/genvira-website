@@ -32,12 +32,12 @@
 .home-audience-grid .text-link{margin-top:auto}
 
 @media(prefers-reduced-motion:no-preference){
-    .hero-copy>h1,.hero-copy>p:not(.eyebrow),.text-entered h2,.text-entered h3,h2.text-entered{
-        animation:home-text-enter 560ms ease-out both;
+    h1,.hero-copy>p:not(.eyebrow),.text-entered{
+        animation:text-enter 560ms ease-out backwards;
     }
     .hero-copy>p:not(.eyebrow){animation-delay:110ms}
 }
-@keyframes home-text-enter{
+@keyframes text-enter{
     from{opacity:.5;transform:translateY(12px)}
     to{opacity:1;transform:translateY(0)}
 }

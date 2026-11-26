@@ -76,3 +76,4 @@ earlier prototype entries are reconstructed from git commit timestamps in utc
 2026-11-26T16:55:18Z | Share the GVB program layout, add an HLA graphic placeholder, and verify static, desktop, and mobile checks.
 2026-11-26T16:58:05Z | Publish program pages and pipeline entries from Markdown while preserving existing URLs; verify a new program, draft exclusion, and desktop and mobile checks.
 2026-11-26T17:00:10Z | Expand the platform science overview with the GVB-2030 immune rationale and GVB-2040 HLA focus; verify static, desktop, and mobile checks.
+2026-11-26T17:01:21Z | Apply shared text transitions to headings across the site and verify desktop, mobile, and reduced motion behavior.

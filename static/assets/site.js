@@ -71,13 +71,13 @@ if (research_controls) {
     filter_research();
 }
 
-if (document.querySelector('[data-home]') && 'IntersectionObserver' in window
+if ('IntersectionObserver' in window
     && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
     const text_observer = new IntersectionObserver(entries => {
         entries.filter(entry => entry.isIntersecting).forEach(({ target }) => {
             target.classList.add('text-entered');
             text_observer.unobserve(target);
         });
-    }, { rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('[data-text-reveal]').forEach(target => text_observer.observe(target));
+    });
+    document.querySelectorAll('h2, h3, h4, h5, h6').forEach(target => text_observer.observe(target));
 }
