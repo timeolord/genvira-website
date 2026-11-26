@@ -51,7 +51,7 @@ The goal is to connect vector design with measurable biological characteristics.
 
 ### Consider the path beyond discovery.
 
-Process development and manufacturing considerations inform how candidates move toward preclinical and partnered development.
+Process development and manufacturing considerations inform how candidates move from discovery into preclinical development.
 
 We consider production yield and scale-up early in vector design, with the goal of developing processes suitable for future manufacturing under Good Manufacturing Practice (GMP).
 
@@ -59,11 +59,11 @@ We consider production yield and scale-up early in vector design, with the goal 
 
 ## A foundation for our therapeutic pipeline.
 
-GVB-2030 is in IND-enabling studies for bladder cancer. GVB-2040 is our next development focus and is currently preclinical. We also work with research and industry partners on viral-vector programs.
+GVB-2030 is in IND-enabling studies for bladder cancer. GVB-2040 is our next development focus and is currently preclinical. Both programs are part of Genvira’s own therapeutic pipeline.
 
 [View our pipeline ↗](@/pipeline.md)
 
-[Explore partnering →](@/partnering.md)
+[Discuss our programs →](@/partnering.md)
 
 ---
 

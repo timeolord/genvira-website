@@ -5,7 +5,7 @@ template = "index.html"
 [extra]
 eyebrow = "OUR LEAD PROGRAM"
 layout = "home"
-labels = ["OUR LEAD PROGRAM · GVB-2030", "THERAPEUTICS FIRST", "OUR ENGINEERING PLATFORM", "BUILT IN OTTAWA. WORKING THROUGH COLLABORATION."]
+labels = ["OUR LEAD PROGRAM · GVB-2030", "THERAPEUTICS FIRST", "OUR ENGINEERING PLATFORM", "BUILT IN OTTAWA"]
 facts = [{"label" = "LEAD CANDIDATE", "value" = "GVB-2030"}, {"label" = "THERAPEUTIC FOCUS", "value" = "Bladder cancer"}, {"label" = "DEVELOPMENT STAGE", "value" = "IND-enabling studies"}]
 +++
 
@@ -59,7 +59,7 @@ Process development and scalable manufacturing considerations.
 
 ## Research roots. A therapeutic focus.
 
-Genvira grew out of the Ottawa Hospital Research Institute. Today, our team brings viral engineering and translational research together to advance our own programs and work with partners.
+Genvira grew out of the Ottawa Hospital Research Institute. Today, our team brings viral engineering and translational research together to develop our own cancer therapies.
 
 [Get to know Genvira ↗](@/about.md)
 
@@ -74,7 +74,7 @@ Genvira grew out of the Ottawa Hospital Research Institute. Today, our team brin
 
 ---
 
-## Work with Genvira
+## Connect with Genvira
 
 ### Pharma and oncology teams
 
@@ -84,9 +84,9 @@ Explore GVB-2030 if you’re evaluating investigational therapies for bladder ca
 
 ### Drug developers
 
-Talk to us about research and development collaborations. Tell us which tumor type or therapeutic modality you’re working on and where you see an opportunity to work together.
+Explore Genvira’s investigational programs, their therapeutic approaches, and their development stages.
 
-[Explore partnering](@/partnering.md)
+[Discuss our programs](@/partnering.md)
 
 ### Government and economic development
 

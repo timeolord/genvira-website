@@ -10,7 +10,7 @@ labels = ["START A CONVERSATION", "GENVIRA BIOSCIENCES INC."]
 
 ## Connect with our team.
 
-For program, partnership, investment, or research inquiries, contact Genvira directly.
+For program, investment, or research inquiries, contact Genvira directly.
 
 ---
 

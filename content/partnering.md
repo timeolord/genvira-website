@@ -1,48 +1,46 @@
 +++
-title = "Partnering"
-description = "Connect with Genvira about therapeutic programs, scientific collaboration, and strategic opportunities."
+title = "Program inquiries"
+description = "Connect with Genvira about our investigational therapies, development priorities, and investment inquiries."
 template = "page.html"
 [extra]
-eyebrow = "ADVANCING THROUGH COLLABORATION"
+eyebrow = "CONNECT WITH GENVIRA"
 layout = "partnering"
-labels = ["WORK WITH GENVIRA", "AREAS FOR DISCUSSION", "RECENT COLLABORATION"]
-column_labels = ["01 / THERAPEUTIC PROGRAMS", "02 / SCIENTIFIC COLLABORATION", "03 / STRATEGIC CONVERSATIONS"]
+labels = ["OUR THERAPEUTIC PROGRAMS", "AREAS FOR DISCUSSION", "RESEARCH & UPDATES"]
+column_labels = ["01 / LEAD PROGRAM", "02 / PRECLINICAL PROGRAM", "03 / INVESTMENT INQUIRIES"]
 +++
 
-## A focused conversation. A shared scientific goal.
+## Talk with us about our pipeline
 
-We welcome conversations with biotechnology companies, research groups, and potential investment partners.
+Genvira develops its own investigational therapies. We welcome inquiries from pharma and oncology teams, drug developers, and investors interested in our programs.
 
-Start with the program or capability that interests you. Our team can discuss the public development overview and explore whether there is a basis for further collaboration.
+Tell us which program or development milestone you’d like to discuss.
 
 [Contact our team ↗](@/contact.md)
 
 ---
 
-### GVB-2030 & the pipeline
+### GVB-2030
 
-Discuss the lead bladder cancer program and Genvira’s broader research direction.
+Learn about our investigational immunotherapy for bladder cancer and its IND-enabling studies.
 
 [Explore GVB-2030 ↗](@/programs/gvb-2030.md)
 
-### Viral-vector engineering
+### GVB-2040
 
-Explore potential collaboration in vector design, characterization, and translational development.
+Learn about our preclinical personalized cancer vaccine program and its focus on the patient’s HLA profile.
 
-[Explore the platform ↗](@/platform.md)
+[Explore GVB-2040 ↗](@/programs/gvb-2040.md)
 
-### Partners & investors
+### Investors
 
 Connect with the team about Genvira’s therapeutic focus and development priorities.
 
-[Start a conversation ↗](mailto:info@genvira.com?subject=Strategic%20inquiry)
+[Start an investor conversation ↗](mailto:info@genvira.com?subject=Investment%20inquiry)
 
 ---
 
-## Working together on melanoma research.
+## Follow our research
 
-Genvira, Labskin, and the National Research Council of Canada announced a UK–Canada collaboration supported by up to £1.2 million ($2.0 million) in funding in August 2025.
+Explore the published science behind our therapeutic programs and find company updates.
 
-[Read the company update ↗](@/research/_index.md)
-
-[Read the collaboration announcement](@/research/melanoma-research-collaboration.md)
+[Read research and updates ↗](@/research/_index.md)

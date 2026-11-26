@@ -39,8 +39,6 @@ In the Phase 3 KEYNOTE-045 trial, patients with advanced urothelial cancer that 
 
 ## Clinical development progress
 
-A partnered Phase 1 study evaluated a Genvira-engineered vector in a separate development program. We reported encouraging preliminary safety and efficacy signals from that study.
-
 Future clinical studies will evaluate GVB-2030’s safety and potential benefit in patients.
 
 ---
