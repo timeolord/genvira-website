@@ -1,24 +1,7 @@
-# wordpress core and local configuration
-/wp-admin/
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
-/.htaccess
-/wp-content/index.php
-/wp-content/languages/
-
-# uploads and local state
-/wp-content/uploads/
+# local state and recovery files
 /.local/
 /.direnv/
 *.log
-
-# local backups
-/wordpress.sql
-/uploads-backup/
 
 # generated site
 /dist/

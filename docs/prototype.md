@@ -48,7 +48,7 @@ Publication cards show only the verified year when an exact publication day was 
 
 ## Implementation
 
-Zola builds the prototype from content files and Tera templates. All fifteen published prototype records were migrated from the sanitized WordPress snapshot with their titles, summaries, categories, date labels, and article URLs preserved. Each snapshot body matched its authored seed file. All page and article bodies now use ordinary Markdown. Layout templates preserve the columns, cards, diagrams, portraits, pipeline table, and controls; shared prose styles give research articles consistent headings, citations, quotes, and source links. There is no database or content seeding step.
+Zola builds the prototype from content files and Tera templates. Page and article bodies use Markdown. Front matter stores titles, summaries, categories, date labels, and article paths. Layout templates preserve the columns, cards, diagrams, portraits, pipeline table, and controls; shared prose styles give research articles consistent headings, citations, quotes, and source links. There is no database or content seeding step.
 
 The pipeline is a semantic table that becomes a stacked layout on small screens. The platform uses ordinary buttons with keyboard controls. Research filters and search are local and do not require a service. Without JavaScript, navigation, all research entries, and all platform descriptions remain visible. No video, stock photographs, analytics, external font requests, or scroll-triggered content reveals are included.
 
@@ -58,7 +58,7 @@ The local privacy page describes only the prototype. Final public privacy and me
 
 The browser checks cover eleven pages at 1440 px desktop and 390 px mobile widths, four research detail pages, responsive overflow, image loading, heading structure, menu open and Escape behavior, platform steps, research type filters, search with no results, contact details and map layout, a JavaScript-disabled fallback, and a real 404 response. The script and its Nix QA environment are documented in the root README.
 
-The former WordPress snapshot was previously validated with a temporary database restore. That implementation and snapshot remain available in Git history. The Zola build checks generated links, anchors, CSS assets, sitemap destinations, deployment prefixes, licenses, and the absence of server files or localhost references.
+The Zola build checks generated links, anchors, CSS assets, sitemap destinations, deployment prefixes, licenses, and the absence of server files or localhost references.
 
 Saved browser captures: [desktop homepage](prototype-desktop.png), [mobile homepage](prototype-mobile.png), and [mobile pipeline](pipeline-mobile.png).
 

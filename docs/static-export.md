@@ -1,6 +1,6 @@
 # Static build
 
-Zola renders the site directly from the content and templates in this repository. No WordPress server, database restore, or crawling step is involved.
+Zola renders the site directly from the content and templates in this repository.
 
 ```fish
 nix develop --command fish scripts/build-static.fish

@@ -10,7 +10,7 @@ Use `YYYY-MM-DDTHH:MM:SSZ | description`, with the actual current UTC time from 
 
 ## Development preferences
 
-Use Nix for dependencies, keep `flake.nix` and `flake.lock` current, and keep `.envrc` set to `use flake`. Use fish for shell commands and scripts. Keep functions concise, prefer functional patterns, and use snakecase names. Comments should be lowercase, informal, concise, and contain no dashes. Prefer Rust, Zig, or Haskell when introducing a new tool where appropriate; use constructors instead of default values in Zig. Keep the existing WordPress PHP, CSS, JavaScript, and SVG implementation where appropriate.
+Use Nix for dependencies, keep `flake.nix` and `flake.lock` current, and keep `.envrc` set to `use flake`. Use fish for shell commands and scripts. Keep functions concise, prefer functional patterns, and use snakecase names. Comments should be lowercase, informal, concise, and contain no dashes. Prefer Rust, Zig, or Haskell when introducing a new tool where appropriate; use constructors instead of default values in Zig. Reuse the existing Zola templates, CSS, JavaScript, and SVG where appropriate.
 
 Use plain prose without em dashes, emojis, or unnecessary bold formatting.
 
@@ -18,10 +18,10 @@ Use plain prose without em dashes, emojis, or unnecessary bold formatting.
 
 Keep page and article content under `content`, layouts under `templates`, and styles and shared artwork under `static`. Update the README when behavior or setup changes, and refresh relevant saved previews when artwork changes.
 
-Zola content and metadata live in source files. Preserve existing page and article URLs, use `get_url` for links that need the deployment prefix, and keep draft articles out of production. Never commit credentials or local state. The former WordPress implementation and sanitized snapshot are available in Git history; ignored local databases are recovery material and must not be overwritten.
+Zola content and metadata live in source files. Preserve existing page and article URLs, use `get_url` for links that need the deployment prefix, and keep draft articles out of production. Never commit credentials or local state. Preserve ignored local recovery files and databases.
 
 Run checks appropriate to the change. Use desktop and mobile previews for visual changes and `scripts/build-static.fish` for static build validation. Documentation-only changes need link and diff checks, without rebuilding the website.
 
 Pushing `main` automatically deploys the static prototype through GitHub Actions. Preserve the `/genvira-website/` deployment path and inherited domain configuration. The personal domain is temporary during prototyping; deployment belongs entirely to this repository. Do not modify the personal website or add integration steps for it. Do not stop an existing local development server unless you started it or the user asks you to.
 
-Preserve unrelated user files. The untracked `old-website/` directory is reference material; do not stage it wholesale.
+Preserve unrelated user files. The `old-website/` directory is reference material. Preserve it and avoid staging it wholesale.

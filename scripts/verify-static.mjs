@@ -19,7 +19,7 @@ for (const file of files.filter(file => file.isFile())) {
     const local_urls = text.match(/https?:\/\/(?:localhost|127\.0\.0\.1)(?::\d+)?/g) || [];
     assert(local_urls.every(url => url === base_url.origin), `unexpected local server reference: ${path}`);
     if (extension === '.html') {
-        assert(!/\{\{|\{%|<\?php|\/wp-(?:admin|json|content)\//.test(text), `unprocessed content: ${path}`);
+        assert(!/\{\{|\{%|<\?php/.test(text), `unprocessed content: ${path}`);
         assert.equal([...text.matchAll(/<h1\b/gi)].length, 1, `expected one heading: ${path}`);
         documents.set(path, text);
     }

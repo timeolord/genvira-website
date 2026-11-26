@@ -1,6 +1,6 @@
 # Genvira website
 
-The Genvira prototype is built with [Zola](https://www.getzola.org/). Content, templates, styles, and artwork live in this repository. Development and deployment require no WordPress installation, PHP, or database.
+The Genvira prototype is built with [Zola](https://www.getzola.org/). Content, templates, styles, and artwork live in this repository.
 
 ## Development
 
@@ -30,7 +30,7 @@ The flake provides Zola, Node.js for validation, and fish. `flake.lock` pins the
 
 ### Windows without Nix
 
-Use PowerShell in Windows Terminal or the normal PowerShell app. Zola does not support PowerShell ISE. You do not need Nix, WSL, fish, WordPress, or a Rust compiler.
+Use PowerShell in Windows Terminal or the normal PowerShell app. Zola does not support PowerShell ISE. You can build directly with Zola and Node.js.
 
 Install [Git for Windows](https://git-scm.com/install/windows) and Zola 0.23.6 using WinGet:
 
@@ -164,7 +164,7 @@ The homepage introduces the lead program and gives pharma teams, drug developers
 
 GVB-2040 has a dedicated program page describing its HLA personalization focus and preclinical stage. It is linked from the header, footer, and pipeline.
 
-The homepage and GVB-2030 page share [tumor-environment.svg](static/assets/tumor-environment.svg), a conceptual illustration showing a TLS within an enlarged tumor rather than study data. The logo, portraits, locally bundled fonts, and scientific source links are preserved from the WordPress prototype. Research and content notes are in [docs/prototype.md](docs/prototype.md). Scientific status, publication links, and privacy copy need the team's review before public launch. The prototype retains `noindex` metadata and a robots exclusion.
+The homepage and GVB-2030 page share [tumor-environment.svg](static/assets/tumor-environment.svg), a conceptual illustration showing a TLS within an enlarged tumor rather than study data. Research and content notes are in [docs/prototype.md](docs/prototype.md). Scientific status, publication links, and privacy copy need the team's review before public launch. The prototype retains `noindex` metadata and a robots exclusion.
 
 ## Build and deployment
 
@@ -174,9 +174,9 @@ Build and validate the production bundle:
 nix develop --command fish scripts/build-static.fish
 ```
 
-The output is `dist/genvira/`, ready for a static host. The build validates HTML links, anchors, CSS assets, deployment prefixes, bundled licenses, and the absence of server files or localhost references. It works in an ordinary checkout and does not read or replace local databases. `dist/` is generated output; edit source files instead.
+The output is `dist/genvira/`, ready for a static host. The build validates HTML links, anchors, CSS assets, deployment prefixes, bundled licenses, and the absence of server files or localhost references. `dist/` is generated output; edit source files instead.
 
-The prototype address remains <https://www.melkyway.ca/genvira-website/>. Pushing `main` builds and publishes through `.github/workflows/pages.yml`; pull requests build and validate without publishing. GitHub Pages must use GitHub Actions as its build source. The workflow uses Pages metadata for the deployment URL and the repository's built-in GitHub token. It does not need database credentials or a separate hosting account.
+The prototype address remains <https://www.melkyway.ca/genvira-website/>. Pushing `main` builds and publishes through `.github/workflows/pages.yml`; pull requests build and validate without publishing. GitHub Pages must use GitHub Actions as its build source. The workflow uses Pages metadata for the deployment URL and the repository's built-in GitHub token.
 
 This repository inherits the domain from `timeolord.github.io`. Do not configure the personal domain as this repository's own custom domain or modify the personal website. Deployment belongs entirely to this repository.
 
@@ -251,5 +251,3 @@ On Windows, append the equivalent UTC entry from PowerShell, replacing the examp
 ```powershell
 Add-Content -Path changelog.txt -Encoding utf8 -Value (([DateTime]::UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ")) + " | Describe the change and relevant checks.")
 ```
-
-The Zola migration preserves the fifteen published prototype records from the sanitized WordPress snapshot, including metadata and article URLs. WordPress starter records were outside the published prototype. The old theme, plugins, database snapshot, and WordPress scripts are available in Git history. Ignored `.local/` data and uploads are preserved for recovery, but are no longer used. The untracked `old-website/` directory remains reference material.
