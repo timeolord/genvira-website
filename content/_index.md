@@ -13,7 +13,7 @@ facts = [{"label" = "LEAD CANDIDATE", "value" = "GVB-2030"}, {"label" = "THERAPE
 
 We develop investigational cancer immunotherapies, starting with GVB-2030 for bladder cancer. Our goal is to help the immune system recognize and respond to tumors.
 
-[Explore GVB-2030 ↗](@/gvb-2030.md)
+[Explore GVB-2030 ↗](@/programs/gvb-2030.md)
 
 [View our pipeline →](@/pipeline.md)
 
@@ -31,7 +31,7 @@ Our lead program is an engineered vaccinia virus being developed for bladder can
 
 Behind it is a broader development platform that brings vector design, characterization, and manufacturing considerations together.
 
-[Meet our lead program ↗](@/gvb-2030.md)
+[Meet our lead program ↗](@/programs/gvb-2030.md)
 
 ---
 

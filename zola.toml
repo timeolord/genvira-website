@@ -9,8 +9,6 @@ generate_feeds = false
 
 [extra]
 navigation = [
-  { path = "gvb-2030/", label = "GVB-2030" },
-  { path = "gvb-2040/", label = "GVB-2040" },
   { path = "pipeline/", label = "Pipeline" },
   { path = "platform/", label = "Platform" },
   { path = "research/", label = "Research & updates" },

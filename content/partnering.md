@@ -23,7 +23,7 @@ Start with the program or capability that interests you. Our team can discuss th
 
 Discuss the lead bladder cancer program and Genvira’s broader research direction.
 
-[Explore GVB-2030 ↗](@/gvb-2030.md)
+[Explore GVB-2030 ↗](@/programs/gvb-2030.md)
 
 ### Viral-vector engineering
 

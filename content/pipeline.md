@@ -8,7 +8,7 @@ layout = "pipeline"
 labels = ["THERAPEUTIC PROGRAMS", "THE PLATFORM BEHIND THE PIPELINE"]
 +++
 
-## Four programs in development
+## Programs in development
 
 GVB-2030 leads our pipeline with an investigational immunotherapy for bladder cancer.
 
@@ -16,8 +16,6 @@ GVB-2030 leads our pipeline with an investigational immunotherapy for bladder ca
 
 | Program | Approach | Focus | Development status |
 | --- | --- | --- | --- |
-| [GVB-2030 ↗](@/gvb-2030.md) | Vaccinia-based immunotherapy | Bladder cancer | **IND-enabling studies** Preparing for first-in-human evaluation |
-| [GVB-2040 ↗](@/gvb-2040.md) | HLA-personalized cancer vaccine | Oncology | **Preclinical** Cell-line data |
 | GVB-2020 | In vivo CAR-T / TCR-T approach | Oncology & immunology | **Preclinical** Tested in cells |
 | GVB-2010 | Investigational therapy | Colorectal cancer | **Preclinical** Mouse-model studies complete |
 
@@ -37,7 +35,7 @@ In a separate Phase 1b study, TLS density increased in patients who responded to
 
 In the Phase 3 KEYNOTE-045 trial, patients with advanced urothelial cancer that progressed during or after platinum chemotherapy had a median overall survival of 10.3 months with pembrolizumab versus 7.4 months with chemotherapy.[^pipeline-3]
 
-[Explore GVB-2030](@/gvb-2030.md)
+[Explore GVB-2030](@/programs/gvb-2030.md)
 
 ## Clinical development progress
 

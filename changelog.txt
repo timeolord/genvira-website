@@ -74,3 +74,4 @@ earlier prototype entries are reconstructed from git commit timestamps in utc
 2026-11-26T16:52:48Z | Add the preclinical GVB-2040 HLA-personalized cancer vaccine page and navigation links; verify static, desktop, and mobile checks.
 2026-11-26T16:53:13Z | Explain how patient and tumor biopsy sequencing inform HLA personalization for GVB-2040; verify the static build.
 2026-11-26T16:55:18Z | Share the GVB program layout, add an HLA graphic placeholder, and verify static, desktop, and mobile checks.
+2026-11-26T16:58:05Z | Publish program pages and pipeline entries from Markdown while preserving existing URLs; verify a new program, draft exclusion, and desktop and mobile checks.

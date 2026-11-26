@@ -94,6 +94,7 @@ The Blender version comes from the same `flake.lock` as the website tools. Keep 
 
 - `content/_index.md` contains the homepage.
 - `content/*.md` contains the other main pages.
+- `content/programs/*.md` contains program pages and their pipeline metadata.
 - `content/research/_index.md` configures the research archive.
 - `content/research/*.md` contains publication and company news articles.
 - `templates/` contains shared layouts, navigation, article cards, and the 404 page.
@@ -105,6 +106,14 @@ Content files start with TOML metadata between `+++` lines. All page and article
 The homepage and other designed pages use `---` on its own line to separate layout blocks. Keep those separators in order when editing; their templates arrange the blocks into the existing columns, cards, diagrams, and controls. Section labels and other small layout details live under `[extra]` in the same file. Team biographies use `### Name`, an image, a role in bold, and ordinary paragraphs. The pipeline uses a Markdown table. The privacy page and research articles use the shared prose layout and do not need layout separators.
 
 Layout markup lives in `templates/layouts/`, with shared text and button formatting in `templates/partials/`. Research articles share `templates/article.html` and the prose styles in `static/markdown.css`, including headings, citations, quotations, and source links. In templates, use `get_url` for links and assets that need the deployment prefix.
+
+### Publish a program
+
+Copy [GVB-2040](content/programs/gvb-2040.md) to a new Markdown file in `content/programs/`. Set its title, description, and unique top-level `path`, and set `weight` to place it in ascending pipeline order. Keep `layout = "program"` and update `approach`, `focus`, `stage`, and the optional `stage_detail` for the pipeline row. Use `header = true` to feature the program in the header and footer. Set `draft = true` above `[extra]` while preparing a program for publication.
+
+Keep the ten Markdown blocks in order, separated by `---`. They supply the overview, facts, context heading, figure, context details, development heading, development steps, rationale heading, rationale columns, and links. Use a unique `context_id` for the figure section. Set `placeholder_graphic = true` for a labeled placeholder or omit it when using a Markdown image. Set `current_step` to the zero-based index of the active development step and keep the step and column labels aligned with their headings.
+
+Published program pages appear in the pipeline automatically. GVB-2020 and GVB-2010 are listed directly in [the pipeline Markdown](content/pipeline.md) while they have no dedicated pages.
 
 ### Publish a research update
 

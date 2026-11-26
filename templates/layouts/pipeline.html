@@ -1,8 +1,24 @@
 <section class="section shell">
 <div class="section-heading"><div><p class="eyebrow">{{ page.extra.labels[0] }}</p>{{ blocks[0] | regex_replace(pattern="(?s)^\\s*(<h2[^>]*>.*?</h2>).*", rep="$1") | safe }}</div>{{ blocks[0] | regex_replace(pattern="(?s)^\\s*<h2[^>]*>.*?</h2>", rep="") | safe }}</div>
-{% set table = blocks[1] | replace(from="<table>", to='<table class="pipeline-table" role="table">') | replace(from="<th>", to='<th scope="col">') %}
-{% set table = table | regex_replace(pattern='(?s)(<tr>\\s*)<td>(.*?)</td>', rep='$1<th scope="row">$2</th>') | regex_replace(pattern='(?s)(<tbody>\\s*)<tr>\\s*<th scope="row">', rep='$1<tr class="lead-row"><th scope="row"><span class="tag">LEAD PROGRAM</span>') %}
-<div class="pipeline-table-wrap" tabindex="0" role="region" aria-label="Therapeutic pipeline table">{{ table | regex_replace(pattern='<td><strong>(.*?)</strong> (.*?)</td>', rep='<td><span class="stage-label">$1</span><p class="small">$2</p></td>') | safe }}</div>
+{% set programs = get_section(path="programs/_index.md") %}
+{% set legacy_table = blocks[1] | split(pat="<tbody>") %}
+{% set legacy_rows = legacy_table[1] | split(pat="</tbody>") | first %}
+<div class="pipeline-table-wrap" tabindex="0" role="region" aria-label="Therapeutic pipeline table">
+<table class="pipeline-table">
+<thead><tr><th scope="col">Program</th><th scope="col">Approach</th><th scope="col">Focus</th><th scope="col">Development status</th></tr></thead>
+<tbody>
+{% for program in programs.pages %}
+<tr{% if program.extra.lead %} class="lead-row"{% endif %}>
+<th scope="row">{% if program.extra.lead %}<span class="tag">LEAD PROGRAM</span>{% endif %}<a href="{{ program.permalink }}">{{ program.title }} <span aria-hidden="true">↗</span></a></th>
+<td>{{ program.extra.approach }}</td>
+<td>{{ program.extra.focus }}</td>
+<td><span class="stage-label">{{ program.extra.stage }}</span>{% if program.extra.stage_detail %}<p class="small">{{ program.extra.stage_detail }}</p>{% endif %}</td>
+</tr>
+{% endfor %}
+{{ legacy_rows | regex_replace(pattern='(?s)(<tr>\\s*)<td>(.*?)</td>', rep='$1<th scope="row">$2</th>') | regex_replace(pattern='<td><strong>(.*?)</strong> (.*?)</td>', rep='<td><span class="stage-label">$1</span><p class="small">$2</p></td>') | safe }}
+</tbody>
+</table>
+</div>
 <div class="prose article-width">{{ blocks[2] | safe }}</div>
 </section>
 <section class="tinted-section"><div class="shell section">{% set copy = blocks[3] %}{% set label = page.extra.labels[1] %}{% set lead = false %}{% set link_class = "button button-outline" %}{% include "partials/split.html" %}</div></section>
