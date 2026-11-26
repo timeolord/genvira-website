@@ -1,0 +1,18 @@
+base_url = "https://www.melkyway.ca/genvira-website/"
+title = "Genvira Biosciences"
+description = "Genvira Biosciences is advancing GVB-2030 for bladder cancer through viral vector engineering in Ottawa, Canada."
+default_language = "en"
+output_dir = "dist/genvira"
+compile_sass = false
+build_search_index = false
+generate_feeds = false
+
+[extra]
+navigation = [
+  { path = "gvb-2030/", label = "GVB-2030" },
+  { path = "pipeline/", label = "Pipeline" },
+  { path = "platform/", label = "Platform" },
+  { path = "research/", label = "Research & updates" },
+  { path = "about/", label = "About" },
+  { path = "team/", label = "Team" },
+]

@@ -14,13 +14,13 @@ Use Nix for dependencies, keep `flake.nix` and `flake.lock` current, and keep `.
 
 Use plain prose without em dashes, emojis, or unnecessary bold formatting.
 
-## WordPress and publishing
+## Zola and publishing
 
-Keep theme and shared artwork changes under `wp-content/themes/genvira`. Update the README when behavior or setup changes, and refresh relevant saved previews when artwork changes.
+Keep page and article content under `content`, layouts under `templates`, and styles and shared artwork under `static`. Update the README when behavior or setup changes, and refresh relevant saved previews when artwork changes.
 
-WordPress content and settings live in the database. Refresh and review the sanitized `database/initial.sql` snapshot when changing them. Seed HTML changes must also be applied to WordPress before taking the snapshot; avoid overwriting unrelated editorial work. Never commit raw database exports, credentials, or local state.
+Zola content and metadata live in source files. Preserve existing page and article URLs, use `get_url` for links that need the deployment prefix, and keep draft articles out of production. Never commit credentials or local state. The former WordPress implementation and sanitized snapshot are available in Git history; ignored local databases are recovery material and must not be overwritten.
 
-Run checks appropriate to the change. Use desktop and mobile previews for visual changes and static-export validation when export behavior changes. Documentation-only changes need link and diff checks, without rebuilding the website.
+Run checks appropriate to the change. Use desktop and mobile previews for visual changes and `scripts/build-static.fish` for static build validation. Documentation-only changes need link and diff checks, without rebuilding the website.
 
 Pushing `main` automatically deploys the static prototype through GitHub Actions. Preserve the `/genvira-website/` deployment path and inherited domain configuration. The personal domain is temporary during prototyping; deployment belongs entirely to this repository. Do not modify the personal website or add integration steps for it. Do not stop an existing local development server unless you started it or the user asks you to.
 

@@ -20,5 +20,6 @@
 /wordpress.sql
 /uploads-backup/
 
-# generated static export
+# generated site
 /dist/
+/public/

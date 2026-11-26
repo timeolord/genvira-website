@@ -1,6 +1,6 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 
-const origin = (process.env.GENVIRA_QA_URL || 'http://localhost:8080').replace(/\/$/, '');
+const origin = (process.env.GENVIRA_QA_URL || 'http://127.0.0.1:1111').replace(/\/$/, '');
 const path_prefix = new URL(origin).pathname.replace(/\/$/, '');
 const debug_url = process.env.GENVIRA_QA_BROWSER || 'http://localhost:9227';
 const output_dir = process.env.GENVIRA_QA_OUTPUT || '/tmp/genvira-prototype-qa';
@@ -56,7 +56,7 @@ async function navigate(path) {
         scrollTo(0, 0);
     })()`);
     assert(await evaluate("document.querySelectorAll('h1').length === 1"), `expected one h1 at ${path}`);
-    assert(!await evaluate("/Warning:|Fatal error:/.test(document.body.innerText)"), `php warning at ${path}`);
+    assert(!await evaluate("document.body.innerText.includes('{{')"), `unprocessed template at ${path}`);
     assert(await evaluate("[...document.querySelectorAll('img:not(.leaflet-tile)')].every(image => image.complete && image.naturalWidth > 0)"), `missing image at ${path}`);
 }
 async function check_contact_layout(mobile) {

@@ -34,9 +34,9 @@ jobs:
         if: github.event_name != 'pull_request'
         id: pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b
-      - name: restore snapshot and export static site
+      - name: build and validate zola site
         env:
-          PAGES_BASE_PATH: ${{ github.event_name == 'pull_request' && format('/{0}', github.event.repository.name) || steps.pages.outputs.base_path }}
+          PAGES_BASE_URL: ${{ github.event_name == 'pull_request' && format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) || steps.pages.outputs.base_url }}
         run: nix develop --command fish scripts/build-static.fish
       - name: upload static site
         if: github.event_name != 'pull_request'

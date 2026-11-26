@@ -1,0 +1,8 @@
+{% for article in articles %}
+<article class="research-entry" data-kind="{{ article.extra.kind }}" data-year="{{ article.date | date(format="%Y") }}">
+    <div class="entry-meta"><span class="tag">{% if article.extra.kind == "news" %}Company news{% else %}Publication{% endif %}</span><time datetime="{{ article.date }}">{{ article.extra.date_label | default(value=article.date | date(format="%-d %b %Y"), boolean=true) }}</time></div>
+    <h3><a href="{{ article.permalink }}">{{ article.title }}</a></h3>
+    <p>{{ article.description }}</p>
+    <a class="text-link" href="{{ article.permalink }}">Read {% if article.extra.kind == "news" %}update{% else %}publication{% endif %} <span aria-hidden="true">↗</span></a>
+</article>
+{% endfor %}

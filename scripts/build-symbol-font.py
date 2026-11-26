@@ -76,4 +76,4 @@ font.setupPost()
 font.font.flavor = 'woff'
 font.font['head'].created = font.font['head'].modified = timestampSinceEpoch(0)
 font.font.recalcTimestamp = False
-font.save('wp-content/themes/genvira/assets/genvira-symbols.woff')
+font.save('static/assets/genvira-symbols.woff')

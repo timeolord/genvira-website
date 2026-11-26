@@ -8,7 +8,7 @@ CG Oncology informed the direct disease and lead-program hierarchy, restrained n
 
 ## Brand
 
-The original logo is `wp-content/themes/genvira/assets/logo.svg`, retrieved from https://genvira.com/cdn/shop/files/genvira.svg?v=1734045026 on 12 November 2026.
+The original logo is `static/assets/logo.svg`, retrieved from https://genvira.com/cdn/shop/files/genvira.svg?v=1734045026 on 12 November 2026.
 
 | Role | Colour |
 | --- | --- |
@@ -22,7 +22,7 @@ The original logo is `wp-content/themes/genvira/assets/logo.svg`, retrieved from
 | Hero background | `#062b40` |
 | Supporting pale background | `#f0f6f7` |
 
-Dark ink and pale backgrounds are supporting colours, not extracted logo colours. Bright cyan is used for emphasis on dark backgrounds and surfaces; small links use a darker cyan for legibility. The original multicolour logo is preserved. Manrope is self-hosted; its license is bundled with the theme.
+Dark ink and pale backgrounds are supporting colours, not extracted logo colours. Bright cyan is used for emphasis on dark backgrounds and surfaces; small links use a darker cyan for legibility. The original multicolour logo is preserved. Manrope is self-hosted; its license is bundled with the static assets.
 
 ## Content sources
 
@@ -44,11 +44,11 @@ Reviewed 12 November 2026. The table records sources for the website copy.
 
 GVB-2030 remains labelled IND-enabling, as in the public pipeline. First-in-human development is described as a goal, with no trial-enrollment claim. The Pipeline page attributes preliminary safety and efficacy signals to Genvira’s account of a partnered Phase 1 study in a separate program. The company overview does not identify the partner, trial registration, or study readout. Platform frames GMP manufacturing as a development goal. No unpublished results, efficacy statistics, clinical milestones, or new intellectual-property details were invented.
 
-Publication cards show only the verified year when an exact publication day was not established. Internal WordPress ordering dates are not presented as exact bibliographic dates. Company news uses the actual announcement date. Publications are not described as clinical results for GVB-2030.
+Publication cards show only the verified year when an exact publication day was not established. Article ordering dates are not presented as exact bibliographic dates. Company news uses the actual announcement date. Publications are not described as clinical results for GVB-2030.
 
 ## Implementation
 
-This is a classic WordPress theme. Pages and research articles are stored in WordPress and remain editable there. `wp_dev prototype` seeds the authored HTML from the theme and activates it. It is explicit and repeatable, preserves unrelated content, and refuses unmarked slug collisions. Re-running it replaces the seeded pages and articles, so preserve editorial work first.
+Zola builds the prototype from content files and Tera templates. All fifteen published prototype records were migrated from the sanitized WordPress snapshot with their titles, summaries, categories, date labels, and article URLs preserved. Each snapshot body matched its authored seed file. Pages retain their HTML layout inside Markdown content files, and research articles can also use ordinary Markdown. There is no database or content seeding step.
 
 The pipeline is a semantic table that becomes a stacked layout on small screens. The platform uses ordinary buttons with keyboard controls. Research filters and search are local and do not require a service. Without JavaScript, navigation, all research entries, and all platform descriptions remain visible. No video, stock photographs, analytics, external font requests, or scroll-triggered content reveals are included.
 
@@ -58,9 +58,9 @@ The local privacy page describes only the prototype. Final public privacy and me
 
 The browser checks cover eleven pages at 1440 px desktop and 390 px mobile widths, four research detail pages, responsive overflow, image loading, heading structure, menu open and Escape behavior, platform steps, research type filters, search with no results, contact details and map layout, a JavaScript-disabled fallback, and a real 404 response. The script and its Nix QA environment are documented in the root README.
 
-The sanitized SQL was imported into a temporary database. Checks confirmed all eleven page summaries, fifteen prototype content markers, the selected theme, four queryable research posts, and creation of a fresh administrator with ID 1. Checksums confirmed that the restore test did not change the working database.
+The former WordPress snapshot was previously validated with a temporary database restore. That implementation and snapshot remain available in Git history. The Zola build checks generated links, anchors, CSS assets, sitemap destinations, deployment prefixes, licenses, and the absence of server files or localhost references.
 
-Browser captures of the actual WordPress theme: [desktop homepage](../wp-content/themes/genvira/screenshot.png), [mobile homepage](prototype-mobile.png), and [mobile pipeline](pipeline-mobile.png).
+Saved browser captures: [desktop homepage](prototype-desktop.png), [mobile homepage](prototype-mobile.png), and [mobile pipeline](pipeline-mobile.png).
 
 ## CEO illustration update, 16 November 2026
 

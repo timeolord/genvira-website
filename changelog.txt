@@ -59,3 +59,5 @@ earlier prototype entries are reconstructed from git commit timestamps in utc
 2026-11-24T19:00:59Z | Rewrite the website privacy notice around hosting, maps, direct inquiries, and privacy requests, then verify the rendered page.
 2026-11-25T15:03:22Z | Move seeded research updates into standalone HTML files and a metadata index, document WordPress publishing, and verify repeat imports and static export with additional posts.
 2026-11-25T15:07:44Z | Use the supplied abstracts verbatim in the three publication posts and verify the text and citations in WordPress and the static export.
+2026-11-26T15:40:02Z | Migrate the prototype to Zola with source content, preserved URLs and artwork, Nix and Pages builds, updated documentation and previews; verify desktop and mobile behavior, publishing, drafts, links, and deployment paths.
+2026-11-26T15:49:02Z | Normalize migrated metadata and copied license whitespace; verify the complete commit diff.
