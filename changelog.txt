@@ -66,3 +66,4 @@ earlier prototype entries are reconstructed from git commit timestamps in utc
 2026-11-26T16:21:42Z | Enlarge the shared tumor illustration to enclose the entire TLS, update descriptions and previews, and verify cell containment, desktop and mobile rendering, and static links.
 2026-11-26T16:26:05Z | Add a separate Blender Nix shell and launch instructions; verify Blender 5.2.3 LTS background startup, ARM shell evaluation, and documentation links.
 2026-11-26T16:39:34Z | Refresh homepage marketing copy and audience links, and add text transitions verified at desktop and mobile widths with reduced motion.
+2026-11-26T16:43:44Z | Add cited clinical and tumor immunology research to the GVB-2030 pipeline rationale and verify static, desktop, and mobile builds.
