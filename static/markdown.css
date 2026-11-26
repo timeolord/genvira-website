@@ -11,6 +11,7 @@
 @media(max-width:900px){.markdown-lead>p:first-child,.markdown-lead-after-heading>h2+p{font-size:1.25rem}.markdown-introduction>.markdown-split{gap:40px}}
 @media(max-width:640px){.markdown-introduction>.markdown-split{gap:28px}.markdown-introduction .markdown-split>div:first-child h2{max-width:360px}.markdown-facts li{gap:15px}.pipeline-table td:nth-child(2)::before{content:"Approach"}.pipeline-table td:nth-child(3)::before{content:"Focus"}.pipeline-table td:nth-child(4)::before{content:"Development status"}}
 
+.prose .footnote-reference a{text-decoration:none}
 .pipeline-references{padding-block:36px 56px;font-size:.8125rem}
 .pipeline-references h2{font-size:1rem}
 .pipeline-references .footnote-definition{display:flex;gap:.75em}
