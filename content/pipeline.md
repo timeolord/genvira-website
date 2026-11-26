@@ -17,7 +17,7 @@ GVB-2030 leads our pipeline with an investigational immunotherapy for bladder ca
 | Program | Approach | Focus | Development status |
 | --- | --- | --- | --- |
 | [GVB-2030 ↗](@/gvb-2030.md) | Vaccinia-based immunotherapy | Bladder cancer | **IND-enabling studies** Preparing for first-in-human evaluation |
-| GVB-2040 | Personalized cancer vaccine | Oncology | **Preclinical** Cell-line data |
+| [GVB-2040 ↗](@/gvb-2040.md) | HLA-personalized cancer vaccine | Oncology | **Preclinical** Cell-line data |
 | GVB-2020 | In vivo CAR-T / TCR-T approach | Oncology & immunology | **Preclinical** Tested in cells |
 | GVB-2010 | Investigational therapy | Colorectal cancer | **Preclinical** Mouse-model studies complete |
 

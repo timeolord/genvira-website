@@ -101,7 +101,7 @@ try {
     await command('Emulation.setScriptExecutionDisabled', { value: false });
     await command('Runtime.enable');
     await viewport(1440, 1100);
-    const paths = ['/', '/gvb-2030/', '/pipeline/', '/platform/', '/research/', '/about/', '/team/', '/partnering/', '/contact/', '/careers/', '/privacy/'];
+    const paths = ['/', '/gvb-2030/', '/gvb-2040/', '/pipeline/', '/platform/', '/research/', '/about/', '/team/', '/partnering/', '/contact/', '/careers/', '/privacy/'];
     for (const path of paths) {
         const response = await fetch(`${origin}${path}`);
         assert(response.status === 200, `${path} returned ${response.status}`);
